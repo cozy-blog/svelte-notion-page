@@ -4,6 +4,11 @@
 
 `svetle-notion-page` is component who render page using a notion. see [example](/src/routes/+page.svelte).
 
+## Installation
+```bash
+npm install -D svelte-notion-page
+```
+
 ## Using a customized provider
 
 ```sveltehtml
