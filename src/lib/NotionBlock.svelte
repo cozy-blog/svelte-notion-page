@@ -13,12 +13,6 @@
 
 <svelte:component this={provider.resolve(block.type)} {block} {depth}>
 	{#if block.has_children === true}
-		<div class="pad"><NotionBlocks depth={depth + 1} blocks={block.blocks} /></div>
+		<NotionBlocks depth={depth + 1} blocks={block.blocks} />
 	{/if}
 </svelte:component>
-
-<style lang="postcss">
-	.pad {
-		padding-left: 16px;
-	}
-</style>
