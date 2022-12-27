@@ -1,14 +1,17 @@
 <script lang="ts">
-	import { defaultProvider, NotionComponentProvider } from '$lib/NotionComponentProvider';
+	import { defaultComponents, NotionComponentProvider } from '$lib/NotionComponentProvider';
 	import NotionPage from '$lib/NotionPage.svelte';
 	import { json } from './post.js';
-	import Paragraph from '$lib/Paragraph.svelte';
+	import TestFallback from './TestFallback.svelte';
+	import { setContext } from 'svelte';
+	import { PROVIDER_KEY } from '$lib/context';
 
-	const provider = defaultProvider;
+	const provider = new NotionComponentProvider({
+		...defaultComponents,
+		paragraph: TestFallback
+	});
+
+	setContext(PROVIDER_KEY, provider);
 </script>
 
 <NotionPage content={json} />
-
-<h1>Welcome to your library project</h1>
-<p>Create your package using @sveltejs/package and preview/showcase your work with SvelteKit</p>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>

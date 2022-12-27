@@ -1,16 +1,19 @@
 <script lang="ts">
 	import type { Block } from '$lib/types';
 	import NotionBlocks from '$lib/NotionBlocks.svelte';
-	import { defaultProvider } from '$lib/NotionComponentProvider';
-	import Paragraph from '$lib/Paragraph.svelte';
-	defaultProvider.register('paragraph', Paragraph);
+	import { getContext } from 'svelte';
+	import { NotionComponentProvider } from '$lib';
+	import { PROVIDER_KEY } from '$lib/context';
 
+	export let depth;
 	export let block: Block;
+
+	const provider = getContext<NotionComponentProvider>(PROVIDER_KEY);
 </script>
 
-<svelte:component this={defaultProvider.resolve(block.type)} {block}>
+<svelte:component this={provider.resolve(block.type)} {block} {depth}>
 	{#if block.has_children === true}
-		<div class="pad"><NotionBlocks blocks={block.blocks} /></div>
+		<div class="pad"><NotionBlocks depth={depth + 1} blocks={block.blocks} /></div>
 	{/if}
 </svelte:component>
 

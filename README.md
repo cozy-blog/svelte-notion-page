@@ -1,38 +1,26 @@
-# create-svelte
+# svelte-notion-page
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+> This library is an experimental state. It would be changed rapidly.
 
-## Creating a project
+`svetle-notion-page` is component who render page using a notion. see [example](/src/routes/+page.svelte).
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Using a customized provider
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+```sveltehtml
 
-# create a new project in my-app
-npm create svelte@latest my-app
+<script lang="ts">
+    import {defaultComponents, NotionPage, NotionComponentProvider} from 'cozylog/svelte-notion-page';
+    import {json} from './post.js'; // notion page blocks
+    import {setContext} from 'svelte';
+    import {PROVIDER_KEY} from '$lib/context';
+
+    const provider = new NotionComponentProvider({
+        ...defaultComponents,
+    });
+
+    // Set a customized provider in Context("notion_component_provider").
+    setContext(PROVIDER_KEY, provider);
+</script>
+
+<NotionPage content={json}/>
 ```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.

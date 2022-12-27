@@ -1,8 +1,14 @@
 import type { ComponentType } from 'svelte';
-import TestComponent from '$lib/TestComponent.svelte';
+import FallbackComponent from '$lib/FallbackComponent.svelte';
 
 export class NotionComponentProvider {
-	constructor(private map: { [key: string]: ComponentType }) {}
+	private map: { [key: string]: ComponentType };
+
+	public fallBackComponent: ComponentType;
+	constructor(map: { [key: string]: ComponentType }) {
+		this.map = { ...map };
+		this.fallBackComponent = FallbackComponent;
+	}
 
 	register(key: string, component: ComponentType) {
 		this.map[key] = component;
@@ -15,11 +21,12 @@ export class NotionComponentProvider {
 	resolve(key: string): ComponentType {
 		const target = this.map[key];
 		if (target === undefined) {
-			// TODO: Return fallback component
-			return TestComponent;
+			return FallbackComponent;
 		}
 		return target;
 	}
 }
 
-export const defaultProvider = new NotionComponentProvider({ test: TestComponent });
+export const defaultComponents = {};
+
+export const defaultProvider = new NotionComponentProvider(defaultComponents);
