@@ -9,16 +9,16 @@
 ```sveltehtml
 
 <script lang="ts">
-    import {defaultComponents, NotionPage, NotionComponentProvider} from 'cozylog/svelte-notion-page';
-    import {json} from './post.js'; // notion page blocks
-    import {setContext} from 'svelte';
-    import {PROVIDER_KEY} from '$lib/context';
+    import { defaultComponents, NotionComponentProvider, NotionPage } from 'svelte-notion-page';
+    import { json } from './post';
+    import { setContext } from 'svelte';
+    import { PROVIDER_KEY } from 'svelte-notion-page/context';
+    import Test from './Test.svelte';
 
     const provider = new NotionComponentProvider({
         ...defaultComponents,
+        paragraph: Test
     });
-
-    // Set a customized provider in Context("notion_component_provider").
     setContext(PROVIDER_KEY, provider);
 </script>
 
