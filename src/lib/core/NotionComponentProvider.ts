@@ -1,5 +1,7 @@
 import type { ComponentType } from 'svelte';
-import FallbackComponent from '$lib/FallbackComponent.svelte';
+import FallbackComponent from '$lib/core/FallbackComponent.svelte';
+import TestFallback from '$lib/components/Paragraph.svelte';
+import Paragraph from '$lib/components/Paragraph.svelte';
 
 export class NotionComponentProvider {
 	private map: { [key: string]: ComponentType };
@@ -21,12 +23,14 @@ export class NotionComponentProvider {
 	resolve(key: string): ComponentType {
 		const target = this.map[key];
 		if (target === undefined) {
-			return FallbackComponent;
+			return this.fallBackComponent;
 		}
 		return target;
 	}
 }
 
-export const defaultComponents = {};
+export const defaultComponents: Record<string, ComponentType> = {
+	paragraph: Paragraph
+};
 
 export const defaultProvider = new NotionComponentProvider(defaultComponents);

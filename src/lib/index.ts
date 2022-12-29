@@ -1,4 +1,4 @@
 // Reexport your entry components here
-export * from './NotionComponentProvider';
-export { default as NotionPage } from './NotionPage.svelte';
-export * as context from './context';
+export * from './core/NotionComponentProvider';
+export { default as NotionPage } from './core/NotionPage.svelte';
+export * as context from './core/context';

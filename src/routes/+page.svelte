@@ -1,17 +1,24 @@
 <script lang="ts">
-	import { defaultComponents, NotionComponentProvider } from '$lib/NotionComponentProvider';
+	import { defaultComponents, NotionComponentProvider } from '$lib/core/NotionComponentProvider';
 	import NotionPage from '$lib/NotionPage.svelte';
 	import { json } from './post.js';
-	import TestFallback from './TestFallback.svelte';
 	import { setContext } from 'svelte';
-	import { PROVIDER_KEY } from '$lib/context';
+	import Paragraph from '$lib/components/Paragraph.svelte';
+	import {
+		NOTION_COMPONENT_PROVIDER_KEY,
+		NOTION_PAGE_INFO_KEY,
+		NOTION_THEME
+	} from '$lib/core/context';
+	import type { Content } from '$lib/types.js';
 
 	const provider = new NotionComponentProvider({
 		...defaultComponents,
-		paragraph: TestFallback
+		paragraph: Paragraph
 	});
 
-	setContext(PROVIDER_KEY, provider);
+	setContext(NOTION_COMPONENT_PROVIDER_KEY, provider);
+
+	const content = json as unknown as Content;
 </script>
 
-<NotionPage content={json} />
+<NotionPage content={content} />
