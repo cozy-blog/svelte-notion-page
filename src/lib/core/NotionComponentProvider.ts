@@ -1,15 +1,18 @@
 import type { ComponentType } from 'svelte';
-import FallbackComponent from '$lib/core/FallbackComponent.svelte';
-import TestFallback from '$lib/components/Paragraph.svelte';
-import Paragraph from '$lib/components/Paragraph.svelte';
+import FallBackComponent from '$lib/components/blocks/FallbackComponent.svelte';
+import Paragraph from '$lib/components/blocks/Paragraph.svelte';
 
 export class NotionComponentProvider {
 	private map: { [key: string]: ComponentType };
 
 	public fallBackComponent: ComponentType;
-	constructor(map: { [key: string]: ComponentType }) {
+	constructor(map: { [key: string]: ComponentType }, fallbackComponent: ComponentType) {
 		this.map = { ...map };
-		this.fallBackComponent = FallbackComponent;
+		this.fallBackComponent = fallbackComponent;
+	}
+
+	replaceFallbackCompoent(fallback: ComponentType) {
+		this.fallBackComponent = fallback;
 	}
 
 	register(key: string, component: ComponentType) {
@@ -33,4 +36,4 @@ export const defaultComponents: Record<string, ComponentType> = {
 	paragraph: Paragraph
 };
 
-export const defaultProvider = new NotionComponentProvider(defaultComponents);
+export const defaultProvider = new NotionComponentProvider(defaultComponents, FallBackComponent);

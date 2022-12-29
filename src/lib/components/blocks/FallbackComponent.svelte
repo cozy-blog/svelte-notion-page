@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Block } from '../types';
+	import type { Block } from '../../types';
 
 	export let block: Block;
 

@@ -7,3 +7,4 @@ import type {
 export type Page = GetPageResponse;
 export type Block = PartialBlockObjectResponse & BlockObjectResponse & { blocks?: Block[] };
 export type Content = Page & { blocks: Block[] };
+export type NotionThemeStyle = Record<string, string>

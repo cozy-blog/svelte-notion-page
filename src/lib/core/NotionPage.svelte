@@ -1,21 +1,29 @@
 <script lang="ts">
-	import type { Content } from '../types';
+	import type { Content, NotionThemeStyle } from '../types';
 	import NotionBlocks from './NotionBlocks.svelte';
-	import { hasContext, setContext } from 'svelte';
-	import { defaultProvider } from './NotionComponentProvider';
-	import { NOTION_PAGE_INFO_KEY, NOTION_COMPONENT_PROVIDER_KEY, NOTION_THEME } from './context';
+	import { setContext } from 'svelte';
+	import { defaultProvider, NotionComponentProvider } from './NotionComponentProvider';
+	import {
+		NOTION_PAGE_INFO_KEY,
+		notionComponentProvierContext,
+		notionThemeContext
+	} from './context';
 	import NotionPageLayout from './NotionPageLayout.svelte';
+	import defaultTheme from '$lib/components/themeStyle';
 
 	export let content: Content;
+	export let theme: NotionThemeStyle = notionThemeContext.exist()
+		? notionThemeContext.get()
+		: defaultTheme;
+	export let componentProvider: NotionComponentProvider = notionComponentProvierContext.exist()
+		? notionComponentProvierContext.get()
+		: defaultProvider;
 
-	if (!hasContext(NOTION_COMPONENT_PROVIDER_KEY)) {
-		setContext(NOTION_COMPONENT_PROVIDER_KEY, defaultProvider);
-	}
 	setContext(NOTION_PAGE_INFO_KEY, {
 		pageId: content.id
 	});
 </script>
 
-<NotionPageLayout {content}>
-	<NotionBlocks depth={0} blocks={content.blocks} />
+<NotionPageLayout {content} {theme}>
+	<NotionBlocks {componentProvider} depth={0} blocks={content.blocks} />
 </NotionPageLayout>
