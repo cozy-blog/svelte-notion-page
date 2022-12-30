@@ -1,9 +1,9 @@
 <script lang="ts">
-	import type { Block } from '../../types';
+	import type { Block } from '../types';
 
 	export let block: Block;
 
-	console.warn(`Fail to resolve ${block.type}`);
+	console.warn(`Fail to resolve ${block?.type}`);
 </script>
 
 <div>
@@ -12,4 +12,4 @@
 		<slot />
 	</div>
 </div>
-{@debug block}
+<!-- {@debug block} -->

@@ -210,6 +210,11 @@
   min-height: calc(100vh - var(--notion-header-height));
 }
 
+.notion-green,
+.notion-green_co {
+  color: var(--notion-green);
+}
+
 .notion-red,
 .notion-red_co {
   color: var(--notion-red);
@@ -245,6 +250,10 @@
 .notion-gray,
 .notion-gray_co {
   color: var(--notion-gray);
+}
+
+.notion-green_background {
+  background-color: var(--notion-green_background);
 }
 .notion-red_background {
   background-color: var(--notion-red_background);

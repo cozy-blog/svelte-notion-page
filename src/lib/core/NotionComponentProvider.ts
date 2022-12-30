@@ -1,9 +1,13 @@
-import type { ComponentType } from 'svelte';
-import FallBackComponent from '$lib/components/blocks/FallbackComponent.svelte';
-import Paragraph from '$lib/components/blocks/Paragraph.svelte';
+import type { ComponentType, } from 'svelte';
+import FallBackComponent from '$lib/components/FallbackComponent.svelte';
+import Paragraph from '$lib/components/Paragraph.svelte';
+import Cover from '$lib/components/Cover.svelte';
+import PageLayout from '$lib/components/PageLayout.svelte';
+import Text from '$lib/components/Text.svelte';
+import Theme from '$lib/components/Theme.svelte';
 
 export class NotionComponentProvider {
-	private map: { [key: string]: ComponentType };
+	private map: { [key in string]: ComponentType };
 
 	public fallBackComponent: ComponentType;
 	constructor(map: { [key: string]: ComponentType }, fallbackComponent: ComponentType) {
@@ -33,7 +37,11 @@ export class NotionComponentProvider {
 }
 
 export const defaultComponents: Record<string, ComponentType> = {
-	paragraph: Paragraph
+	paragraph: Paragraph,
+	cover: Cover,
+	pageLayout: PageLayout,
+	theme: Theme,
+	text: Text
 };
 
 export const defaultProvider = new NotionComponentProvider(defaultComponents, FallBackComponent);
