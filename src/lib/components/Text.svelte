@@ -34,7 +34,7 @@
 			default:
 				throw { message: `unexpected type: ${type}` };
 		}
-	}, `<span class="${getColorCss(color)}">${content}</span>`);
+	}, `<span class="${getColorCss(color)} notion-span">${content}</span>`);
 </script>
 
 {@html html}

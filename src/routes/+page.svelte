@@ -5,7 +5,7 @@
 		defaultProvider
 	} from '$lib/core/NotionComponentProvider';
 	import NotionPage from '$lib/core/NotionPage.svelte';
-	import { json, get } from './(hero)blog/test/notion-export.js';
+	import { get } from './(hero)blog/test/notion-export.js';
 	import type { Content } from '$lib/types.js';
 
 	const promise = get({ params: {} }) as unknown as Promise<{ body: { json: Content } }>;

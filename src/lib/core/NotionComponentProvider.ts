@@ -8,6 +8,8 @@ import Theme from '$lib/components/Theme.svelte';
 import Heading1 from '$lib/components/Heading1.svelte';
 import Heading2 from '$lib/components/Heading2.svelte';
 import Heading3 from '$lib/components/Heading3.svelte';
+import Column from '$lib/components/Column.svelte';
+import ColumnList from '$lib/components/ColumnList.svelte';
 
 export class NotionComponentProvider {
 	private map: { [key in string]: ComponentType };
@@ -47,7 +49,9 @@ export const defaultComponents: Record<string, ComponentType> = {
 	heading_3: Heading3,
 	cover: Cover,
 	pageLayout: PageLayout,
-	theme: Theme
+	theme: Theme,
+	column: Column,
+	column_list: ColumnList
 };
 
 export const defaultProvider = new NotionComponentProvider(defaultComponents, FallBackComponent);

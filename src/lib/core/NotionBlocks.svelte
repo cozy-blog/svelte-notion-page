@@ -9,7 +9,7 @@
 {#each blocks as block}
 	<svelte:component this={componentProvider.resolve(block.type)} props={block} {depth}>
 		{#if block.has_children === true}
-			<svelte:self slot="child" depth={++depth} blocks={block.blocks} />
+			<svelte:self depth={++depth} blocks={block.blocks} />
 		{/if}
 	</svelte:component>
 {/each}

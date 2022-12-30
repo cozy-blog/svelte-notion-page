@@ -42,23 +42,32 @@
 
 
 
-  <Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"cb0e237a-1a88-4db2-819d-550cfd8b366a","created_time":"2022-12-30T01:23:00.000Z","last_edited_time":"2022-12-30T01:56:00.000Z"}}>
-depth 0
+  <Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"0352d2e4-25bb-4315-914a-35651bf4c862","created_time":"2022-12-30T02:28:00.000Z","last_edited_time":"2022-12-30T02:40:00.000Z"}}>
+
+</Paragraph>
+<ColumnList cols={2}><Column><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"f508f7b8-8d28-460a-8dc8-5e557fcfcad9","created_time":"2022-12-30T04:37:00.000Z","last_edited_time":"2022-12-30T05:15:00.000Z"}}>
+asdfa;sldnf;lansdf;lkansdf;lknasd;flnkal;sdnf;laksndf;alnsdf;lknasdf;lnas;dlfna;slkndf;laksndf;lknasdf;lnasdlfkna;sdnf;lasnkfd
 </Paragraph>
 <IndentGroup>
-  <Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"3d2403a9-3d6a-4b79-95f7-239fa41fb8cf","created_time":"2022-12-30T01:23:00.000Z","last_edited_time":"2022-12-30T01:56:00.000Z"}}>
-depth 1
+  <Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"ce9bccfb-9bd2-4e44-8538-a7460609d100","created_time":"2022-12-30T04:38:00.000Z","last_edited_time":"2022-12-30T04:38:00.000Z"}}>
+asdf
 </Paragraph>
 <IndentGroup>
-  <Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"0cf1a355-0c2f-4c38-8f32-7820572d7b24","created_time":"2022-12-30T01:23:00.000Z","last_edited_time":"2022-12-30T01:23:00.000Z"}}>
-depth 2
+  <Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"977e228e-5e24-4e36-b154-b2c59910cff0","created_time":"2022-12-30T04:38:00.000Z","last_edited_time":"2022-12-30T05:15:00.000Z"}}>
+asdfasldkfbalkbsdflkjbasdfkljbasldkfjbalskdbflaksbdflkjabsdflkjabsdflkbasdlkfbalskjdbflkasbjdflkjabsdflkjbasdfjbasldfkbalsdkbfalksjbdfljkabsdfljkabsdfljbasdlfkjb
 </Paragraph>
 
 </IndentGroup>
+<Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"3b0b2b82-367a-41c1-9321-9652ca89744a","created_time":"2022-12-30T04:38:00.000Z","last_edited_time":"2022-12-30T04:38:00.000Z"}}>
+
+</Paragraph>
 
 </IndentGroup>
-<Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"9cdd1c13-de82-4d61-9634-2417cf43bd3c","created_time":"2022-12-30T01:42:00.000Z","last_edited_time":"2022-12-30T01:56:00.000Z"}}>
-
+</Column><Column><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"a1f8b892-166f-4090-8a48-e2304c848085","created_time":"2022-12-30T04:37:00.000Z","last_edited_time":"2022-12-30T04:38:00.000Z"}}>
+colum2
+</Paragraph>
+</Column></ColumnList><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"f20a9fba-7632-4ed4-b1b4-0841fd059c33","created_time":"2022-12-30T05:19:00.000Z","last_edited_time":"2022-12-30T05:28:00.000Z"}}>
+동해물과 백두산이 마르도 닳도록 하느님이 보우하사 우리나라 만세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세요
 </Paragraph>
 
   

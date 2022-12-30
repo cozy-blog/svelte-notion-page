@@ -22,7 +22,6 @@
 
 <style>
 	p {
-		width: 100%;
 		padding: 3px 2px;
 		white-space: pre-wrap;
 	}
