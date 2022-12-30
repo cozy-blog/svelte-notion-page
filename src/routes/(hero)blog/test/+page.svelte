@@ -42,26 +42,147 @@
 
 
 
-  <Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"0352d2e4-25bb-4315-914a-35651bf4c862","created_time":"2022-12-30T02:28:00.000Z","last_edited_time":"2022-12-30T02:40:00.000Z"}}>
+  <NumberedListItem number=1> 숫자 리스트1</NumberedListItem>
+<BulletedListItem>점 리스트</BulletedListItem>
+<NumberedListItem number=1> 숫자 리스트2</NumberedListItem>
+<Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"4e5c8275-4c0e-40a9-9bad-1c7b67017b1b","created_time":"2022-12-30T08:55:00.000Z","last_edited_time":"2022-12-30T08:57:00.000Z"}}>
+일반 텍스트
+</Paragraph>
+<IndentGroup>
+  <Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"cb890248-accf-491c-a07e-b4bfc2ea6332","created_time":"2022-12-30T08:57:00.000Z","last_edited_time":"2022-12-30T08:57:00.000Z"}}>
+일반 텍스트2
+</Paragraph>
+
+</IndentGroup>
+<NumberedListItem number=1> asdlkfn</NumberedListItem>
+<IndentGroup>
+  <NumberedListItem number=a> as</NumberedListItem>
+<IndentGroup>
+  <NumberedListItem number=i> a</NumberedListItem>
+<IndentGroup>
+  <NumberedListItem number=1> a</NumberedListItem>
+<IndentGroup>
+  <NumberedListItem number=1> a</NumberedListItem>
+<IndentGroup>
+  <NumberedListItem number=1> a</NumberedListItem>
+<IndentGroup>
+  <NumberedListItem number=1> a</NumberedListItem>
+<NumberedListItem number=2> </NumberedListItem>
+
+</IndentGroup>
+
+</IndentGroup>
+
+</IndentGroup>
+
+</IndentGroup>
+
+</IndentGroup>
+<NumberedListItem number=b> asdlfn</NumberedListItem>
+<IndentGroup>
+  <NumberedListItem number=i> asldknf</NumberedListItem>
+<IndentGroup>
+  <NumberedListItem number=1> asldknf</NumberedListItem>
+<IndentGroup>
+  <NumberedListItem number=1> asdf
+<br />
+alkdnfl</NumberedListItem>
+<IndentGroup>
+  <NumberedListItem number=1> asldknf</NumberedListItem>
+<NumberedListItem number=2> </NumberedListItem>
+
+</IndentGroup>
+
+</IndentGroup>
+
+</IndentGroup>
+
+</IndentGroup>
+
+</IndentGroup>
+<NumberedListItem number=2> asdf</NumberedListItem>
+<NumberedListItem number=3> asdf&ensp;</NumberedListItem>
+<IndentGroup>
+  <NumberedListItem number=a> sadf</NumberedListItem>
+<IndentGroup>
+  <NumberedListItem number=i> asdf a</NumberedListItem>
+<IndentGroup>
+  <NumberedListItem number=1> asdf</NumberedListItem>
+<IndentGroup>
+  <NumberedListItem number=1> asdf</NumberedListItem>
+<IndentGroup>
+  <NumberedListItem number=1> asdf</NumberedListItem>
+
+</IndentGroup>
+
+</IndentGroup>
+<NumberedListItem number=2> asdf</NumberedListItem>
+<IndentGroup>
+  <NumberedListItem number=1> asdf</NumberedListItem>
+<IndentGroup>
+  <NumberedListItem number=1> </NumberedListItem>
+
+</IndentGroup>
+
+</IndentGroup>
+<NumberedListItem number=3> asdf</NumberedListItem>
+<IndentGroup>
+  <NumberedListItem number=1> asdf</NumberedListItem>
+<NumberedListItem number=2> asldknf</NumberedListItem>
+<NumberedListItem number=3> alskdf</NumberedListItem>
+<IndentGroup>
+  <NumberedListItem number=1> asldknf</NumberedListItem>
+<NumberedListItem number=2> asdf</NumberedListItem>
+<NumberedListItem number=3> asdlfkn</NumberedListItem>
+
+</IndentGroup>
+
+</IndentGroup>
+
+</IndentGroup>
+
+</IndentGroup>
+
+</IndentGroup>
+<NumberedListItem number=4> ???</NumberedListItem>
+<IndentGroup>
+  <NumberedListItem number=a> 오..</NumberedListItem>
+
+</IndentGroup>
+<BulletedListItem>점 리스트 1</BulletedListItem>
+<IndentGroup>
+  <BulletedListItem>점</BulletedListItem>
+<IndentGroup>
+  <BulletedListItem>?</BulletedListItem>
+<IndentGroup>
+  <BulletedListItem>개쩌네</BulletedListItem>
+
+</IndentGroup>
+
+</IndentGroup>
+
+</IndentGroup>
+<BulletedListItem>점 리스트 2</BulletedListItem>
+<Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"440fa40c-4778-40c7-94ca-92d4da80e5f7","created_time":"2022-12-30T08:25:00.000Z","last_edited_time":"2022-12-30T08:45:00.000Z"}}>
+hk
+</Paragraph>
+<IndentGroup>
+  <NumberedListItem number=a> asdf</NumberedListItem>
+<NumberedListItem number=b> asdf</NumberedListItem>
+<NumberedListItem number=c> asdf</NumberedListItem>
+<IndentGroup>
+  <NumberedListItem number=i> ???&ensp;</NumberedListItem>
+
+</IndentGroup>
+<NumberedListItem number=d> </NumberedListItem>
+<Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"c7b2739b-dce3-4de6-af9a-0bdfbcd212c3","created_time":"2022-12-30T08:41:00.000Z","last_edited_time":"2022-12-30T08:41:00.000Z"}}>
 
 </Paragraph>
-<ColumnList cols={2}><Column><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"f508f7b8-8d28-460a-8dc8-5e557fcfcad9","created_time":"2022-12-30T04:37:00.000Z","last_edited_time":"2022-12-30T07:52:00.000Z"}}>
-동해물과 백두산이 마르도 닳도록 하느님이 보우하사 우리나
-</Paragraph>
-<ColumnList cols={3}><Column><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"0e418012-809b-4301-b59e-cba2667ae15f","created_time":"2022-12-30T07:52:00.000Z","last_edited_time":"2022-12-30T07:52:00.000Z"}}>
-zzzzzzzzzzzzzz
-</Paragraph>
-</Column><Column><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"e5947d83-7733-4a61-9b6b-5f09ed841f26","created_time":"2022-12-30T07:52:00.000Z","last_edited_time":"2022-12-30T07:52:00.000Z"}}>
-1111111123123123
-</Paragraph>
-</Column><Column><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"2457ce86-315a-49b1-8121-8b27eb2646ce","created_time":"2022-12-30T07:52:00.000Z","last_edited_time":"2022-12-30T07:52:00.000Z"}}>
-gkaldsflnasd;flna;lsdnf;lansdf;lkn
-</Paragraph>
-</Column></ColumnList></Column><Column><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"a1f8b892-166f-4090-8a48-e2304c848085","created_time":"2022-12-30T04:37:00.000Z","last_edited_time":"2022-12-30T07:53:00.000Z"}}>
-colum2
-</Paragraph>
-</Column></ColumnList><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"f20a9fba-7632-4ed4-b1b4-0841fd059c33","created_time":"2022-12-30T05:19:00.000Z","last_edited_time":"2022-12-30T05:28:00.000Z"}}>
-동해물과 백두산이 마르도 닳도록 하느님이 보우하사 우리나라 만세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세요
+
+</IndentGroup>
+<Header level={1}>제목!</Header>
+<Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"82f4ea7d-fe4c-4296-bd04-f6869ae26c92","created_time":"2022-12-30T08:42:00.000Z","last_edited_time":"2022-12-30T08:42:00.000Z"}}>
+
 </Paragraph>
 
   

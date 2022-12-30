@@ -1,0 +1,20 @@
+<script lang="ts">
+	import { notionComponentProvierContext } from '$lib/core/context';
+	import type { BulletedListItemProps } from '$lib/types';
+	import { getColorCss } from '$lib/utils/getColorCss';
+
+	export let props: BulletedListItemProps;
+	const {
+		bulleted_list_item: { text: texts, color }
+	} = props;
+	const componentProvider = notionComponentProvierContext.get();
+</script>
+
+<div class={`notion-block notion-list notion-list-disc ${getColorCss(color)}`}>
+	<li>
+		{#each texts as text}
+			<svelte:component this={componentProvider.resolve(text.type)} props={text} />
+		{/each}
+	</li>
+	<slot />
+</div>

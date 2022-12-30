@@ -10,6 +10,8 @@ import Heading2 from '$lib/components/Heading2.svelte';
 import Heading3 from '$lib/components/Heading3.svelte';
 import Column from '$lib/components/Column.svelte';
 import ColumnList from '$lib/components/ColumnList.svelte';
+import NumberedListItem from '$lib/components/NumberedListItem.svelte';
+import BulletedListItem from '$lib/components/BulletedListItem.svelte';
 
 export class NotionComponentProvider {
 	private map: { [key in string]: ComponentType };
@@ -51,7 +53,9 @@ export const defaultComponents: Record<string, ComponentType> = {
 	pageLayout: PageLayout,
 	theme: Theme,
 	column: Column,
-	column_list: ColumnList
+	column_list: ColumnList,
+	numbered_list_item: NumberedListItem,
+	bulleted_list_item: BulletedListItem
 };
 
 export const defaultProvider = new NotionComponentProvider(defaultComponents, FallBackComponent);

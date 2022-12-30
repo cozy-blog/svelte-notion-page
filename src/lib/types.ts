@@ -90,3 +90,11 @@ export type HeadingProps = {
 
 export type ColumnListProps = { type: 'column_list' } & Block;
 export type ColumnProps = { type: 'column' } & Block;
+export type BulletedListItemProps = {
+	type: 'bulleted_list_item';
+	bulleted_list_item: { color: string; text: TextProps[] };
+};
+export type NumberedListItemProps = {
+	type: 'numbered_list_item';
+	numbered_list_item: { color: string; text: TextProps[] };
+};
