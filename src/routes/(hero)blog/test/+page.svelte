@@ -45,25 +45,19 @@
   <Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"0352d2e4-25bb-4315-914a-35651bf4c862","created_time":"2022-12-30T02:28:00.000Z","last_edited_time":"2022-12-30T02:40:00.000Z"}}>
 
 </Paragraph>
-<ColumnList cols={2}><Column><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"f508f7b8-8d28-460a-8dc8-5e557fcfcad9","created_time":"2022-12-30T04:37:00.000Z","last_edited_time":"2022-12-30T05:15:00.000Z"}}>
-asdfa;sldnf;lansdf;lkansdf;lknasd;flnkal;sdnf;laksndf;alnsdf;lknasdf;lnas;dlfna;slkndf;laksndf;lknasdf;lnasdlfkna;sdnf;lasnkfd
+<ColumnList cols={2}><Column><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"f508f7b8-8d28-460a-8dc8-5e557fcfcad9","created_time":"2022-12-30T04:37:00.000Z","last_edited_time":"2022-12-30T07:52:00.000Z"}}>
+동해물과 백두산이 마르도 닳도록 하느님이 보우하사 우리나
 </Paragraph>
-<IndentGroup>
-  <Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"ce9bccfb-9bd2-4e44-8538-a7460609d100","created_time":"2022-12-30T04:38:00.000Z","last_edited_time":"2022-12-30T04:38:00.000Z"}}>
-asdf
+<ColumnList cols={3}><Column><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"0e418012-809b-4301-b59e-cba2667ae15f","created_time":"2022-12-30T07:52:00.000Z","last_edited_time":"2022-12-30T07:52:00.000Z"}}>
+zzzzzzzzzzzzzz
 </Paragraph>
-<IndentGroup>
-  <Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"977e228e-5e24-4e36-b154-b2c59910cff0","created_time":"2022-12-30T04:38:00.000Z","last_edited_time":"2022-12-30T05:15:00.000Z"}}>
-asdfasldkfbalkbsdflkjbasdfkljbasldkfjbalskdbflaksbdflkjabsdflkjabsdflkbasdlkfbalskjdbflkasbjdflkjabsdflkjbasdfjbasldfkbalsdkbfalksjbdfljkabsdfljkabsdfljbasdlfkjb
+</Column><Column><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"e5947d83-7733-4a61-9b6b-5f09ed841f26","created_time":"2022-12-30T07:52:00.000Z","last_edited_time":"2022-12-30T07:52:00.000Z"}}>
+1111111123123123
 </Paragraph>
-
-</IndentGroup>
-<Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"3b0b2b82-367a-41c1-9321-9652ca89744a","created_time":"2022-12-30T04:38:00.000Z","last_edited_time":"2022-12-30T04:38:00.000Z"}}>
-
+</Column><Column><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"2457ce86-315a-49b1-8121-8b27eb2646ce","created_time":"2022-12-30T07:52:00.000Z","last_edited_time":"2022-12-30T07:52:00.000Z"}}>
+gkaldsflnasd;flna;lsdnf;lansdf;lkn
 </Paragraph>
-
-</IndentGroup>
-</Column><Column><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"a1f8b892-166f-4090-8a48-e2304c848085","created_time":"2022-12-30T04:37:00.000Z","last_edited_time":"2022-12-30T04:38:00.000Z"}}>
+</Column></ColumnList></Column><Column><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"a1f8b892-166f-4090-8a48-e2304c848085","created_time":"2022-12-30T04:37:00.000Z","last_edited_time":"2022-12-30T07:53:00.000Z"}}>
 colum2
 </Paragraph>
 </Column></ColumnList><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"f20a9fba-7632-4ed4-b1b4-0841fd059c33","created_time":"2022-12-30T05:19:00.000Z","last_edited_time":"2022-12-30T05:28:00.000Z"}}>

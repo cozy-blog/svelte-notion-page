@@ -39,7 +39,7 @@ export type ParagraphProps = {
 		color: string;
 		text: TextProps[];
 	};
-};
+} & Block;
 
 export type EquationProps = {
 	type: 'equation';
@@ -56,7 +56,7 @@ export type EquationProps = {
 	};
 	plain_text: string;
 	href?: string | null;
-};
+} & Block;
 
 export type CodeProps = {
 	type: 'code';
@@ -65,25 +65,28 @@ export type CodeProps = {
 		language: string;
 		text: TextProps[];
 	};
-};
+} & Block;
 
 export type Heading_1_Props = {
 	type: 'heading_1';
 	heading_1: HeadingProps;
-};
+} & Block;
 
 export type Heading_2_Props = {
 	type: 'heading_2';
 	heading_2: HeadingProps;
-};
+} & Block;
 
 export type Heading_3_Props = {
 	type: 'heading_3';
 	heading_3: HeadingProps;
-};
+} & Block;
 
 export type HeadingProps = {
 	is_toggleable: boolean;
 	color: string;
 	text: TextProps[];
 };
+
+export type ColumnListProps = { type: 'column_list' } & Block;
+export type ColumnProps = { type: 'column' } & Block;

@@ -11,7 +11,7 @@
 
 <div class={`notion-block ${getColorCss(color)}`}>
 	{#if texts.length !== 0}
-		<p>
+		<p class="notion-paragraph">
 			{#each texts as text}
 				<svelte:component this={componentProvider.resolve(text.type)} props={text} />
 			{/each}
@@ -19,10 +19,3 @@
 	{/if}
 	<slot />
 </div>
-
-<style>
-	p {
-		padding: 3px 2px;
-		white-space: pre-wrap;
-	}
-</style>
