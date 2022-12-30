@@ -9,11 +9,16 @@
 	const componentProvider = notionComponentProvierContext.get();
 </script>
 
-<p class={`${getColorCss(color)} `}>
-	{#each texts as text}
-		<svelte:component this={componentProvider.resolve(text.type)} props={text} />
-	{/each}
-</p>
+<div class={`notion-block ${getColorCss(color)}`}>
+	{#if texts.length !== 0}
+		<p>
+			{#each texts as text}
+				<svelte:component this={componentProvider.resolve(text.type)} props={text} />
+			{/each}
+		</p>
+	{/if}
+	<slot />
+</div>
 
 <style>
 	p {

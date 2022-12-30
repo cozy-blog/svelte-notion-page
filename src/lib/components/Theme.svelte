@@ -5,8 +5,6 @@
 
 <style>
 	:global(.notion) {
-		--notion-font: ui-sans-serif, system-ui, apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica,
-			'Apple Color Emoji', Arial, sans-serif, 'Segoe UI Emoji', 'Segoe UI Symbol';
 		--fg-color: rgb(55, 53, 47);
 		--fg-color-0: rgba(55, 53, 47, 0.09);
 		--fg-color-1: rgba(55, 53, 47, 0.16);
@@ -69,11 +67,16 @@
 		--notion-item-purple: rgba(103, 36, 222, 0.2);
 		--notion-item-gray: rgba(155, 154, 151, 0.4);
 
+		--notion-font: ui-sans-serif, system-ui, apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica,
+			'Apple Color Emoji', Arial, sans-serif, 'Segoe UI Emoji', 'Segoe UI Symbol';
 		--notion-max-width: 720px;
 		--notion-header-height: 45px;
+		--notion-indent: 1.5em;
 	}
 
 	:global(.dark-mode) {
+		--notion-font: ui-sans-serif, system-ui, apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica,
+			'Apple Color Emoji', Arial, sans-serif, 'Segoe UI Emoji', 'Segoe UI Symbol';
 		--fg-color: rgba(255, 255, 255, 0.9);
 		--fg-color-0: var(--fg-color);
 		--fg-color-1: var(--fg-color);

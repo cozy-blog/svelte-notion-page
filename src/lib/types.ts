@@ -66,3 +66,24 @@ export type CodeProps = {
 		text: TextProps[];
 	};
 };
+
+export type Heading_1_Props = {
+	type: 'heading_1';
+	heading_1: HeadingProps;
+};
+
+export type Heading_2_Props = {
+	type: 'heading_2';
+	heading_2: HeadingProps;
+};
+
+export type Heading_3_Props = {
+	type: 'heading_3';
+	heading_3: HeadingProps;
+};
+
+export type HeadingProps = {
+	is_toggleable: boolean;
+	color: string;
+	text: TextProps[];
+};

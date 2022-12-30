@@ -21,14 +21,12 @@
 			{/if}
 			<main
 				class={`
-         notion-page-${true ? 'has' : 'no'}-cover 
-         notion-page-${true ? 'has' : 'no'}-icon 
-         notion-page-${true ? 'has-text' : 'has-image'}-icon 
-         ${true ? 'notion-full-width' : ''}
-         ${false ? 'notion-small-text' : ''}
+         notion-page-${false ? 'has' : 'no'}-cover 
+         notion-page-${false ? 'has' : 'no'}-icon 
+         notion-page-${false ? 'has-text' : 'has-image'}-icon 
        `}
-			 class:notion-full-width={false}
-			 class:notion-small-text={false}
+				class:notion-full-width={true}
+				class:notion-small-text={false}
 			>
 				{#if false}
 					<PageIcon />
