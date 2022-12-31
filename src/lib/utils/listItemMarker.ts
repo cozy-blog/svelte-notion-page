@@ -44,7 +44,7 @@ export const numberedListItemMarker = new ListItemMarker([
 	(step) => alphaCount(step),
 	(step) => romans.romanize(step).toLowerCase()
 ]);
-export const bulletedListItemMarker = new ListItemMarker([() => '-']);
+export const bulletedListItemMarker = new ListItemMarker([() => '●', () => '○', () => '■']);
 
 const charCode = 'a'.charCodeAt(0);
 

@@ -71,7 +71,7 @@
 			'Apple Color Emoji', Arial, sans-serif, 'Segoe UI Emoji', 'Segoe UI Symbol';
 		--notion-max-width: 720px;
 		--notion-header-height: 45px;
-		--notion-indent: 1.5em;
+		--notion-indent: 1.7em;
 	}
 
 	:global(.dark-mode) {

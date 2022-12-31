@@ -10,12 +10,14 @@
 </script>
 
 <div class={`notion-block ${getColorCss(color)}`}>
-	{#if texts.length !== 0}
-		<p class="notion-paragraph">
+	<p class="notion-paragraph">
+		{#if texts.length !== 0}
 			{#each texts as text}
 				<svelte:component this={componentProvider.resolve(text.type)} props={text} />
 			{/each}
-		</p>
-	{/if}
+		{:else}
+			&nbsp
+		{/if}
+	</p>
 	<slot />
 </div>

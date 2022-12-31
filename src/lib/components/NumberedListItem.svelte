@@ -17,7 +17,7 @@
 	class={`notion-block notion-list notion-list-numbered ${getColorCss(color)}`}
 >
 	<li>
-		<span class="notion-list-marker">{marker}</span>
+		<div class="notion-list-marker">{marker}</div>
 		{#each texts as text}
 			<svelte:component this={componentProvider.resolve(text.type)} props={text} />
 		{/each}

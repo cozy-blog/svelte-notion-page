@@ -42,78 +42,58 @@
 
 
 
-  <ColumnList cols={2}><Column><NumberedListItem number=a> 숫자리스트</NumberedListItem>
-<NumberedListItem number=b> </NumberedListItem>
+  <BulletedListItem>불렛1</BulletedListItem>
 <IndentGroup>
-  <NumberedListItem number=i> </NumberedListItem>
-<NumberedListItem number=ii> 숫자리스트 2</NumberedListItem>
-<NumberedListItem number=iii> asd</NumberedListItem>
-<NumberedListItem number=iv> asdf</NumberedListItem>
+  <BulletedListItem>불렛2</BulletedListItem>
 <IndentGroup>
-  <NumberedListItem number=1> </NumberedListItem>
-<NumberedListItem number=2> 1</NumberedListItem>
-<NumberedListItem number=3> 크흠</NumberedListItem>
+  <BulletedListItem>불렛3</BulletedListItem>
 <IndentGroup>
-  <NumberedListItem number=1> 2</NumberedListItem>
-
-</IndentGroup>
-<NumberedListItem number=4> 3</NumberedListItem>
-<NumberedListItem number=5> 1</NumberedListItem>
-<NumberedListItem number=6> 2</NumberedListItem>
-<NumberedListItem number=7> 3</NumberedListItem>
-<NumberedListItem number=8> 1</NumberedListItem>
-<NumberedListItem number=9> 2</NumberedListItem>
-<NumberedListItem number=10> 1</NumberedListItem>
-<NumberedListItem number=11> 2</NumberedListItem>
-<NumberedListItem number=12> 3</NumberedListItem>
-<NumberedListItem number=13> 1</NumberedListItem>
-<NumberedListItem number=14> 5</NumberedListItem>
-<NumberedListItem number=15> 1</NumberedListItem>
-<NumberedListItem number=16> a</NumberedListItem>
-<NumberedListItem number=17> 1</NumberedListItem>
-<NumberedListItem number=18> 2</NumberedListItem>
-<NumberedListItem number=19> 3</NumberedListItem>
-<NumberedListItem number=20> 1</NumberedListItem>
-<NumberedListItem number=21> a</NumberedListItem>
-<NumberedListItem number=22> 1</NumberedListItem>
-<NumberedListItem number=23> 3</NumberedListItem>
-<NumberedListItem number=24> 1</NumberedListItem>
-<NumberedListItem number=25> 2</NumberedListItem>
-<NumberedListItem number=26> 3</NumberedListItem>
-<NumberedListItem number=27> a</NumberedListItem>
-<NumberedListItem number=28> 1</NumberedListItem>
-<NumberedListItem number=29> 2</NumberedListItem>
-<NumberedListItem number=30> 3</NumberedListItem>
-<NumberedListItem number=31> 1</NumberedListItem>
-<NumberedListItem number=32> </NumberedListItem>
+  <BulletedListItem>불렛4</BulletedListItem>
 <IndentGroup>
-  <NumberedListItem number=1> hi</NumberedListItem>
-
-</IndentGroup>
-
-</IndentGroup>
-<BulletedListItem>bullet1</BulletedListItem>
-<IndentGroup>
-  <BulletedListItem>bullet2</BulletedListItem>
-<IndentGroup>
-  <BulletedListItem>bullet3</BulletedListItem>
+  <BulletedListItem>?</BulletedListItem>
 
 </IndentGroup>
 
 </IndentGroup>
 
 </IndentGroup>
-</Column><Column><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"d2be7c4c-c74b-4d85-bbd3-6cd413eb5594","created_time":"2022-12-30T09:13:00.000Z","last_edited_time":"2022-12-31T06:34:00.000Z"}}>
-zz
+
+</IndentGroup>
+<Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"b814803a-1238-48a7-b24f-d1c76baedfc8","created_time":"2022-12-31T07:52:00.000Z","last_edited_time":"2022-12-31T07:56:00.000Z"}}>
+하이
 </Paragraph>
-<Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"d76d9810-a0cb-4d7c-9a62-2e55dac1d821","created_time":"2022-12-31T03:33:00.000Z","last_edited_time":"2022-12-31T03:33:00.000Z"}}>
+<IndentGroup>
+  <Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"a0722f11-e39e-43e3-90dc-6b6420d1cfb0","created_time":"2022-12-31T07:56:00.000Z","last_edited_time":"2022-12-31T07:56:00.000Z"}}>
+하이
+</Paragraph>
+<IndentGroup>
+  <Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"a379decd-b79c-4249-abde-f5be4c198026","created_time":"2022-12-31T07:56:00.000Z","last_edited_time":"2022-12-31T07:56:00.000Z"}}>
+하이
+</Paragraph>
+
+</IndentGroup>
+
+</IndentGroup>
+<Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"5775eb07-ac2c-4abd-b12d-46ab0eedbad1","created_time":"2022-12-31T07:56:00.000Z","last_edited_time":"2022-12-31T07:56:00.000Z"}}>
 
 </Paragraph>
-</Column></ColumnList><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"82f4ea7d-fe4c-4296-bd04-f6869ae26c92","created_time":"2022-12-30T08:42:00.000Z","last_edited_time":"2022-12-30T09:22:00.000Z"}}>
-안녕
+<BulletedListItem>불렛</BulletedListItem>
+<NumberedListItem number=1> 숫자</NumberedListItem>
+<IndentGroup>
+  <NumberedListItem number=a> 흠</NumberedListItem>
+<IndentGroup>
+  <NumberedListItem number=i> 큼</NumberedListItem>
+<NumberedListItem number=ii> 큼</NumberedListItem>
+<IndentGroup>
+  <NumberedListItem number=1> gkdl</NumberedListItem>
+<Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"8ea3c748-cf56-479f-ae6e-96cc2b3c596b","created_time":"2022-12-31T08:12:00.000Z","last_edited_time":"2022-12-31T08:12:00.000Z"}}>
+
 </Paragraph>
-<Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"2b6e603d-789d-4476-aeda-8d8cc94e1be3","created_time":"2022-12-30T09:22:00.000Z","last_edited_time":"2022-12-30T09:22:00.000Z"}}>
-안녕
-</Paragraph>
+
+</IndentGroup>
+
+</IndentGroup>
+
+</IndentGroup>
 
   
