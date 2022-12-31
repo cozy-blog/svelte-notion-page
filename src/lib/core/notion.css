@@ -1093,14 +1093,16 @@ svg.notion-page-icon {
 }
 
 .notion-toggle {
-	padding: 3px 2px;
+	--notion-toggle-padding-left: 9px;
+	padding-left: var(--notion-toggle-padding-left);
 }
-.notion-toggle > summary {
-	cursor: pointer;
-	outline: none;
+
+.notion-toggle > summary > p {
+	display: inline-flex;
 }
-.notion-toggle > div {
-	margin-left: 1.1em;
+
+.notion-toggle > .notion-block {
+	margin-left: calc(var(--notion-indent) - var(--notion-toggle-padding-left));
 }
 
 .notion-collection {
@@ -1728,7 +1730,7 @@ svg.notion-page-icon {
 
 .notion-to-do-checked .notion-to-do-content {
 	text-decoration: line-through;
-	opacity: 0.375;
+	opacity: 0.7;
 }
 
 .notion-google-drive {

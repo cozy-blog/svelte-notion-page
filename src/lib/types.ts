@@ -102,10 +102,18 @@ export type NumberedListItemProps = {
 } & ContextedBlock;
 
 export type TodoProps = {
-	type: 'to_do',
+	type: 'to_do';
 	to_do: {
 		color: string;
 		checked: boolean;
 		text: TextProps[];
-	}
+	};
+} & ContextedBlock;
+
+export type ToggleProps = {
+	type: 'toggle';
+	toggle: {
+		color: string;
+		text: TextProps[];
+	};
 } & ContextedBlock;
