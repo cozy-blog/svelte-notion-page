@@ -13,17 +13,20 @@ import ColumnList from '$lib/components/ColumnList.svelte';
 import NumberedListItem from '$lib/components/NumberedListItem.svelte';
 import BulletedListItem from '$lib/components/BulletedListItem.svelte';
 
+export type NotionComponentProviderOptions = {
+	fallBackComponent?: ComponentType;
+};
+
 export class NotionComponentProvider {
 	private map: { [key in string]: ComponentType };
-
 	public fallBackComponent: ComponentType;
-	constructor(map: { [key: string]: ComponentType }, fallbackComponent: ComponentType) {
-		this.map = { ...map };
-		this.fallBackComponent = fallbackComponent;
-	}
 
-	replaceFallbackCompoent(fallback: ComponentType) {
-		this.fallBackComponent = fallback;
+	constructor(
+		map: { [key: string]: ComponentType },
+		{ fallBackComponent = FallBackComponent }: NotionComponentProviderOptions = {}
+	) {
+		this.map = { ...defaultComponents, ...map };
+		this.fallBackComponent = fallBackComponent;
 	}
 
 	register(key: string, component: ComponentType) {
@@ -58,4 +61,4 @@ export const defaultComponents: Record<string, ComponentType> = {
 	bulleted_list_item: BulletedListItem
 };
 
-export const defaultProvider = new NotionComponentProvider(defaultComponents, FallBackComponent);
+export const defaultProvider = new NotionComponentProvider({});

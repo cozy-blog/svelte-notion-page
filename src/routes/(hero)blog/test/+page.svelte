@@ -42,147 +42,78 @@
 
 
 
-  <NumberedListItem number=1> 숫자 리스트1</NumberedListItem>
-<BulletedListItem>점 리스트</BulletedListItem>
-<NumberedListItem number=1> 숫자 리스트2</NumberedListItem>
-<Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"4e5c8275-4c0e-40a9-9bad-1c7b67017b1b","created_time":"2022-12-30T08:55:00.000Z","last_edited_time":"2022-12-30T08:57:00.000Z"}}>
-일반 텍스트
-</Paragraph>
+  <ColumnList cols={2}><Column><NumberedListItem number=a> 숫자리스트</NumberedListItem>
+<NumberedListItem number=b> </NumberedListItem>
 <IndentGroup>
-  <Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"cb890248-accf-491c-a07e-b4bfc2ea6332","created_time":"2022-12-30T08:57:00.000Z","last_edited_time":"2022-12-30T08:57:00.000Z"}}>
-일반 텍스트2
-</Paragraph>
-
-</IndentGroup>
-<NumberedListItem number=1> asdlkfn</NumberedListItem>
-<IndentGroup>
-  <NumberedListItem number=a> as</NumberedListItem>
-<IndentGroup>
-  <NumberedListItem number=i> a</NumberedListItem>
-<IndentGroup>
-  <NumberedListItem number=1> a</NumberedListItem>
-<IndentGroup>
-  <NumberedListItem number=1> a</NumberedListItem>
-<IndentGroup>
-  <NumberedListItem number=1> a</NumberedListItem>
-<IndentGroup>
-  <NumberedListItem number=1> a</NumberedListItem>
-<NumberedListItem number=2> </NumberedListItem>
-
-</IndentGroup>
-
-</IndentGroup>
-
-</IndentGroup>
-
-</IndentGroup>
-
-</IndentGroup>
-<NumberedListItem number=b> asdlfn</NumberedListItem>
-<IndentGroup>
-  <NumberedListItem number=i> asldknf</NumberedListItem>
-<IndentGroup>
-  <NumberedListItem number=1> asldknf</NumberedListItem>
-<IndentGroup>
-  <NumberedListItem number=1> asdf
-<br />
-alkdnfl</NumberedListItem>
-<IndentGroup>
-  <NumberedListItem number=1> asldknf</NumberedListItem>
-<NumberedListItem number=2> </NumberedListItem>
-
-</IndentGroup>
-
-</IndentGroup>
-
-</IndentGroup>
-
-</IndentGroup>
-
-</IndentGroup>
-<NumberedListItem number=2> asdf</NumberedListItem>
-<NumberedListItem number=3> asdf&ensp;</NumberedListItem>
-<IndentGroup>
-  <NumberedListItem number=a> sadf</NumberedListItem>
-<IndentGroup>
-  <NumberedListItem number=i> asdf a</NumberedListItem>
-<IndentGroup>
-  <NumberedListItem number=1> asdf</NumberedListItem>
-<IndentGroup>
-  <NumberedListItem number=1> asdf</NumberedListItem>
-<IndentGroup>
-  <NumberedListItem number=1> asdf</NumberedListItem>
-
-</IndentGroup>
-
-</IndentGroup>
-<NumberedListItem number=2> asdf</NumberedListItem>
-<IndentGroup>
-  <NumberedListItem number=1> asdf</NumberedListItem>
+  <NumberedListItem number=i> </NumberedListItem>
+<NumberedListItem number=ii> 숫자리스트 2</NumberedListItem>
+<NumberedListItem number=iii> asd</NumberedListItem>
+<NumberedListItem number=iv> asdf</NumberedListItem>
 <IndentGroup>
   <NumberedListItem number=1> </NumberedListItem>
-
-</IndentGroup>
-
-</IndentGroup>
-<NumberedListItem number=3> asdf</NumberedListItem>
+<NumberedListItem number=2> 1</NumberedListItem>
+<NumberedListItem number=3> 크흠</NumberedListItem>
 <IndentGroup>
-  <NumberedListItem number=1> asdf</NumberedListItem>
-<NumberedListItem number=2> asldknf</NumberedListItem>
-<NumberedListItem number=3> alskdf</NumberedListItem>
+  <NumberedListItem number=1> 2</NumberedListItem>
+
+</IndentGroup>
+<NumberedListItem number=4> 3</NumberedListItem>
+<NumberedListItem number=5> 1</NumberedListItem>
+<NumberedListItem number=6> 2</NumberedListItem>
+<NumberedListItem number=7> 3</NumberedListItem>
+<NumberedListItem number=8> 1</NumberedListItem>
+<NumberedListItem number=9> 2</NumberedListItem>
+<NumberedListItem number=10> 1</NumberedListItem>
+<NumberedListItem number=11> 2</NumberedListItem>
+<NumberedListItem number=12> 3</NumberedListItem>
+<NumberedListItem number=13> 1</NumberedListItem>
+<NumberedListItem number=14> 5</NumberedListItem>
+<NumberedListItem number=15> 1</NumberedListItem>
+<NumberedListItem number=16> a</NumberedListItem>
+<NumberedListItem number=17> 1</NumberedListItem>
+<NumberedListItem number=18> 2</NumberedListItem>
+<NumberedListItem number=19> 3</NumberedListItem>
+<NumberedListItem number=20> 1</NumberedListItem>
+<NumberedListItem number=21> a</NumberedListItem>
+<NumberedListItem number=22> 1</NumberedListItem>
+<NumberedListItem number=23> 3</NumberedListItem>
+<NumberedListItem number=24> 1</NumberedListItem>
+<NumberedListItem number=25> 2</NumberedListItem>
+<NumberedListItem number=26> 3</NumberedListItem>
+<NumberedListItem number=27> a</NumberedListItem>
+<NumberedListItem number=28> 1</NumberedListItem>
+<NumberedListItem number=29> 2</NumberedListItem>
+<NumberedListItem number=30> 3</NumberedListItem>
+<NumberedListItem number=31> 1</NumberedListItem>
+<NumberedListItem number=32> </NumberedListItem>
 <IndentGroup>
-  <NumberedListItem number=1> asldknf</NumberedListItem>
-<NumberedListItem number=2> asdf</NumberedListItem>
-<NumberedListItem number=3> asdlfkn</NumberedListItem>
+  <NumberedListItem number=1> hi</NumberedListItem>
 
 </IndentGroup>
 
 </IndentGroup>
-
-</IndentGroup>
-
-</IndentGroup>
-
-</IndentGroup>
-<NumberedListItem number=4> ???</NumberedListItem>
+<BulletedListItem>bullet1</BulletedListItem>
 <IndentGroup>
-  <NumberedListItem number=a> 오..</NumberedListItem>
-
-</IndentGroup>
-<BulletedListItem>점 리스트 1</BulletedListItem>
+  <BulletedListItem>bullet2</BulletedListItem>
 <IndentGroup>
-  <BulletedListItem>점</BulletedListItem>
-<IndentGroup>
-  <BulletedListItem>?</BulletedListItem>
-<IndentGroup>
-  <BulletedListItem>개쩌네</BulletedListItem>
+  <BulletedListItem>bullet3</BulletedListItem>
 
 </IndentGroup>
 
 </IndentGroup>
 
 </IndentGroup>
-<BulletedListItem>점 리스트 2</BulletedListItem>
-<Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"440fa40c-4778-40c7-94ca-92d4da80e5f7","created_time":"2022-12-30T08:25:00.000Z","last_edited_time":"2022-12-30T08:45:00.000Z"}}>
-hk
+</Column><Column><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"d2be7c4c-c74b-4d85-bbd3-6cd413eb5594","created_time":"2022-12-30T09:13:00.000Z","last_edited_time":"2022-12-31T06:34:00.000Z"}}>
+zz
 </Paragraph>
-<IndentGroup>
-  <NumberedListItem number=a> asdf</NumberedListItem>
-<NumberedListItem number=b> asdf</NumberedListItem>
-<NumberedListItem number=c> asdf</NumberedListItem>
-<IndentGroup>
-  <NumberedListItem number=i> ???&ensp;</NumberedListItem>
-
-</IndentGroup>
-<NumberedListItem number=d> </NumberedListItem>
-<Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"c7b2739b-dce3-4de6-af9a-0bdfbcd212c3","created_time":"2022-12-30T08:41:00.000Z","last_edited_time":"2022-12-30T08:41:00.000Z"}}>
+<Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"d76d9810-a0cb-4d7c-9a62-2e55dac1d821","created_time":"2022-12-31T03:33:00.000Z","last_edited_time":"2022-12-31T03:33:00.000Z"}}>
 
 </Paragraph>
-
-</IndentGroup>
-<Header level={1}>제목!</Header>
-<Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"82f4ea7d-fe4c-4296-bd04-f6869ae26c92","created_time":"2022-12-30T08:42:00.000Z","last_edited_time":"2022-12-30T08:42:00.000Z"}}>
-
+</Column></ColumnList><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"82f4ea7d-fe4c-4296-bd04-f6869ae26c92","created_time":"2022-12-30T08:42:00.000Z","last_edited_time":"2022-12-30T09:22:00.000Z"}}>
+안녕
+</Paragraph>
+<Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"2b6e603d-789d-4476-aeda-8d8cc94e1be3","created_time":"2022-12-30T09:22:00.000Z","last_edited_time":"2022-12-30T09:22:00.000Z"}}>
+안녕
 </Paragraph>
 
   

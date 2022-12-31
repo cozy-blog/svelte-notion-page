@@ -5,17 +5,18 @@ import type {
 } from '@notionhq/client/build/src/api-endpoints';
 
 export type Page = GetPageResponse;
-export type Block = PartialBlockObjectResponse & BlockObjectResponse & { blocks?: Block[] };
+type _Block = PartialBlockObjectResponse & BlockObjectResponse;
+export type Block = _Block & { blocks?: Block[] };
+export type ContextedBlock = _Block & BlockContext & { blocks?: ContextedBlock[] };
 export type Content = Page & { blocks: Block[] };
-export type NotionThemeStyle = Record<string, string>;
-export type ComponentName =
-	| 'pageLayout'
-	| 'cover'
-	| 'header'
-	| 'pageIcon'
-	| 'paragraph'
-	| 'text'
-	| 'title';
+
+export type BlockContext = {
+	context: {
+		previous?: ContextedBlock | null;
+		parent?: ContextedBlock | null;
+	};
+};
+
 export type TextProps = {
 	type: 'text';
 	text: {
@@ -39,7 +40,7 @@ export type ParagraphProps = {
 		color: string;
 		text: TextProps[];
 	};
-} & Block;
+} & ContextedBlock;
 
 export type EquationProps = {
 	type: 'equation';
@@ -56,7 +57,7 @@ export type EquationProps = {
 	};
 	plain_text: string;
 	href?: string | null;
-} & Block;
+} & ContextedBlock;
 
 export type CodeProps = {
 	type: 'code';
@@ -65,22 +66,22 @@ export type CodeProps = {
 		language: string;
 		text: TextProps[];
 	};
-} & Block;
+} & ContextedBlock;
 
 export type Heading_1_Props = {
 	type: 'heading_1';
 	heading_1: HeadingProps;
-} & Block;
+} & ContextedBlock;
 
 export type Heading_2_Props = {
 	type: 'heading_2';
 	heading_2: HeadingProps;
-} & Block;
+} & ContextedBlock;
 
 export type Heading_3_Props = {
 	type: 'heading_3';
 	heading_3: HeadingProps;
-} & Block;
+} & ContextedBlock;
 
 export type HeadingProps = {
 	is_toggleable: boolean;
@@ -93,8 +94,9 @@ export type ColumnProps = { type: 'column' } & Block;
 export type BulletedListItemProps = {
 	type: 'bulleted_list_item';
 	bulleted_list_item: { color: string; text: TextProps[] };
-};
+} & ContextedBlock;
+
 export type NumberedListItemProps = {
 	type: 'numbered_list_item';
 	numbered_list_item: { color: string; text: TextProps[] };
-};
+} & ContextedBlock;

@@ -81,9 +81,8 @@
 
 .notion-block {
 	display: flex;
-	padding: 0px;
-	margin: 0px;
 	flex-direction: column;
+  margin-bottom: 2px;
 }
 
 .notion-block > .notion-block {
@@ -111,7 +110,6 @@
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	gap: 2px;
 }
 
 .notion-aside {
@@ -711,21 +709,26 @@ svg.notion-page-icon {
 	text-decoration: underline;
 }
 
-.notion-list {
-	margin: 0;
-	margin-block-start: 0.6em;
-	margin-block-end: 0.6em;
+.notion-list-marker {
+	display: inline-block;
+	margin-right: 0.5em
 }
 
-.notion-list-disc {
-	list-style-type: disc;
-	margin-top: 0;
-	margin-bottom: 0;
+ .notion-list-numbered[data-notion-marker-format="romans"] > li > .notion-list-marker {
+	width: 3em; 
+	margin-right: 0em;
+	text-align: center;
 }
-.notion-list-numbered {
-	list-style-type: decimal;
-	margin-top: 0;
-	margin-bottom: 0;
+.notion-list-numbered[data-notion-marker-format="romans"] > .notion-block {
+	margin-left: 3.7em;
+	
+}
+.notion-list-numbered .notion-list-marker::after {
+	content: '.';
+}
+
+.notion-list-bulleted .notion-list-marker::after {
+	content: '';
 }
 
 .notion-list-disc li {
@@ -737,9 +740,10 @@ svg.notion-page-icon {
 }
 
 .notion-list li {
-	padding-top: 6px;
-	padding-bottom: 6px;
+	padding-top: 4px;
+	padding-bottom: 4px;
 	white-space: pre-wrap;
+	list-style-type: none;
 }
 
 .notion-asset-wrapper {
