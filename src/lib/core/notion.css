@@ -720,7 +720,6 @@ svg.notion-page-icon {
 .notion-list-numbered[data-notion-marker-format='romans'] > li > .notion-list-marker {
 	width: 3em;
 	margin-right: 0em;
-	text-align: center;
 }
 .notion-list-numbered[data-notion-marker-format='romans'] > .notion-block {
 	margin-left: 2.9em;
@@ -737,13 +736,11 @@ svg.notion-page-icon {
 	font-size: 1px;
 	width: 26px;
 	transform: scale(0.8);
-	text-align: center;
 	padding: 4px 0px;
 }
 
 .notion-list-numbered > li > .notion-list-marker {
 	width: 26px;
-	text-align: center;
 }
 
 .notion-list-marker {
@@ -1390,7 +1387,11 @@ svg.notion-page-icon {
 .notion-property-checkbox-unchecked {
 	width: 16px;
 	height: 16px;
-	border: 1.3px solid var(--fg-color);
+	/* border: 2px solid var(--fg-color); */
+}
+
+.notion-property-checkbox-unchecked svg {
+	fill: var(--fg-color);
 }
 
 .notion-gallery {
@@ -1718,36 +1719,16 @@ svg.notion-page-icon {
 }
 
 .notion-to-do {
-	width: 100%;
 	display: flex;
-	flex-direction: column;
 }
 
-.notion-to-do-item {
-	width: 100%;
-	display: flex;
-	align-items: center;
-	width: 100%;
-	padding-left: 2px;
-	min-height: calc(1.5em + 3px + 3px);
+.notion-to-do .notion-property-checkbox {
+	margin: auto 6px;
 }
 
-.notion-to-do-children {
-	padding-left: 1.5em;
-}
-
-.notion-to-do-checked .notion-to-do-item {
+.notion-to-do-checked .notion-to-do-content {
 	text-decoration: line-through;
 	opacity: 0.375;
-}
-
-.notion-to-do-body {
-	white-space: pre-wrap;
-	word-break: break-word;
-}
-
-.notion-to-do-item .notion-property-checkbox {
-	margin-right: 8px;
 }
 
 .notion-google-drive {

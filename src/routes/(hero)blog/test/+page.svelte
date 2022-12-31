@@ -42,60 +42,21 @@
 
 
 
-  <BulletedListItem>불렛1</BulletedListItem>
+  <TodoItem checked={true}>할 일 있습니다</TodoItem>
 <IndentGroup>
-  <BulletedListItem>불렛2</BulletedListItem>
-<IndentGroup>
-  <BulletedListItem>불렛3</BulletedListItem>
-<IndentGroup>
-  <BulletedListItem>불렛4</BulletedListItem>
-<IndentGroup>
-  <BulletedListItem>?</BulletedListItem>
+  <TodoItem checked={true}>뎁스 추가</TodoItem>
+<TodoItem checked={false}>체크 여부는?</TodoItem>
 
 </IndentGroup>
-
-</IndentGroup>
-
-</IndentGroup>
-
-</IndentGroup>
-<Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"b814803a-1238-48a7-b24f-d1c76baedfc8","created_time":"2022-12-31T07:52:00.000Z","last_edited_time":"2022-12-31T07:56:00.000Z"}}>
+<Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"9d9bb2f7-c222-42ee-8e97-ba6e9135a998","created_time":"2022-12-31T14:27:00.000Z","last_edited_time":"2022-12-31T15:40:00.000Z"}}>
 하이
 </Paragraph>
 <IndentGroup>
-  <Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"a0722f11-e39e-43e3-90dc-6b6420d1cfb0","created_time":"2022-12-31T07:56:00.000Z","last_edited_time":"2022-12-31T07:56:00.000Z"}}>
-하이
-</Paragraph>
-<IndentGroup>
-  <Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"a379decd-b79c-4249-abde-f5be4c198026","created_time":"2022-12-31T07:56:00.000Z","last_edited_time":"2022-12-31T07:56:00.000Z"}}>
-하이
+  <Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"4899ca16-d429-41ea-adf2-74d4035f0414","created_time":"2022-12-31T15:40:00.000Z","last_edited_time":"2022-12-31T15:40:00.000Z"}}>
+??
 </Paragraph>
 
 </IndentGroup>
-
-</IndentGroup>
-<Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"5775eb07-ac2c-4abd-b12d-46ab0eedbad1","created_time":"2022-12-31T07:56:00.000Z","last_edited_time":"2022-12-31T07:56:00.000Z"}}>
-
-</Paragraph>
-<BulletedListItem>불렛</BulletedListItem>
-<NumberedListItem number=1> 숫자</NumberedListItem>
-<IndentGroup>
-  <NumberedListItem number=a> 흠
-<br />
-sadf</NumberedListItem>
-<IndentGroup>
-  <NumberedListItem number=i> 큼</NumberedListItem>
-<NumberedListItem number=ii> 큼</NumberedListItem>
-<IndentGroup>
-  <NumberedListItem number=1> gkdl</NumberedListItem>
-<Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"8ea3c748-cf56-479f-ae6e-96cc2b3c596b","created_time":"2022-12-31T08:12:00.000Z","last_edited_time":"2022-12-31T08:12:00.000Z"}}>
-
-</Paragraph>
-
-</IndentGroup>
-
-</IndentGroup>
-
-</IndentGroup>
+<TodoItem checked={false}></TodoItem>
 
   

@@ -12,6 +12,8 @@ import Column from '$lib/components/Column.svelte';
 import ColumnList from '$lib/components/ColumnList.svelte';
 import NumberedListItem from '$lib/components/NumberedListItem.svelte';
 import BulletedListItem from '$lib/components/BulletedListItem.svelte';
+import Todo from '$lib/components/Todo.svelte';
+import CheckBox from '$lib/components/CheckBox.svelte';
 
 export type NotionComponentProviderOptions = {
 	fallBackComponent?: ComponentType;
@@ -58,7 +60,9 @@ export const defaultComponents: Record<string, ComponentType> = {
 	column: Column,
 	column_list: ColumnList,
 	numbered_list_item: NumberedListItem,
-	bulleted_list_item: BulletedListItem
+	bulleted_list_item: BulletedListItem,
+	to_do: Todo,
+	checkbox: CheckBox
 };
 
 export const defaultProvider = new NotionComponentProvider({});
