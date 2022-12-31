@@ -80,7 +80,9 @@
 <BulletedListItem>불렛</BulletedListItem>
 <NumberedListItem number=1> 숫자</NumberedListItem>
 <IndentGroup>
-  <NumberedListItem number=a> 흠</NumberedListItem>
+  <NumberedListItem number=a> 흠
+<br />
+sadf</NumberedListItem>
 <IndentGroup>
   <NumberedListItem number=i> 큼</NumberedListItem>
 <NumberedListItem number=ii> 큼</NumberedListItem>

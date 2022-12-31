@@ -738,6 +738,7 @@ svg.notion-page-icon {
 	width: 26px;
 	transform: scale(0.8);
 	text-align: center;
+	padding: 4px 0px;
 }
 
 .notion-list-numbered > li > .notion-list-marker {
@@ -745,13 +746,18 @@ svg.notion-page-icon {
 	text-align: center;
 }
 
+.notion-list-marker {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: fit-content;
+}
 
 .notion-list > li {
 	padding-top: 4px;
 	padding-bottom: 4px;
 	list-style-type: none;
 	display: flex;
-	align-items: center;
 }
 
 .notion-asset-wrapper {
