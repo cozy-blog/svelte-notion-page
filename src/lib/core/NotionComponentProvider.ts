@@ -21,6 +21,7 @@ import Equation from '$lib/components/Equation.svelte';
 import Code from '$lib/components/Code.svelte';
 import Image from '$lib/components/Image.svelte';
 import Video from '$lib/components/Video.svelte';
+import Divider from '$lib/components/Divider.svelte';
 
 export type NotionComponentProviderOptions = {
 	fallBackComponent?: ComponentType;
@@ -75,6 +76,7 @@ export const defaultComponents: Record<string, ComponentType> = {
 	code: Code,
 	image: Image,
 	video: Video,
+	divider: Divider,
 
 	// low level custom. 넣을까 말까 고민중.., 
 	checkbox: CheckBox,

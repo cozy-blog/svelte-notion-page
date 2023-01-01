@@ -22,8 +22,8 @@ export type TextProps = {
 	text: {
 		content: string;
 		link?: {
-			url: string
-		}
+			url: string;
+		};
 	};
 	annotations: {
 		bold: boolean;
@@ -162,5 +162,12 @@ export type VideoProps = {
 		external?: {
 			url: string;
 		};
+	};
+} & ContextedBlock;
+
+export type DividerProps = {
+	type: 'divider';
+	divider: {
+		//
 	};
 } & ContextedBlock;
