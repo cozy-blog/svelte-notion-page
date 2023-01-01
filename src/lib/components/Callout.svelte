@@ -7,9 +7,12 @@
 		callout: { color, text: texts, icon }
 	} = props;
 	const componentProvider = notionComponentProvierContext.get();
+
 </script>
 
-<div class={`notion-block notion-callout ${getColorCss(color)}`}>
+<div
+ class:notion-callout-outline={!getColorCss(color).includes('background')} 
+ class={`notion-block notion-callout ${getColorCss(color)}`}>
 	<div class="notion-callout-content">
 		<div class="notion-page-icon-inline">
 			{#if icon.type === 'emoji' && icon.emoji != null}

@@ -427,7 +427,7 @@
 }
 
 .notion-h3 {
-	font-size: 1.25em; 
+	font-size: 1.25em;
 	margin-top: 1em;
 }
 
@@ -646,7 +646,7 @@ svg.notion-page-icon {
 	font-size: 14px;
 }
 
-.notion-quote {
+.notion-quote-content {
 	display: block;
 	word-break: break-word;
 	border-left: 3px solid currentcolor;
@@ -1087,7 +1087,9 @@ svg.notion-page-icon {
 	padding: 16px 16px 16px 12px;
 	margin-top: 6px;
 	border-radius: 3px;
-
+}
+.notion-callout-outline {
+	border: 1px solid var(--fg-color-0);
 }
 
 .notion-callout-content {

@@ -9,8 +9,8 @@
 	const componentProvider = notionComponentProvierContext.get();
 </script>
 
-<div class={`notion-block ${getColorCss(color)}`}>
-	<p class="notion-quote">
+<div class={`notion-block notion-quote ${getColorCss(color)}`}>
+	<p class="notion-quote-content">
 		{#if texts.length !== 0}
 			{#each texts as text}
 				<svelte:component this={componentProvider.resolve(text.type)} props={text} />

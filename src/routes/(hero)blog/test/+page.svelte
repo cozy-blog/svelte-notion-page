@@ -42,11 +42,11 @@
 
 
 
-  <Callout emoji="⚠️">이것은 인용입니다
-<br />
+  <Equation block={true} katexString="이것은 인용입니다
 ???? 
-<br />
-인용문은 글자 색을 못바꾸나</Callout><Callout emoji="undefined">asdf<span slot="children"><Quote>함ㅇ림ㄴㅇ리ㅣ</Quote></span></Callout><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"0383b0f8-57ff-4a2d-a570-72ea7324c363","created_time":"2023-01-01T04:52:00.000Z","last_edited_time":"2023-01-01T04:52:00.000Z"}}>
+인용문은 글자 색을 못바꾸나
+??
+f(n) = x^2+ss" /><Callout emoji="undefined">asdf<span slot="children"><Quote>함ㅇ림ㄴㅇ리ㅣ</Quote></span></Callout><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"0383b0f8-57ff-4a2d-a570-72ea7324c363","created_time":"2023-01-01T04:52:00.000Z","last_edited_time":"2023-01-01T04:52:00.000Z"}}>
 hi
 </Paragraph>
 <IndentGroup>

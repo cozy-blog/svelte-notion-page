@@ -2,7 +2,7 @@ const json = {
   "object": "page",
   "id": "591d29d3-cb19-4273-bb3a-82644ed4faa4",
   "created_time": "2022-12-28T23:30:00.000Z",
-  "last_edited_time": "2023-01-01T04:54:00.000Z",
+  "last_edited_time": "2023-01-01T05:33:00.000Z",
   "created_by": {
     "object": "user",
     "id": "95fc0174-8fc6-4114-8e45-f67eacd99f07"
@@ -105,7 +105,7 @@ const json = {
         "page_id": "591d29d3-cb19-4273-bb3a-82644ed4faa4"
       },
       "created_time": "2023-01-01T04:23:00.000Z",
-      "last_edited_time": "2023-01-01T04:52:00.000Z",
+      "last_edited_time": "2023-01-01T05:33:00.000Z",
       "created_by": {
         "object": "user",
         "id": "95fc0174-8fc6-4114-8e45-f67eacd99f07"
@@ -116,32 +116,9 @@ const json = {
       },
       "has_children": false,
       "archived": false,
-      "type": "callout",
-      "callout": {
-        "icon": {
-          "type": "emoji",
-          "emoji": "⚠️"
-        },
-        "color": "yellow_background",
-        "text": [
-          {
-            "type": "text",
-            "text": {
-              "content": "이것은 인용입니다\n???? \n인용문은 글자 색을 못바꾸나",
-              "link": null
-            },
-            "annotations": {
-              "bold": false,
-              "italic": false,
-              "strikethrough": false,
-              "underline": false,
-              "code": false,
-              "color": "default"
-            },
-            "plain_text": "이것은 인용입니다\n???? \n인용문은 글자 색을 못바꾸나",
-            "href": null
-          }
-        ]
+      "type": "equation",
+      "equation": {
+        "expression": "이것은 인용입니다\n???? \n인용문은 글자 색을 못바꾸나\n??\nf(n) = x^2+ss"
       }
     },
     {
@@ -152,7 +129,7 @@ const json = {
         "page_id": "591d29d3-cb19-4273-bb3a-82644ed4faa4"
       },
       "created_time": "2023-01-01T04:23:00.000Z",
-      "last_edited_time": "2023-01-01T04:54:00.000Z",
+      "last_edited_time": "2023-01-01T05:32:00.000Z",
       "created_by": {
         "object": "user",
         "id": "95fc0174-8fc6-4114-8e45-f67eacd99f07"
@@ -168,10 +145,10 @@ const json = {
         "icon": {
           "type": "file",
           "file": {
-            "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/858f2137-cab7-47ab-8f23-7b803eeec782/5.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230101%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230101T050523Z&X-Amz-Expires=3600&X-Amz-Signature=592cd5f3c5a6ac01fc73a884dc64c39352b2b69996957daa9172fee80708d7f4&X-Amz-SignedHeaders=host&x-id=GetObject"
+            "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/858f2137-cab7-47ab-8f23-7b803eeec782/5.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230101%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230101T053534Z&X-Amz-Expires=3600&X-Amz-Signature=47cd8b406a9f1c4e26c68852471fe01489d196e449afbe407e529bcf9168614b&X-Amz-SignedHeaders=host&x-id=GetObject"
           }
         },
-        "color": "brown_background",
+        "color": "purple",
         "text": [
           {
             "type": "text",
