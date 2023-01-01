@@ -42,37 +42,35 @@
 
 
 
-  <Header level={1}>?????ASDFA SDf</Header>
+  <Quote>이것은 인용입니다
+<br />
+???? 
+<br />
+인용문은 글자 색을 못바꾸나?
+<br />
+</Quote><ColumnList cols={2}><Column><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"981c553e-d2f2-4eba-978b-ba90367aaa4c","created_time":"2023-01-01T04:26:00.000Z","last_edited_time":"2023-01-01T04:44:00.000Z"}}>
+
+</Paragraph>
+<Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"14e01917-e41c-4fb4-ba2f-0b27ba572356","created_time":"2023-01-01T04:26:00.000Z","last_edited_time":"2023-01-01T04:45:00.000Z"}}>
+asdf
+</Paragraph>
+</Column><Column><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"0ada6b31-1d63-4f94-8b9f-b3c846d91115","created_time":"2023-01-01T04:26:00.000Z","last_edited_time":"2023-01-01T04:43:00.000Z"}}>
+
+</Paragraph>
+</Column></ColumnList><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"22d88673-a74a-4899-aea2-67eee33965ff","created_time":"2023-01-01T04:23:00.000Z","last_edited_time":"2023-01-01T04:31:00.000Z"}}>
+asdf
+</Paragraph>
 <IndentGroup>
-  <Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"bc628a73-f071-439c-bc37-4b281b2b18b1","created_time":"2022-12-31T23:12:00.000Z","last_edited_time":"2022-12-31T23:46:00.000Z"}}>
-무어ㅣㅁ 또
+  <Quote>함ㅇ림ㄴㅇ리ㅣ</Quote>
+</IndentGroup>
+<Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"80559768-90f6-4e98-bb6b-87c042028d19","created_time":"2023-01-01T04:23:00.000Z","last_edited_time":"2023-01-01T04:47:00.000Z"}}>
+하이
+</Paragraph>
+<IndentGroup>
+  <Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"9834bd2c-f640-40bc-bc48-5ee23ca3db26","created_time":"2023-01-01T04:31:00.000Z","last_edited_time":"2023-01-01T04:32:00.000Z"}}>
+ㅋㅋ
 </Paragraph>
 
 </IndentGroup>
-<Header level={3}>홀리쉿</Header>
-<Header level={1}>it is 제목</Header>
-<Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"a096a29a-f1f3-4682-a1a3-340939e7b1b3","created_time":"2023-01-01T00:06:00.000Z","last_edited_time":"2023-01-01T00:07:00.000Z"}}>
-asdf?
-</Paragraph>
-<Header level={1}>제목</Header>
-<Header level={1}>??????</Header>
-<Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"c9f6b5f8-c880-4782-8bc1-eef2d23ff5d5","created_time":"2022-12-31T23:51:00.000Z","last_edited_time":"2022-12-31T23:52:00.000Z"}}>
-일반
-</Paragraph>
-<Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"68a7304c-9a7b-4c2e-a328-00e3823833b7","created_time":"2022-12-31T23:06:00.000Z","last_edited_time":"2022-12-31T23:52:00.000Z"}}>
-일반
-</Paragraph>
-<Header level={2}>?????</Header>
-<Header level={3}>zz</Header>
-<Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"6059af87-b270-4e5d-841d-408a6e45abfd","created_time":"2023-01-01T00:08:00.000Z","last_edited_time":"2023-01-01T00:12:00.000Z"}}>
-asdf
-</Paragraph>
-<Toggle>asdf
-<br />
-asdf
-<span slot="children"></span></Toggle><TodoItem checked={false}>asdf
-<br />
-asdf</TodoItem>
-<TodoItem checked={false}>??</TodoItem>
-
+<Quote>asdf???</Quote>
   

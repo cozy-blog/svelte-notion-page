@@ -26,8 +26,12 @@
 	</details>
 {:else}
 	<h1 class={`${getColorCss(color)} notion-h notion-h1`}>
-		{#each texts as text}
-			<svelte:component this={componentProvider.resolve(text.type)} props={text} />
-		{/each}
+		{#if texts.length !== 0}
+			{#each texts as text}
+				<svelte:component this={componentProvider.resolve(text.type)} props={text} />
+			{/each}
+		{:else}
+			&nbsp
+		{/if}V
 	</h1>
 {/if}

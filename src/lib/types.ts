@@ -117,3 +117,11 @@ export type ToggleProps = {
 		text: TextProps[];
 	};
 } & ContextedBlock;
+
+export type QuoteProps = {
+	type: 'quote';
+	quote: {
+		color: string;
+		text: TextProps[];
+	};
+} & ContextedBlock;
