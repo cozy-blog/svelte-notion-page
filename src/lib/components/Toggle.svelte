@@ -2,6 +2,7 @@
 	import type { ToggleProps } from '$lib/types';
 	import { getColorCss } from '$lib/utils/getColorCss';
 	import { notionComponentProvierContext } from '$lib/core/context';
+	import RichText from './base/richtext/RichText.svelte';
 	export let props: ToggleProps;
 	const {
 		toggle: { color, text: texts }
@@ -14,13 +15,7 @@
 <details open={false} class={`notion-block notion-toggle ${getColorCss(color)}`}>
 	<summary>
 		<p class="notion-paragraph notion-toggle-summary-content">
-			{#if texts.length !== 0}
-				{#each texts as text}
-					<svelte:component this={componentProvider.resolve(text.type)} props={text} />
-				{/each}
-			{:else}
-				&nbsp
-			{/if}
+			<RichText props={texts} />
 		</p>
 	</summary>
 	<slot />

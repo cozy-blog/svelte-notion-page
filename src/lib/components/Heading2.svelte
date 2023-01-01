@@ -2,6 +2,7 @@
 	import { notionComponentProvierContext } from '$lib/core/context';
 	import type { Heading_2_Props } from '$lib/types';
 	import { getColorCss } from '$lib/utils/getColorCss';
+	import RichText from './base/richtext/RichText.svelte';
 	export let props: Heading_2_Props;
 	const {
 		heading_2: { color, text: texts, is_toggleable }
@@ -13,25 +14,13 @@
 	<details class={`notion-toggle notion-toggle-h2 ${getColorCss(color)}`}>
 		<summary>
 			<h2 class="notion-h notion-toggle-summary-content">
-				{#if texts.length !== 0}
-					{#each texts as text}
-						<svelte:component this={componentProvider.resolve(text.type)} props={text} />
-					{/each}
-				{:else}
-					&nbsp
-				{/if}
+				<RichText props={texts} />
 			</h2>
 		</summary>
 		<slot />
 	</details>
 {:else}
 	<h2 class={`${getColorCss(color)} notion-h notion-h2`}>
-		{#if texts.length !== 0}
-			{#each texts as text}
-				<svelte:component this={componentProvider.resolve(text.type)} props={text} />
-			{/each}
-		{:else}
-			&nbsp
-		{/if}
+		<RichText props={texts} />
 	</h2>
 {/if}

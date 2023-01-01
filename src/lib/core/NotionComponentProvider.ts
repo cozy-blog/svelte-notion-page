@@ -1,10 +1,10 @@
 import type { ComponentType } from 'svelte';
 import FallBackComponent from '$lib/components/FallbackComponent.svelte';
 import Paragraph from '$lib/components/Paragraph.svelte';
-import Cover from '$lib/components/Cover.svelte';
-import PageLayout from '$lib/components/PageLayout.svelte';
-import Text from '$lib/components/Text.svelte';
-import Theme from '$lib/components/Theme.svelte';
+import Cover from '$lib/components/layout/Cover.svelte';
+import PageLayout from '$lib/components/layout/PageLayout.svelte';
+import Text from '$lib/components/base/richtext/component/Text.svelte';
+import Theme from '$lib/components/layout/Theme.svelte';
 import Heading1 from '$lib/components/Heading1.svelte';
 import Heading2 from '$lib/components/Heading2.svelte';
 import Heading3 from '$lib/components/Heading3.svelte';
@@ -54,7 +54,6 @@ export class NotionComponentProvider {
 
 export const defaultComponents: Record<string, ComponentType> = {
 	paragraph: Paragraph,
-	text: Text,
 	heading_1: Heading1,
 	heading_2: Heading2,
 	heading_3: Heading3,
@@ -66,11 +65,14 @@ export const defaultComponents: Record<string, ComponentType> = {
 	numbered_list_item: NumberedListItem,
 	bulleted_list_item: BulletedListItem,
 	to_do: Todo,
-	checkbox: CheckBox,
 	toggle: Toggle,
 	quote: Quote,
 	callout: Callout,
 	equation: Equation,
+
+	// low level custom. 넣을까 말까 고민중.., 
+	checkbox: CheckBox,
+	text: Text,
 };
 
 export const defaultProvider = new NotionComponentProvider({});

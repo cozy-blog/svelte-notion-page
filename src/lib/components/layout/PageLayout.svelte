@@ -1,9 +1,9 @@
 <script lang="ts">
-	import Cover from '$lib/components/Cover.svelte';
-	import Header from '$lib/components/Header.svelte';
-	import PageIcon from '$lib/components/PageIcon.svelte';
+	import Cover from '$lib/components/layout/Cover.svelte';
+	import Header from '$lib/components/layout/Header.svelte';
+	import PageIcon from '$lib/components/layout/PageIcon.svelte';
 	import type { Content } from '$lib/types';
-	import { notionThemeContext } from '../core/context';
+	import { notionThemeContext } from '../../core/context';
 	export let content: Content;
 </script>
 

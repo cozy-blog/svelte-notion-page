@@ -44,10 +44,11 @@ export type ParagraphProps = {
 
 export type EquationProps = {
 	type: 'equation';
+	inline?: boolean;
 	equation: {
 		expression: string;
 	};
-} & ContextedBlock;
+};
 
 export type CodeProps = {
 	type: 'code';

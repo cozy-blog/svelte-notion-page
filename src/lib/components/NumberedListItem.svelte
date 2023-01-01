@@ -3,6 +3,7 @@
 	import type { NumberedListItemProps } from '$lib/types';
 	import { getColorCss } from '$lib/utils/getColorCss';
 	import { numberedListItemMarker } from '$lib/utils/listItemMarker';
+	import RichText from './base/richtext/RichText.svelte';
 
 	export let props: NumberedListItemProps;
 	const {
@@ -18,9 +19,7 @@
 >
 	<li>
 		<div class="notion-list-marker">{marker}</div>
-		{#each texts as text}
-			<svelte:component this={componentProvider.resolve(text.type)} props={text} />
-		{/each}
+		<RichText props={texts} />
 	</li>
 	<slot />
 </div>

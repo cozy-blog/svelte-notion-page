@@ -1,8 +1,7 @@
 <script lang="ts">
 	import type { EquationProps } from '$lib/types';
-	import renderEquation from '$lib/utils/renderEquation';
-
 	export let props: EquationProps;
+	import renderEquation from '$lib/utils/renderEquation';
 	const {
 		equation: { expression }
 	} = props;
@@ -17,6 +16,6 @@
 	/>
 </svelte:head>
 
-<div class="notion-block notion-equation notion-equation-block">
+<span class="notion-equation notion-equation-inline">
 	{@html renderEquation(expression)}
-</div>
+</span>

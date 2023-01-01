@@ -2,17 +2,18 @@
 	import { notionComponentProvierContext } from '$lib/core/context';
 	import type { CalloutProps } from '$lib/types';
 	import { getColorCss } from '$lib/utils/getColorCss';
+	import RichText from './base/richtext/RichText.svelte';
 	export let props: CalloutProps;
 	const {
 		callout: { color, text: texts, icon }
 	} = props;
 	const componentProvider = notionComponentProvierContext.get();
-
 </script>
 
 <div
- class:notion-callout-outline={!getColorCss(color).includes('background')} 
- class={`notion-block notion-callout ${getColorCss(color)}`}>
+	class:notion-callout-outline={!getColorCss(color).includes('background')}
+	class={`notion-block notion-callout ${getColorCss(color)}`}
+>
 	<div class="notion-callout-content">
 		<div class="notion-page-icon-inline">
 			{#if icon.type === 'emoji' && icon.emoji != null}
@@ -26,13 +27,7 @@
 			{/if}
 		</div>
 		<p class="notion-callout-text">
-			{#if texts.length !== 0}
-				{#each texts as text}
-					<svelte:component this={componentProvider.resolve(text.type)} props={text} />
-				{/each}
-			{:else}
-				&nbsp
-			{/if}
+			<RichText props={texts} />
 		</p>
 	</div>
 

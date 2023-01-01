@@ -2,6 +2,8 @@
 	import { notionComponentProvierContext } from '$lib/core/context';
 	import type { ParagraphProps } from '$lib/types';
 	import { getColorCss } from '$lib/utils/getColorCss';
+	import RichText from './base/richtext/RichText.svelte';
+	import ParagrahContent from './base/richtext/RichText.svelte';
 	export let props: ParagraphProps;
 	const {
 		paragraph: { color, text: texts }
@@ -11,13 +13,8 @@
 
 <div class={`notion-block ${getColorCss(color)}`}>
 	<p class="notion-paragraph">
-		{#if texts.length !== 0}
-			{#each texts as text}
-				<svelte:component this={componentProvider.resolve(text.type)} props={text} />
-			{/each}
-		{:else}
-			&nbsp
-		{/if}
+		<RichText props={texts} />
 	</p>
+
 	<slot />
 </div>

@@ -42,9 +42,10 @@
 
 
 
-  <Equation block={true} katexString="asdfasdf
-asadf
-asdf" /><Equation block={true} katexString="이것은 인용입니다
+  <Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"1c9485b0-5695-46d5-80a4-640ae52dadf7","created_time":"2023-01-01T06:07:00.000Z","last_edited_time":"2023-01-01T06:07:00.000Z"}}>
+adsf &ensp;<Equation block={false} katexString="E = mc^2" />
+</Paragraph>
+<Equation block={true} katexString="이것은 인용입니다
 ???? 
 인용문은 글자 색을 못바꾸나
 ??
@@ -63,5 +64,39 @@ asdfs
 </Column></ColumnList><Callout emoji="💡">하이<span slot="children"><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"9834bd2c-f640-40bc-bc48-5ee23ca3db26","created_time":"2023-01-01T04:31:00.000Z","last_edited_time":"2023-01-01T04:32:00.000Z"}}>
 ㅋㅋ
 </Paragraph>
-</span></Callout><Callout emoji="💡">asdf???</Callout>
+</span></Callout><Callout emoji="💡">asdf???</Callout><ColumnList cols={2}><Column><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"f04d403f-433d-4701-92f5-1d3b6a74e7d0","created_time":"2023-01-01T06:59:00.000Z","last_edited_time":"2023-01-01T07:00:00.000Z"}}>
+간만에
+</Paragraph>
+<IndentGroup>
+  <Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"cbd696a6-9754-4809-b526-ab8a99fc4bab","created_time":"2023-01-01T06:59:00.000Z","last_edited_time":"2023-01-01T06:59:00.000Z"}}>
+다시
+</Paragraph>
+<NumberedListItem number=1> dd</NumberedListItem>
+<NumberedListItem number=2> asdf</NumberedListItem>
+<IndentGroup>
+  <NumberedListItem number=a> ???</NumberedListItem>
+<IndentGroup>
+  <NumberedListItem number=i> ????</NumberedListItem>
+<NumberedListItem number=ii> aasdf</NumberedListItem>
+<IndentGroup>
+  <Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"e6bfe0dd-d99b-40dc-adca-4768e920464c","created_time":"2023-01-01T07:00:00.000Z","last_edited_time":"2023-01-01T07:00:00.000Z"}}>
+aasdf
+</Paragraph>
+
+</IndentGroup>
+
+</IndentGroup>
+
+</IndentGroup>
+
+</IndentGroup>
+</Column><Column><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"1e14ff2c-f371-4ee0-a7d8-8c41ab78f94b","created_time":"2023-01-01T06:59:00.000Z","last_edited_time":"2023-01-01T07:00:00.000Z"}}>
+응?
+</Paragraph>
+</Column></ColumnList><Header level={1}>gmdoal</Header>
+<Header level={2}>?ASDFasdf</Header>
+<Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"ec11c722-c065-4f16-806d-cbfd97cc5cad","created_time":"2023-01-01T07:00:00.000Z","last_edited_time":"2023-01-01T07:00:00.000Z"}}>
+
+</Paragraph>
+
   

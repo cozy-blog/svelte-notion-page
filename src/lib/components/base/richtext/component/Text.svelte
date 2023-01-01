@@ -16,7 +16,7 @@
 		code && 'code'
 	].filter((type) => !!type);
 
-	const html = types.reduce((child, type) => {
+	const text = types.reduce((child, type) => {
 		switch (type) {
 			case 'link':
 				return `<a class="notion-link" href=${href}>${child}</a>`;
@@ -30,11 +30,10 @@
 				return `<span class="notion-inline-underscore">${child}</span>`;
 			case 'code':
 				return `<code class="notion-inline-code">${child}</code>`;
-
 			default:
 				throw { message: `unexpected type: ${type}` };
 		}
 	}, `<span class="${getColorCss(color)} notion-span">${content}</span>`);
 </script>
 
-{@html html}
+{@html text}

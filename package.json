@@ -33,6 +33,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@types/katex": "^0.16.0",
 		"katex": "^0.16.4",
 		"romans": "^2.0.8",
 		"svelte-katex": "^0.1.2"
