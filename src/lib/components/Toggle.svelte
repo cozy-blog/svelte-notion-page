@@ -13,7 +13,7 @@
 
 <details open={false} class={`notion-block notion-toggle ${getColorCss(color)}`}>
 	<summary>
-		<p class="notion-paragraph">
+		<p class="notion-paragraph notion-toggle-summary-content">
 			{#if texts.length !== 0}
 				{#each texts as text}
 					<svelte:component this={componentProvider.resolve(text.type)} props={text} />
