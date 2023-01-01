@@ -125,3 +125,21 @@ export type QuoteProps = {
 		text: TextProps[];
 	};
 } & ContextedBlock;
+
+export type CalloutProps = {
+	type: 'callout';
+	callout: {
+		icon: {
+			type: 'emoji' | 'file' | 'external';
+			emoji?: string;
+			file?: {
+				url: string;
+			};
+			external: {
+				url: string;
+			};
+		};
+		color: string;
+		text: TextProps[];
+	};
+};

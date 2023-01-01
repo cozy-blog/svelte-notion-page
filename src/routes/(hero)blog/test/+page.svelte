@@ -42,35 +42,30 @@
 
 
 
-  <Quote>이것은 인용입니다
+  <Callout emoji="⚠️">이것은 인용입니다
 <br />
 ???? 
 <br />
-인용문은 글자 색을 못바꾸나?
-<br />
-</Quote><ColumnList cols={2}><Column><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"981c553e-d2f2-4eba-978b-ba90367aaa4c","created_time":"2023-01-01T04:26:00.000Z","last_edited_time":"2023-01-01T04:44:00.000Z"}}>
-
-</Paragraph>
-<Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"14e01917-e41c-4fb4-ba2f-0b27ba572356","created_time":"2023-01-01T04:26:00.000Z","last_edited_time":"2023-01-01T04:45:00.000Z"}}>
-asdf
-</Paragraph>
-</Column><Column><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"0ada6b31-1d63-4f94-8b9f-b3c846d91115","created_time":"2023-01-01T04:26:00.000Z","last_edited_time":"2023-01-01T04:43:00.000Z"}}>
-
-</Paragraph>
-</Column></ColumnList><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"22d88673-a74a-4899-aea2-67eee33965ff","created_time":"2023-01-01T04:23:00.000Z","last_edited_time":"2023-01-01T04:31:00.000Z"}}>
-asdf
+인용문은 글자 색을 못바꾸나</Callout><Callout emoji="undefined">asdf<span slot="children"><Quote>함ㅇ림ㄴㅇ리ㅣ</Quote></span></Callout><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"0383b0f8-57ff-4a2d-a570-72ea7324c363","created_time":"2023-01-01T04:52:00.000Z","last_edited_time":"2023-01-01T04:52:00.000Z"}}>
+hi
 </Paragraph>
 <IndentGroup>
-  <Quote>함ㅇ림ㄴㅇ리ㅣ</Quote>
+  <Callout emoji="undefined">??</Callout>
 </IndentGroup>
-<Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"80559768-90f6-4e98-bb6b-87c042028d19","created_time":"2023-01-01T04:23:00.000Z","last_edited_time":"2023-01-01T04:47:00.000Z"}}>
-하이
+<Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"aac7c613-1e43-4bcd-b7ea-78957fb86bdd","created_time":"2023-01-01T04:52:00.000Z","last_edited_time":"2023-01-01T04:52:00.000Z"}}>
+
 </Paragraph>
 <IndentGroup>
-  <Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"9834bd2c-f640-40bc-bc48-5ee23ca3db26","created_time":"2023-01-01T04:31:00.000Z","last_edited_time":"2023-01-01T04:32:00.000Z"}}>
+  <Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"db5dbf18-b8ae-44dc-8b34-7a567d7b0997","created_time":"2023-01-01T04:52:00.000Z","last_edited_time":"2023-01-01T04:52:00.000Z"}}>
+
+</Paragraph>
+
+</IndentGroup>
+<ColumnList cols={2}><Column><Callout emoji="undefined"></Callout><Callout emoji="💡">asdf</Callout></Column><Column><Callout emoji="💡"></Callout><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"e43d2834-ebf6-425c-bd71-22ca200f9a18","created_time":"2023-01-01T04:52:00.000Z","last_edited_time":"2023-01-01T04:52:00.000Z"}}>
+
+</Paragraph>
+</Column></ColumnList><Callout emoji="💡">하이<span slot="children"><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"9834bd2c-f640-40bc-bc48-5ee23ca3db26","created_time":"2023-01-01T04:31:00.000Z","last_edited_time":"2023-01-01T04:32:00.000Z"}}>
 ㅋㅋ
 </Paragraph>
-
-</IndentGroup>
-<Quote>asdf???</Quote>
+</span></Callout><Callout emoji="💡">asdf???</Callout>
   
