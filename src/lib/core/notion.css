@@ -849,7 +849,6 @@ svg.notion-page-icon {
 	white-space: pre-wrap !important;
 }
 
-
 .notion-code-content {
 	tab-size: 2;
 	padding: 2.5em;
@@ -1075,9 +1074,20 @@ svg.notion-page-icon {
 }
 
 .notion-image {
-	display: block;
-	width: 100%;
 	border-radius: 1px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+
+.notion-image-content {
+	display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.notion-image-content img {
+	width: 100%;
 }
 
 .notion-asset-caption {

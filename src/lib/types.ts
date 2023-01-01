@@ -126,11 +126,25 @@ export type CalloutProps = {
 			file?: {
 				url: string;
 			};
-			external: {
+			external?: {
 				url: string;
 			};
 		};
 		color: string;
 		text: TextProps[];
 	};
-};
+} & ContextedBlock;
+
+export type ImageProps = {
+	type: 'image';
+	image: {
+		caption: TextProps[];
+		type: 'external' | 'file';
+		file?: {
+			url: string;
+		};
+		external?: {
+			url: string;
+		};
+	};
+} & ContextedBlock;

@@ -42,10 +42,44 @@
 
 
 
-  <Code code={`var previous = null
+  <Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"b52c7d4c-a3bd-4a5a-97d4-9ce9b9ddf23f","created_time":"2023-01-01T12:36:00.000Z","last_edited_time":"2023-01-01T12:43:00.000Z"}}>
+
+</Paragraph>
+<Image url="/assets/test/a3ba89e2-5122-40d3-a3d8-014097878f2a.jpg" caption="it is caption">it is caption</Image>
+<Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"fb18b6e6-5434-46c9-81c3-130eacc27fd1","created_time":"2023-01-01T12:36:00.000Z","last_edited_time":"2023-01-01T12:56:00.000Z"}}>
+asdf
+</Paragraph>
+<IndentGroup>
+  <Image url="/assets/test/af49a6a1-abd6-478c-9847-3c196a34772d.jpg" caption="it is caption">it is caption</Image>
+<Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"b1ee45af-4f81-4cbd-ab1b-0a25564c118b","created_time":"2023-01-01T12:56:00.000Z","last_edited_time":"2023-01-01T12:56:00.000Z"}}>
+
+</Paragraph>
+
+</IndentGroup>
+<Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"a9b9e994-ab49-47dd-b926-9ba5187a9a94","created_time":"2023-01-01T12:36:00.000Z","last_edited_time":"2023-01-01T12:43:00.000Z"}}>
+
+</Paragraph>
+<ColumnList cols={2}><Column><Image url="/assets/test/48754f2e-50d6-4082-9576-a5c248f5d06a.png" caption=""></Image>
+</Column><Column><Image url="/assets/test/750bca61-9c70-4979-a33f-feaf2be06f7a.png" caption=""></Image>
+</Column></ColumnList><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"fb2ee2e3-cc4c-4aca-a4d2-7c9e951aed1a","created_time":"2023-01-01T12:36:00.000Z","last_edited_time":"2023-01-01T12:43:00.000Z"}}>
+
+</Paragraph>
+<Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"8e0293b4-e7bc-4cba-bfa2-4fd318a7c0c1","created_time":"2023-01-01T12:36:00.000Z","last_edited_time":"2023-01-01T12:43:00.000Z"}}>
+
+</Paragraph>
+<Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"c1644a3c-6d7c-477d-81c3-f220b04b0399","created_time":"2023-01-01T12:36:00.000Z","last_edited_time":"2023-01-01T12:43:00.000Z"}}>
+
+</Paragraph>
+<Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"b0b5d6ba-51af-487c-a7e5-372241c5a528","created_time":"2023-01-01T12:36:00.000Z","last_edited_time":"2023-01-01T12:43:00.000Z"}}>
+
+</Paragraph>
+<Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"1edf1ee8-3aee-4688-9acf-9e57c24d713d","created_time":"2023-01-01T12:36:00.000Z","last_edited_time":"2023-01-01T12:43:00.000Z"}}>
+
+</Paragraph>
+<Code code={`var previous = null
 while(previous != null) \{
 	...
-}`} language="javascript">it is caption asdfasdf asdf asdf asdfas</Code><ColumnList cols={2}><Column><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"52004ffa-46f9-4286-88bb-652f415a0337","created_time":"2023-01-01T07:14:00.000Z","last_edited_time":"2023-01-01T07:15:00.000Z"}}>
+}`} language="javascript">it is caption asdfasdf asdf asdf asdfas</Code><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"52004ffa-46f9-4286-88bb-652f415a0337","created_time":"2023-01-01T07:14:00.000Z","last_edited_time":"2023-01-01T12:44:00.000Z"}}>
 asdf
 </Paragraph>
 <IndentGroup>
@@ -60,7 +94,7 @@ asdf
 	get() = &quot;??&quot;
 }`} language="kotlin"></Code>
 </IndentGroup>
-</Column><Column><Code code={`asdfasdf asdfasdfs`} language="erlang"></Code></Column></ColumnList><Equation block={true} katexString="이것은 인용입니다
+<Equation block={true} katexString="이것은 인용입니다
 ???? 
 인용문은 글자 색을 못바꾸나
 ??

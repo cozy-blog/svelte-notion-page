@@ -19,6 +19,7 @@ import Quote from '$lib/components/Quote.svelte';
 import Callout from '$lib/components/Callout.svelte';
 import Equation from '$lib/components/Equation.svelte';
 import Code from '$lib/components/Code.svelte';
+import Image from '$lib/components/Image.svelte';
 
 export type NotionComponentProviderOptions = {
 	fallBackComponent?: ComponentType;
@@ -71,6 +72,7 @@ export const defaultComponents: Record<string, ComponentType> = {
 	callout: Callout,
 	equation: Equation,
 	code: Code,
+	image: Image,
 
 	// low level custom. 넣을까 말까 고민중.., 
 	checkbox: CheckBox,
