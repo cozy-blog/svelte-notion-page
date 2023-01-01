@@ -148,3 +148,17 @@ export type ImageProps = {
 		};
 	};
 } & ContextedBlock;
+
+export type VideoProps = {
+	type: 'video';
+	video: {
+		caption: TextProps[];
+		type: 'external' | 'file';
+		file?: {
+			url: string;
+		};
+		external?: {
+			url: string;
+		};
+	};
+} & ContextedBlock;
