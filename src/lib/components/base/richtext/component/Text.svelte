@@ -3,7 +3,8 @@
 	import { getColorCss } from '$lib/utils/getColorCss';
 	export let props: TextProps;
 	const {
-		text: { content, link: href },
+		href,
+		text: { content },
 		annotations: { bold, italic, strikethrough, underline, code, color }
 	} = props;
 

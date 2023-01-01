@@ -2,7 +2,7 @@ const json = {
   "object": "page",
   "id": "591d29d3-cb19-4273-bb3a-82644ed4faa4",
   "created_time": "2022-12-28T23:30:00.000Z",
-  "last_edited_time": "2023-01-01T13:55:00.000Z",
+  "last_edited_time": "2023-01-01T13:59:00.000Z",
   "created_by": {
     "object": "user",
     "id": "95fc0174-8fc6-4114-8e45-f67eacd99f07"
@@ -105,7 +105,7 @@ const json = {
         "page_id": "591d29d3-cb19-4273-bb3a-82644ed4faa4"
       },
       "created_time": "2023-01-01T12:36:00.000Z",
-      "last_edited_time": "2023-01-01T13:55:00.000Z",
+      "last_edited_time": "2023-01-01T13:59:00.000Z",
       "created_by": {
         "object": "user",
         "id": "95fc0174-8fc6-4114-8e45-f67eacd99f07"
@@ -119,7 +119,27 @@ const json = {
       "type": "paragraph",
       "paragraph": {
         "color": "blue_background",
-        "text": []
+        "text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "asdf",
+              "link": {
+                "url": "https://naver.com"
+              }
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "asdf",
+            "href": "https://naver.com"
+          }
+        ]
       }
     },
     {

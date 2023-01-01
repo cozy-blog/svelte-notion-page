@@ -21,7 +21,9 @@ export type TextProps = {
 	type: 'text';
 	text: {
 		content: string;
-		link?: string | null;
+		link?: {
+			url: string
+		}
 	};
 	annotations: {
 		bold: boolean;

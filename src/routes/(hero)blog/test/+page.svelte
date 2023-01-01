@@ -42,8 +42,8 @@
 
 
 
-  <Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"371a5ee6-e179-4d80-a107-148d8dabd2e8","created_time":"2023-01-01T12:36:00.000Z","last_edited_time":"2023-01-01T13:55:00.000Z"}}>
-
+  <Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"371a5ee6-e179-4d80-a107-148d8dabd2e8","created_time":"2023-01-01T12:36:00.000Z","last_edited_time":"2023-01-01T13:59:00.000Z"}}>
+<Link type="absolute" href='https://naver.com'>asdf</Link>
 </Paragraph>
 <Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"28b66388-6dd3-4441-89b8-64edcd81ebf8","created_time":"2023-01-01T12:36:00.000Z","last_edited_time":"2023-01-01T13:55:00.000Z"}}>
 
