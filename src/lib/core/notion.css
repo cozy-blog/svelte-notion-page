@@ -1931,11 +1931,13 @@ svg.notion-page-icon {
 .notion-equation-block {
 	display: flex;
 	flex-direction: column;
+	justify-items: center;
+	align-items: center;
 	overflow: auto;
 	width: 100%;
 	max-width: 100%;
-	padding: 4px 8px;
-	margin: 4px 0;
+	padding: 16px 8px;
+	margin: 2px 0;
 	cursor: pointer;
 }
 

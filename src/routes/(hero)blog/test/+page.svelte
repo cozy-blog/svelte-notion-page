@@ -42,25 +42,21 @@
 
 
 
-  <Equation block={true} katexString="이것은 인용입니다
+  <Equation block={true} katexString="asdfasdf
+asadf
+asdf" /><Equation block={true} katexString="이것은 인용입니다
 ???? 
 인용문은 글자 색을 못바꾸나
 ??
-f(n) = x^2+ss" /><Callout emoji="undefined">asdf<span slot="children"><Quote>함ㅇ림ㄴㅇ리ㅣ</Quote></span></Callout><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"0383b0f8-57ff-4a2d-a570-72ea7324c363","created_time":"2023-01-01T04:52:00.000Z","last_edited_time":"2023-01-01T04:52:00.000Z"}}>
-hi
+f(n) = x^2+ss" /><Callout emoji="undefined">asdf<span slot="children"><Equation block={true} katexString="ㅇ리ㅣ" /></span></Callout><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"0383b0f8-57ff-4a2d-a570-72ea7324c363","created_time":"2023-01-01T04:52:00.000Z","last_edited_time":"2023-01-01T05:58:00.000Z"}}>
+zxcv
 </Paragraph>
-<IndentGroup>
-  <Callout emoji="undefined">??</Callout>
-</IndentGroup>
-<Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"aac7c613-1e43-4bcd-b7ea-78957fb86bdd","created_time":"2023-01-01T04:52:00.000Z","last_edited_time":"2023-01-01T04:52:00.000Z"}}>
-
+<Equation block={true} katexString="asdf" /><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"db5dbf18-b8ae-44dc-8b34-7a567d7b0997","created_time":"2023-01-01T04:52:00.000Z","last_edited_time":"2023-01-01T05:58:00.000Z"}}>
+???asdf
 </Paragraph>
-<IndentGroup>
-  <Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"db5dbf18-b8ae-44dc-8b34-7a567d7b0997","created_time":"2023-01-01T04:52:00.000Z","last_edited_time":"2023-01-01T04:52:00.000Z"}}>
-
+<Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"cacf20bc-6144-49d0-b386-b631472a7f5e","created_time":"2023-01-01T05:58:00.000Z","last_edited_time":"2023-01-01T06:00:00.000Z"}}>
+asdfs
 </Paragraph>
-
-</IndentGroup>
 <ColumnList cols={2}><Column><Callout emoji="undefined"></Callout><Callout emoji="💡">asdf</Callout></Column><Column><Callout emoji="💡"></Callout><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"e43d2834-ebf6-425c-bd71-22ca200f9a18","created_time":"2023-01-01T04:52:00.000Z","last_edited_time":"2023-01-01T04:52:00.000Z"}}>
 
 </Paragraph>
