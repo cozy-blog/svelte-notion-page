@@ -45,7 +45,7 @@
   <Code code={`var previous = null
 while(previous != null) \{
 	...
-}`} language="erlang">it is caption asdfasdf asdf asdf asdfas</Code><ColumnList cols={2}><Column><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"52004ffa-46f9-4286-88bb-652f415a0337","created_time":"2023-01-01T07:14:00.000Z","last_edited_time":"2023-01-01T07:15:00.000Z"}}>
+}`} language="javascript">it is caption asdfasdf asdf asdf asdfas</Code><ColumnList cols={2}><Column><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"52004ffa-46f9-4286-88bb-652f415a0337","created_time":"2023-01-01T07:14:00.000Z","last_edited_time":"2023-01-01T07:15:00.000Z"}}>
 asdf
 </Paragraph>
 <IndentGroup>
@@ -64,7 +64,10 @@ asdf
 ???? 
 인용문은 글자 색을 못바꾸나
 ??
-f(n) = x^2+ss" /><Callout emoji="undefined">asdf<span slot="children"><Equation block={true} katexString="ㅇ리ㅣ" /></span></Callout><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"0383b0f8-57ff-4a2d-a570-72ea7324c363","created_time":"2023-01-01T04:52:00.000Z","last_edited_time":"2023-01-01T05:58:00.000Z"}}>
+f(n) = x^2+ss" /><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"1a034730-17ee-4862-bfc6-eddab253ae4d","created_time":"2023-01-01T08:49:00.000Z","last_edited_time":"2023-01-01T08:49:00.000Z"}}>
+zxcv
+</Paragraph>
+<Callout emoji="undefined">asdf<span slot="children"><Equation block={true} katexString="ㅇ리ㅣ" /></span></Callout><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"0383b0f8-57ff-4a2d-a570-72ea7324c363","created_time":"2023-01-01T04:52:00.000Z","last_edited_time":"2023-01-01T05:58:00.000Z"}}>
 zxcv
 </Paragraph>
 <Equation block={true} katexString="asdf" /><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"db5dbf18-b8ae-44dc-8b34-7a567d7b0997","created_time":"2023-01-01T04:52:00.000Z","last_edited_time":"2023-01-01T05:58:00.000Z"}}>

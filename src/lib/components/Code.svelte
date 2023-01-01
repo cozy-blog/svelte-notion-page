@@ -35,7 +35,7 @@
 <div class="notion-block notion-code">
 	<div class="notion-code-content">
 		<div class="notion-code-copy">
-			<button class="notion-code-copty-button" on:click={handleCopy}>
+			<button class="notion-code-copy-button" on:click={handleCopy}>
 				<img src={CopyIcon} alt="copy" />
 			</button>
 			{#if copied}

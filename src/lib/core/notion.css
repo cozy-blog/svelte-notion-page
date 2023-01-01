@@ -849,6 +849,7 @@ svg.notion-page-icon {
 	white-space: pre-wrap !important;
 }
 
+
 .notion-code-content {
 	tab-size: 2;
 	padding: 2.5em;
@@ -1091,7 +1092,7 @@ svg.notion-page-icon {
 
 .notion-callout {
 	padding: 16px 16px 16px 12px;
-	margin-top: 6px;
+	margin: 4px 0px;
 	border-radius: 3px;
 }
 .notion-callout-outline {
