@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { notionComponentProvierContext } from '$lib/core/context';
 	import type { NumberedListItemProps } from '$lib/types';
 	import { getColorCss } from '$lib/utils/getColorCss';
 	import { numberedListItemMarker } from '$lib/utils/listItemMarker';
@@ -9,7 +8,6 @@
 	const {
 		numbered_list_item: { text: texts, color }
 	} = props;
-	const componentProvider = notionComponentProvierContext.get();
 	const { marker, format } = numberedListItemMarker.getMarker(props);
 </script>
 

@@ -18,6 +18,7 @@ import Toggle from '$lib/components/Toggle.svelte';
 import Quote from '$lib/components/Quote.svelte';
 import Callout from '$lib/components/Callout.svelte';
 import Equation from '$lib/components/Equation.svelte';
+import Code from '$lib/components/Code.svelte';
 
 export type NotionComponentProviderOptions = {
 	fallBackComponent?: ComponentType;
@@ -69,6 +70,7 @@ export const defaultComponents: Record<string, ComponentType> = {
 	quote: Quote,
 	callout: Callout,
 	equation: Equation,
+	code: Code,
 
 	// low level custom. 넣을까 말까 고민중.., 
 	checkbox: CheckBox,

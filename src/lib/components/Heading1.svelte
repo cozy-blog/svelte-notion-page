@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { notionComponentProvierContext } from '$lib/core/context';
 	import type { Heading_1_Props } from '$lib/types';
 	import { getColorCss } from '$lib/utils/getColorCss';
 	import RichText from './base/richtext/RichText.svelte';
@@ -7,7 +6,6 @@
 	const {
 		heading_1: { color, text: texts, is_toggleable }
 	} = props;
-	const componentProvider = notionComponentProvierContext.get();
 </script>
 
 {#if is_toggleable}

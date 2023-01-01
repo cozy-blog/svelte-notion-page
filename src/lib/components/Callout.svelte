@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { notionComponentProvierContext } from '$lib/core/context';
 	import type { CalloutProps } from '$lib/types';
 	import { getColorCss } from '$lib/utils/getColorCss';
 	import RichText from './base/richtext/RichText.svelte';
@@ -7,7 +6,6 @@
 	const {
 		callout: { color, text: texts, icon }
 	} = props;
-	const componentProvider = notionComponentProvierContext.get();
 </script>
 
 <div

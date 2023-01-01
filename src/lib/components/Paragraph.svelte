@@ -3,12 +3,10 @@
 	import type { ParagraphProps } from '$lib/types';
 	import { getColorCss } from '$lib/utils/getColorCss';
 	import RichText from './base/richtext/RichText.svelte';
-	import ParagrahContent from './base/richtext/RichText.svelte';
 	export let props: ParagraphProps;
 	const {
 		paragraph: { color, text: texts }
 	} = props;
-	const componentProvider = notionComponentProvierContext.get();
 </script>
 
 <div class={`notion-block ${getColorCss(color)}`}>

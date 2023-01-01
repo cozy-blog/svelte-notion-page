@@ -34,7 +34,11 @@
 	"type": "module",
 	"dependencies": {
 		"@types/katex": "^0.16.0",
+		"@types/prismjs": "^1.26.0",
+		"clipboard-copy": "^4.0.1",
+		"highlight.js": "^11.7.0",
 		"katex": "^0.16.4",
+		"prismjs": "^1.29.0",
 		"romans": "^2.0.8",
 		"svelte-katex": "^0.1.2"
 	}

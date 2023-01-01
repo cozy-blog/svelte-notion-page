@@ -842,15 +842,21 @@ svg.notion-page-icon {
 
 .notion-code {
 	position: relative;
-	width: 100%;
-	padding: 1em;
-	margin: 4px 0;
-	border-radius: 3px;
+	/* margin: 2px 0; */
+}
+
+.notion-code code {
+	white-space: pre-wrap !important;
+}
+
+.notion-code-content {
 	tab-size: 2;
+	padding: 2.5em;
+	background: var(--bg-color-1);
+	border-radius: 3px;
 	display: block;
 	box-sizing: border-box;
 	overflow: auto;
-	background: var(--bg-color-1);
 	font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;
 }
 

@@ -42,10 +42,25 @@
 
 
 
-  <Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"1c9485b0-5695-46d5-80a4-640ae52dadf7","created_time":"2023-01-01T06:07:00.000Z","last_edited_time":"2023-01-01T06:07:00.000Z"}}>
-adsf &ensp;<Equation block={false} katexString="E = mc^2" />
+  <Code code={`var previous = null
+while(previous != null) \{
+	...
+}`} language="erlang">it is caption asdfasdf asdf asdf asdfas</Code><ColumnList cols={2}><Column><Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"52004ffa-46f9-4286-88bb-652f415a0337","created_time":"2023-01-01T07:14:00.000Z","last_edited_time":"2023-01-01T07:15:00.000Z"}}>
+asdf
 </Paragraph>
-<Equation block={true} katexString="이것은 인용입니다
+<IndentGroup>
+  <Paragraph blockProps={{"pageId":"591d29d3cb194273bb3a82644ed4faa4","id":"39b7e6ee-166e-43f6-9563-7c13e465ba08","created_time":"2023-01-01T07:15:00.000Z","last_edited_time":"2023-01-01T07:16:00.000Z"}}>
+
+</Paragraph>
+<Code code={`data class SS(
+ val a: Int,
+ val b: String,
+) \{
+ private val c: Int
+	get() = &quot;??&quot;
+}`} language="kotlin"></Code>
+</IndentGroup>
+</Column><Column><Code code={`asdfasdf asdfasdfs`} language="erlang"></Code></Column></ColumnList><Equation block={true} katexString="이것은 인용입니다
 ???? 
 인용문은 글자 색을 못바꾸나
 ??
