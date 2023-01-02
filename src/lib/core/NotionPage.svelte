@@ -45,12 +45,20 @@
 
 		return thisBlock;
 	}
+
+	function resovleToContextedBlocks(blocks: Block[]) {
+		const contextedBlocks = blocks.map((block) => resovleToContextedBlock(block, null, null));
+		contextedBlocks.forEach((current, i) => {
+			if (i !== 0) {
+				current.context.previous = contextedBlocks[i - 1];
+			}
+		});
+		return contextedBlocks;
+	}
 </script>
 
 <svelte:component this={componentProvider.resolve('theme')}>
 	<svelte:component this={componentProvider.resolve('pageLayout')} {content}>
-		<NotionBlocks
-			blocks={content.blocks.map((block) => resovleToContextedBlock(block, null, null))}
-		/>
+		<NotionBlocks blocks={resovleToContextedBlocks(content.blocks)} />
 	</svelte:component>
 </svelte:component>

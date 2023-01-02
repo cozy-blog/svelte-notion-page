@@ -171,3 +171,17 @@ export type DividerProps = {
 		//
 	};
 } & ContextedBlock;
+
+export type AudioProps = {
+	type: 'audio';
+	audio: {
+		caption: TextProps[];
+		type: 'external' | 'file';
+		file?: {
+			url: string;
+		};
+		external?: {
+			url: string;
+		};
+	};
+} & ContextedBlock;

@@ -18,6 +18,7 @@ export class ListItemMarker {
 
 	private getMarkerOrder({ context: { previous }, type }: ContextedBlock) {
 		let order = 1;
+		console.log()
 		while (previous) {
 			if (previous.type !== type) break;
 			order++;
