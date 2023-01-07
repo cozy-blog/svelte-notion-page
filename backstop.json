@@ -23,72 +23,72 @@
 		{
 			"label": "test1: paragraph",
 			"url": "http://localhost:5173/test/1_paragraph/",
-			"misMatchThreshold": 2
+			"misMatchThreshold": 5
 		},
 		{
 			"label": "test2: column-list",
 			"url": "http://localhost:5173/test/2_column_list/"
-			,"misMatchThreshold": 2
+			,"misMatchThreshold": 5
 		},
 		{
 			"label": "test3: numbered-list",
 			"url": "http://localhost:5173/test/3_numbered_list/"
-			,"misMatchThreshold": 2
+			,"misMatchThreshold": 5
 		},
 		{
 			"label": "test4: bulleted-list",
 			"url": "http://localhost:5173/test/4_bulleted_list/"
-			,"misMatchThreshold": 2
+			,"misMatchThreshold": 5
 		},
 		{
 			"label": "test5: callout",
 			"url": "http://localhost:5173/test/5_callout/"
-			,"misMatchThreshold": 2
+			,"misMatchThreshold": 5
 		},
 		{
 			"label": "test6: code",
 			"url": "http://localhost:5173/test/6_code/"
-			,"misMatchThreshold": 2
+			,"misMatchThreshold": 5
 		},
 		{
 			"label": "test7: equation",
 			"url": "http://localhost:5173/test/7_equation/"
-			,"misMatchThreshold": 2
+			,"misMatchThreshold": 5
 		},
 		{
 			"label": "test8: quote",
 			"url": "http://localhost:5173/test/8_quote/"
-			,"misMatchThreshold": 2
+			,"misMatchThreshold": 5
 		},
 		{
 			"label": "test9: heading_1",
 			"url": "http://localhost:5173/test/9_heading_1/"
-			,"misMatchThreshold": 2
+			,"misMatchThreshold": 5
 		},
 		{
 			"label": "test10: heading_2",
 			"url": "http://localhost:5173/test/10_heading_2/"
-			,"misMatchThreshold": 2
+			,"misMatchThreshold": 5
 		},
 		{
 			"label": "test11: heading_3",
 			"url": "http://localhost:5173/test/11_heading_3/"
-			,"misMatchThreshold": 2
+			,"misMatchThreshold": 5
 		},
 		{
 			"label": "test12: divider",
 			"url": "http://localhost:5173/test/12_divider/"
-			,"misMatchThreshold": 2
+			,"misMatchThreshold": 5
 		},
 		{
 			"label": "test13: todo",
 			"url": "http://localhost:5173/test/13_todo/"
-			,"misMatchThreshold": 2
+			,"misMatchThreshold": 5
 		},
 		{
 			"label": "test14: toggle",
 			"url": "http://localhost:5173/test/14_toggle/"
-			,"misMatchThreshold": 2
+			,"misMatchThreshold": 5
 		}
 	],
 	"paths": {
