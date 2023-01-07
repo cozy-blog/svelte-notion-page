@@ -18,7 +18,7 @@ jobs:
       - name: Run web server on background
         run: npx vite preview --port 5173 &
       - name: Run Backstop tests
-        run: sleep 30 && npm run test
+        run: sleep 150 && npm run test
       - uses: actions/upload-artifact@v3
         if: always()
         with:
