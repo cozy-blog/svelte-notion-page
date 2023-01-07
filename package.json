@@ -8,7 +8,9 @@
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
-		"format": "prettier --plugin-search-dir . --write ."
+		"format": "prettier --plugin-search-dir . --write .",
+		"test": "npx backstop test",
+		"reference": "npx backstop reference"
 	},
 	"devDependencies": {
 		"@notionhq/client": "^2.2.3",
@@ -18,6 +20,7 @@
 		"@typescript-eslint/eslint-plugin": "^5.45.0",
 		"@typescript-eslint/parser": "^5.45.0",
 		"autoprefixer": "^10.4.13",
+		"backstopjs": "^6.1.4",
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte3": "^4.0.0",
@@ -34,6 +37,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"-": "^0.0.1",
 		"@types/katex": "^0.16.0",
 		"@types/prismjs": "^1.26.0",
 		"clipboard-copy": "^4.0.1",
