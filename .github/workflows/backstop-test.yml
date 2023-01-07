@@ -10,6 +10,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
+      - name: ls
+        run: ls
       - name: Install dependencies
         run: npm ci
       - name: Build for web server
@@ -22,5 +24,5 @@ jobs:
         if: always()
         with:
           name: backstop-report
-          path: backstop_data/html_report
+          path: backstop_data/ci_report
           retention-days: 30
