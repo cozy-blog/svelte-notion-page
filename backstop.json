@@ -75,6 +75,10 @@
 		{
 			"label": "test14: toggle",
 			"url": "http://localhost:5173/test/14_toggle/"
+		},
+		{
+			"label": "test15: temp",
+			"url": "http://localhost:5173/test/15_temp/"
 		}
 	],
 	"paths": {
@@ -84,7 +88,7 @@
 		"html_report": "backstop_data/html_report",
 		"ci_report": "backstop_data/ci_report"
 	},
-	"report": ["CI"],
+	"report": ["CI", "browser"],
 	"engine": "puppeteer",
 	"engineOptions": {
 		"args": ["--no-sandbox"]

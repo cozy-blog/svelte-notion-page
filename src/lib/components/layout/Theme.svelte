@@ -67,9 +67,8 @@
 		--notion-item-purple: rgba(103, 36, 222, 0.2);
 		--notion-item-gray: rgba(155, 154, 151, 0.4);
 
-		/* --notion-font: ui-sans-serif, system-ui, apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica,
-			'Apple Color Emoji', Arial, sans-serif, 'Segoe UI Emoji', 'Segoe UI Symbol'; */
-		--notion-font: Arial;
+		--notion-font: ui-sans-serif, system-ui, apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica,
+			'Apple Color Emoji', Arial, sans-serif, 'Segoe UI Emoji', 'Segoe UI Symbol';
 		--notion-max-width: 720px;
 		--notion-header-height: 45px;
 		--notion-indent: 27px;

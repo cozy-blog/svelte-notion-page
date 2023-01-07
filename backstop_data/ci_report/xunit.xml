@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="BackstopJS" tests="42" failures="0" errors="0" skipped="0">
+  <testsuite name="BackstopJS" tests="45" failures="0" errors="0" skipped="0">
     <testcase classname="document" name=" ›› test1: paragraph"/>
     <testcase classname="document" name=" ›› test1: paragraph"/>
     <testcase classname="document" name=" ›› test1: paragraph"/>
@@ -43,5 +43,8 @@
     <testcase classname="document" name=" ›› test14: toggle"/>
     <testcase classname="document" name=" ›› test14: toggle"/>
     <testcase classname="document" name=" ›› test14: toggle"/>
+    <testcase classname="document" name=" ›› test15: temp"/>
+    <testcase classname="document" name=" ›› test15: temp"/>
+    <testcase classname="document" name=" ›› test15: temp"/>
   </testsuite>
 </testsuites>
