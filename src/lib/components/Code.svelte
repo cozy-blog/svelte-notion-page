@@ -2,7 +2,7 @@
 	import type { CodeProps } from '$lib/types';
 	import CopyIcon from './icons/copy.svg';
 	import copyToClipboard from 'clipboard-copy';
-	import { highlight, languages } from 'prismjs';
+	import prismjs from 'prismjs';
 	import 'prismjs/themes/prism.css';
 	import RichText from './base/richtext/RichText.svelte';
 
@@ -45,7 +45,7 @@
 			{/if}
 		</div>
 		<code bind:this={codeEl}>
-			{@html highlight(content, languages[language] || {}, language)}
+			{@html prismjs.highlight(content, prismjs.languages[language] || {}, language)}
 		</code>
 	</div>
 	<div class="notion-asset-caption">

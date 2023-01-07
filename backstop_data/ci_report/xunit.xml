@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="BackstopJS" tests="45" failures="0" errors="0" skipped="0">
+    <testcase classname="document" name=" ›› test1: paragraph"/>
+    <testcase classname="document" name=" ›› test1: paragraph"/>
+    <testcase classname="document" name=" ›› test1: paragraph"/>
+    <testcase classname="document" name=" ›› test2: column-list"/>
+    <testcase classname="document" name=" ›› test2: column-list"/>
+    <testcase classname="document" name=" ›› test2: column-list"/>
+    <testcase classname="document" name=" ›› test3: numbered-list"/>
+    <testcase classname="document" name=" ›› test3: numbered-list"/>
+    <testcase classname="document" name=" ›› test3: numbered-list"/>
+    <testcase classname="document" name=" ›› test4: bulleted-list"/>
+    <testcase classname="document" name=" ›› test4: bulleted-list"/>
+    <testcase classname="document" name=" ›› test4: bulleted-list"/>
+    <testcase classname="document" name=" ›› test5: callout"/>
+    <testcase classname="document" name=" ›› test5: callout"/>
+    <testcase classname="document" name=" ›› test5: callout"/>
+    <testcase classname="document" name=" ›› test6: code"/>
+    <testcase classname="document" name=" ›› test6: code"/>
+    <testcase classname="document" name=" ›› test6: code"/>
+    <testcase classname="document" name=" ›› test7: equation"/>
+    <testcase classname="document" name=" ›› test7: equation"/>
+    <testcase classname="document" name=" ›› test7: equation"/>
+    <testcase classname="document" name=" ›› test8: quote"/>
+    <testcase classname="document" name=" ›› test8: quote"/>
+    <testcase classname="document" name=" ›› test8: quote"/>
+    <testcase classname="document" name=" ›› test9: heading_1"/>
+    <testcase classname="document" name=" ›› test9: heading_1"/>
+    <testcase classname="document" name=" ›› test9: heading_1"/>
+    <testcase classname="document" name=" ›› test10: heading_2"/>
+    <testcase classname="document" name=" ›› test10: heading_2"/>
+    <testcase classname="document" name=" ›› test10: heading_2"/>
+    <testcase classname="document" name=" ›› test11: heading_3"/>
+    <testcase classname="document" name=" ›› test11: heading_3"/>
+    <testcase classname="document" name=" ›› test11: heading_3"/>
+    <testcase classname="document" name=" ›› test12: divider"/>
+    <testcase classname="document" name=" ›› test12: divider"/>
+    <testcase classname="document" name=" ›› test12: divider"/>
+    <testcase classname="document" name=" ›› test13: todo"/>
+    <testcase classname="document" name=" ›› test13: todo"/>
+    <testcase classname="document" name=" ›› test13: todo"/>
+    <testcase classname="document" name=" ›› test14: toggle"/>
+    <testcase classname="document" name=" ›› test14: toggle"/>
+    <testcase classname="document" name=" ›› test14: toggle"/>
+    <testcase classname="document" name=" ›› test15: temp"/>
+    <testcase classname="document" name=" ›› test15: temp"/>
+    <testcase classname="document" name=" ›› test15: temp"/>
+  </testsuite>
+</testsuites>
