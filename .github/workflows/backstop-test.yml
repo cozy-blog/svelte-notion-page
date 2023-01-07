@@ -13,10 +13,8 @@ jobs:
           node-version: 18
       - name: Install dependencies
         run: npm ci
-      - name: 'Run dev'
-        run: npm run dev
       - name: Run Backstop tests
-        run: npx backstop test
+        run: npx concurrently -k "npm run dev" "sleep 10 && npm run test"
       - uses: actions/upload-artifact@v3
         if: always()
         with:
