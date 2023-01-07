@@ -87,6 +87,7 @@
 	"report": ["browser"],
 	"engine": "puppeteer",
 	"engineOptions": {
+		"headless": true,
 		"args": ["--no-sandbox"]
 	},
 	"asyncCaptureLimit": 5,
