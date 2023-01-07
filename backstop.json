@@ -21,23 +21,88 @@
 	"onReadyScript": "puppet/onReady.js",
 	"scenarios": [
 		{
-			"label": "notion: case 1",
-			"cookiePath": "backstop_data/engine_scripts/cookies.json",
-			"url": "http://localhost:5173/test/case1/",
-			"referenceUrl": "",
-			"readyEvent": "",
-			"readySelector": "",
-			"delay": 0,
-			"hideSelectors": [],
-			"removeSelectors": [],
-			"hoverSelector": "",
-			"clickSelector": "",
-			"postInteractionWait": 0,
-			"selectors": [],
-			"selectorExpansion": true,
-			"expect": 0,
-			"misMatchThreshold": 0.1,
-			"requireSameDimensions": true
+			"label": "test1: paragraph",
+			"url": "http://localhost:5173/test/1_paragraph/",
+			"removeSelectors": ["#test-header"],
+			"readySelector": "#test-header"
+		},
+		{
+			"label": "test2: column-list",
+			"url": "http://localhost:5173/test/2_column_list/",
+			"removeSelectors": ["#test-header"],
+			"readySelector": "#test-header"
+		},
+		{
+			"label": "test3: numbered-list",
+			"url": "http://localhost:5173/test/3_numbered_list/",
+			"removeSelectors": ["#test-header"],
+			"readySelector": "#test-header"
+		},
+		{
+			"label": "test4: bulleted-list",
+			"url": "http://localhost:5173/test/4_bulleted_list/",
+			"removeSelectors": ["#test-header"],
+			"readySelector": "#test-header"
+		},
+		{
+			"label": "test5: callout",
+			"url": "http://localhost:5173/test/5_callout/",
+			"removeSelectors": ["#test-header"],
+			"readySelector": "#test-header"
+		},
+		{
+			"label": "test6: code",
+			"url": "http://localhost:5173/test/6_code/",
+			"removeSelectors": ["#test-header"],
+			"readySelector": "#test-header"
+		},
+		{
+			"label": "test7: equation",
+			"url": "http://localhost:5173/test/7_equation/",
+			"removeSelectors": ["#test-header"],
+			"readySelector": "#test-header"
+		},
+		{
+			"label": "test8: quote",
+			"url": "http://localhost:5173/test/8_quote/",
+			"removeSelectors": ["#test-header"],
+			"readySelector": "#test-header"
+		},
+		{
+			"label": "test9: heading_1",
+			"url": "http://localhost:5173/test/9_heading_1/",
+			"removeSelectors": ["#test-header"],
+			"readySelector": "#test-header"
+		},
+		{
+			"label": "test10: heading_2",
+			"url": "http://localhost:5173/test/10_heading_2/",
+			"removeSelectors": ["#test-header"],
+			"readySelector": "#test-header"
+		},
+		{
+			"label": "test11: heading_3",
+			"url": "http://localhost:5173/test/11_heading_3/",
+			"removeSelectors": ["#test-header"],
+			"readySelector": "#test-header"
+		},
+		{
+			"label": "test12: divider",
+			"url": "http://localhost:5173/test/12_heading_3/",
+			"removeSelectors": ["#test-header"],
+			"readySelector": "#test-header"
+		},
+		{
+			"label": "test13: todo",
+			"url": "http://localhost:5173/test/13_todo/",
+			"removeSelectors": ["#test-header"],
+			"readySelector": "#test-header"
+		},
+		{
+			"label": "test14: toggle",
+			"url": "http://localhost:5173/test/14_toggle/",
+			"removeSelectors": ["#test-header"],
+			"readySelector": "#test-header"
 		}
 	],
 	"paths": {
