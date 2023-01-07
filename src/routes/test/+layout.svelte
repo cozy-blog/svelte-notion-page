@@ -1,4 +1,4 @@
-<header id="test-header">
+<!-- <header id="test-header">
 	<nav>
 		<ul>
 			<li><a href="/test/1_paragraph">1. paragraph</a></li>
@@ -17,7 +17,7 @@
 			<li><a href="/test/14_toggle">14. toggle</a></li>
 		</ul>
 	</nav>
-</header>
+</header> -->
 <slot />
 
 <style>
