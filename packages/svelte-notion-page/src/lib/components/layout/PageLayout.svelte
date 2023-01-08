@@ -3,7 +3,6 @@
 	import Header from '$lib/components/layout/Header.svelte';
 	import PageIcon from '$lib/components/layout/PageIcon.svelte';
 	import type { Content } from '$lib/types';
-	import { notionThemeContext } from '../../core/context';
 	export let content: Content;
 </script>
 

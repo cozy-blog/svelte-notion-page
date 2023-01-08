@@ -3,22 +3,22 @@
 	import NotionBlocks from './NotionBlocks.svelte';
 	import { setContext } from 'svelte';
 	import { defaultProvider } from './NotionComponentProvider';
-	import { NOTION_PAGE_INFO_KEY, notionComponentProvierContext } from './context';
+	import { NOTION_PAGE_INFO_KEY, notionComponentProviderContext } from './context';
 	import './notion.css';
 
 	export let content: Content;
 
-	if (!notionComponentProvierContext.exist()) {
-		notionComponentProvierContext.set(defaultProvider);
+	if (!notionComponentProviderContext.exist()) {
+		notionComponentProviderContext.set(defaultProvider);
 	}
 
-	const componentProvider = notionComponentProvierContext.get();
+	const componentProvider = notionComponentProviderContext.get();
 
 	setContext(NOTION_PAGE_INFO_KEY, {
 		pageId: content.id
 	});
 
-	function resovleToContextedBlock(
+	function resolveToContextedBlock(
 		block: Block,
 		previous: ContextedBlock | null = null,
 		parent: ContextedBlock | null = null
@@ -26,7 +26,7 @@
 		const { blocks: children } = block;
 		const thisBlock: ContextedBlock = {
 			...block,
-			blocks: undefined,
+			blocks: [],
 			context: { previous, parent }
 		};
 		if (children == null) return thisBlock;
@@ -36,7 +36,7 @@
 		let previousChildBlock: ContextedBlock | null = null;
 
 		children.forEach((child, i) => {
-			const contextChildBlock = resovleToContextedBlock(child, previousChildBlock, thisBlock);
+			const contextChildBlock = resolveToContextedBlock(child, previousChildBlock, thisBlock);
 			childContextBlocks[i] = contextChildBlock;
 			previousChildBlock = contextChildBlock;
 		});
@@ -46,8 +46,8 @@
 		return thisBlock;
 	}
 
-	function resovleToContextedBlocks(blocks: Block[]) {
-		const contextedBlocks = blocks.map((block) => resovleToContextedBlock(block, null, null));
+	function resolveToContextedBlocks(blocks: Block[]) {
+		const contextedBlocks = blocks.map((block) => resolveToContextedBlock(block, null, null));
 		contextedBlocks.forEach((current, i) => {
 			if (i !== 0) {
 				current.context.previous = contextedBlocks[i - 1];
@@ -59,6 +59,6 @@
 
 <svelte:component this={componentProvider.resolve('theme')}>
 	<svelte:component this={componentProvider.resolve('pageLayout')} {content}>
-		<NotionBlocks blocks={resovleToContextedBlocks(content.blocks)} />
+		<NotionBlocks blocks={resolveToContextedBlocks(content.blocks)} />
 	</svelte:component>
 </svelte:component>

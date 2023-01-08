@@ -1,11 +1,12 @@
 <script lang="ts">
-	import type { QuoteProps } from "$lib/types";
-	import { getColorCss } from "$lib/utils/getColorCss";
-	import RichText from "./base/richtext/RichText.svelte";
+	import type { QuoteProps } from '$lib/types';
+	import { getColorCss } from '$lib/utils/getColorCss';
+	import RichText from './base/richtext/RichText.svelte';
 
-  export let props: QuoteProps
-
-  const {quote: {color, text: texts}} = props
+	export let props: QuoteProps;
+	const {
+		quote: { color, rich_text: texts }
+	} = props;
 </script>
 
 <div class={`notion-block notion-quote ${getColorCss(color)}`}>

@@ -1,9 +1,9 @@
 <script lang="ts">
-	import type { Block, ContextedBlock } from '../types';
-	import { notionComponentProvierContext } from './context';
+	import type { ContextedBlock } from '../types';
+	import { notionComponentProviderContext } from './context';
 	export let blocks: ContextedBlock[];
-	export let depth: number = 0;
-	const componentProvider = notionComponentProvierContext.get();
+	export let depth: number = 0
+	const componentProvider = notionComponentProviderContext.get();
 </script>
 
 {#each blocks as block, i}

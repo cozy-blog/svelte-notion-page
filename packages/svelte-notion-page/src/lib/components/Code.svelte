@@ -6,10 +6,10 @@
 	import 'prismjs/themes/prism.css';
 	import RichText from './base/richtext/RichText.svelte';
 
-	export let props: CodeProps;
+	export let props: CodeProps
 
 	const {
-		code: { caption, text: texts, language }
+		code: { caption, rich_text: texts, language }
 	} = props;
 
 	let copied = false;

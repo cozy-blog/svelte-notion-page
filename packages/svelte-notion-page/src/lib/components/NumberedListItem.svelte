@@ -4,9 +4,9 @@
 	import { numberedListItemMarker } from '$lib/utils/listItemMarker';
 	import RichText from './base/richtext/RichText.svelte';
 
-	export let props: NumberedListItemProps;
+	export let props: NumberedListItemProps
 	const {
-		numbered_list_item: { text: texts, color }
+		numbered_list_item: { rich_text: texts, color }
 	} = props;
 	const { marker, format } = numberedListItemMarker.getMarker(props);
 </script>

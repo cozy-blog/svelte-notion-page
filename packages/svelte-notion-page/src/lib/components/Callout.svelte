@@ -4,7 +4,7 @@
 	import RichText from './base/richtext/RichText.svelte';
 	export let props: CalloutProps;
 	const {
-		callout: { color, text: texts, icon }
+		callout: { color, rich_text: texts, icon }
 	} = props;
 </script>
 

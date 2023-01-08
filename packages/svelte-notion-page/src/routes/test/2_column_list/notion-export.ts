@@ -119,7 +119,7 @@ export const json = {
       "type": "paragraph",
       "paragraph": {
         "color": "gray_background",
-        "text": []
+        "rich_text": []
       }
     },
     {
@@ -188,7 +188,7 @@ export const json = {
               "type": "paragraph",
               "paragraph": {
                 "color": "green_background",
-                "text": [
+                "rich_text": [
                   {
                     "type": "text",
                     "text": {
@@ -275,7 +275,7 @@ export const json = {
                           "type": "paragraph",
                           "paragraph": {
                             "color": "blue",
-                            "text": [
+                            "rich_text": [
                               {
                                 "type": "text",
                                 "text": {
@@ -342,7 +342,7 @@ export const json = {
                           "type": "paragraph",
                           "paragraph": {
                             "color": "blue",
-                            "text": [
+                            "rich_text": [
                               {
                                 "type": "text",
                                 "text": {
@@ -415,7 +415,7 @@ export const json = {
               "type": "paragraph",
               "paragraph": {
                 "color": "orange_background",
-                "text": [
+                "rich_text": [
                   {
                     "type": "text",
                     "text": {
@@ -458,7 +458,7 @@ export const json = {
               "type": "paragraph",
               "paragraph": {
                 "color": "default",
-                "text": []
+                "rich_text": []
               }
             }
           ]
@@ -487,7 +487,7 @@ export const json = {
       "type": "paragraph",
       "paragraph": {
         "color": "gray_background",
-        "text": []
+        "rich_text": []
       }
     },
     {
@@ -512,7 +512,7 @@ export const json = {
       "type": "paragraph",
       "paragraph": {
         "color": "gray_background",
-        "text": []
+        "rich_text": []
       },
       "blocks": [
         {
@@ -581,7 +581,7 @@ export const json = {
                   "type": "paragraph",
                   "paragraph": {
                     "color": "default",
-                    "text": [
+                    "rich_text": [
                       {
                         "type": "text",
                         "text": {
@@ -648,7 +648,7 @@ export const json = {
                   "type": "paragraph",
                   "paragraph": {
                     "color": "default",
-                    "text": [
+                    "rich_text": [
                       {
                         "type": "text",
                         "text": {
@@ -715,7 +715,7 @@ export const json = {
                   "type": "paragraph",
                   "paragraph": {
                     "color": "default",
-                    "text": [
+                    "rich_text": [
                       {
                         "type": "text",
                         "text": {

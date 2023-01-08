@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { notionComponentProvierContext } from '$lib/core/context';
 	import type { TodoProps } from '$lib/types';
 	import { getColorCss } from '$lib/utils/getColorCss';
 	import RichText from './base/richtext/RichText.svelte';
@@ -7,7 +6,7 @@
 	export let props: TodoProps;
 
 	const {
-		to_do: { color, text: texts, checked }
+		to_do: { color, rich_text: texts, checked }
 	} = props;
 </script>
 

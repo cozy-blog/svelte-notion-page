@@ -4,7 +4,7 @@
 	import RichText from './base/richtext/RichText.svelte';
 	export let props: ToggleProps;
 	const {
-		toggle: { color, text: texts }
+		toggle: { color, rich_text: texts }
 	} = props;
 </script>
 

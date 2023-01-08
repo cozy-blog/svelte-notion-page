@@ -1,24 +1,23 @@
 <script lang="ts">
-	import { notionComponentProvierContext } from '$lib/core/context';
+	import { notionComponentProviderContext } from '$lib/core/context';
 	import type { BulletedListItemProps } from '$lib/types';
 	import { getColorCss } from '$lib/utils/getColorCss';
 	import { bulletedListItemMarker } from '$lib/utils/listItemMarker';
+	import RichText from './base/richtext/RichText.svelte';
 
 	export let props: BulletedListItemProps;
 	const {
-		bulleted_list_item: { text: texts, color }
+		bulleted_list_item: { color, rich_text: texts }
 	} = props;
-	const componentProvider = notionComponentProvierContext.get();
-	const { marker, } = bulletedListItemMarker.getMarker(props);
+	const componentProvider = notionComponentProviderContext.get();
+	const { marker } = bulletedListItemMarker.getMarker(props);
 </script>
 
 <div class={`notion-block notion-list notion-list-bulleted ${getColorCss(color)}`}>
 	<li>
 		<span class="notion-list-marker">{marker}</span>
-		<div></div>
-		{#each texts as text}
-			<svelte:component this={componentProvider.resolve(text.type)} props={text} />
-		{/each}
+		<div />
+		<RichText props={texts} />
 	</li>
 	<slot />
 </div>

@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { notionComponentProvierContext } from '$lib/core/context';
 	import type { TextProps } from '$lib/types';
 	import Text from './component/Text.svelte';
 	import Equation from './component/Equation.svelte';

@@ -1,9 +1,6 @@
 .idea
 .DS_Store
 node_modules
-/packages/*/build
-/packages/*/.svelte-kit
-/packages/*/package
 .env
 .env.*
 !.env.example
@@ -11,3 +8,8 @@ vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 /packages/*/backstop_data/bitmaps_test
 /packages/*/backstop_data/html_report
+/packages/*/backstop_data/ci_report
+/packages/*/dist
+/packages/*/build
+/packages/*/.svelte-kit
+/packages/*/package

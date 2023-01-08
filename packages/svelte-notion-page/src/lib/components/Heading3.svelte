@@ -2,9 +2,9 @@
 	import type { Heading_3_Props } from '$lib/types';
 	import { getColorCss } from '$lib/utils/getColorCss';
 	import RichText from './base/richtext/RichText.svelte';
-	export let props: Heading_3_Props;
+	export let props: Heading_3_Props
 	const {
-		heading_3: { color, text: texts, is_toggleable }
+		heading_3: { color, rich_text: texts, is_toggleable }
 	} = props;
 </script>
 

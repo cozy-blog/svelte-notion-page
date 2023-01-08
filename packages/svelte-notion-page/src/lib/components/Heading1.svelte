@@ -4,7 +4,7 @@
 	import RichText from './base/richtext/RichText.svelte';
 	export let props: Heading_1_Props;
 	const {
-		heading_1: { color, text: texts, is_toggleable }
+		heading_1: { color, rich_text: texts, is_toggleable }
 	} = props;
 </script>
 

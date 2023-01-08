@@ -119,7 +119,7 @@ export const json = {
       "type": "paragraph",
       "paragraph": {
         "color": "gray_background",
-        "text": []
+        "rich_text": []
       }
     },
     {
@@ -144,7 +144,7 @@ export const json = {
       "type": "paragraph",
       "paragraph": {
         "color": "gray_background",
-        "text": [
+        "rich_text": [
           {
             "type": "text",
             "text": {
@@ -187,7 +187,7 @@ export const json = {
           "type": "paragraph",
           "paragraph": {
             "color": "default",
-            "text": [
+            "rich_text": [
               {
                 "type": "text",
                 "text": {
@@ -230,7 +230,7 @@ export const json = {
           "type": "paragraph",
           "paragraph": {
             "color": "default",
-            "text": [
+            "rich_text": [
               {
                 "type": "text",
                 "text": {
@@ -273,7 +273,7 @@ export const json = {
           "type": "paragraph",
           "paragraph": {
             "color": "default",
-            "text": [
+            "rich_text": [
               {
                 "type": "text",
                 "text": {
@@ -316,7 +316,7 @@ export const json = {
           "type": "paragraph",
           "paragraph": {
             "color": "default",
-            "text": [
+            "rich_text": [
               {
                 "type": "text",
                 "text": {
@@ -359,7 +359,7 @@ export const json = {
           "type": "paragraph",
           "paragraph": {
             "color": "default",
-            "text": [
+            "rich_text": [
               {
                 "type": "text",
                 "text": {
@@ -402,7 +402,7 @@ export const json = {
           "type": "paragraph",
           "paragraph": {
             "color": "default",
-            "text": [
+            "rich_text": [
               {
                 "type": "equation",
                 "equation": {
@@ -444,7 +444,7 @@ export const json = {
           "type": "paragraph",
           "paragraph": {
             "color": "default",
-            "text": [
+            "rich_text": [
               {
                 "type": "text",
                 "text": {
@@ -487,7 +487,7 @@ export const json = {
           "type": "paragraph",
           "paragraph": {
             "color": "default",
-            "text": [
+            "rich_text": [
               {
                 "type": "text",
                 "text": {
@@ -532,7 +532,7 @@ export const json = {
       "type": "paragraph",
       "paragraph": {
         "color": "gray_background",
-        "text": []
+        "rich_text": []
       }
     }
   ]

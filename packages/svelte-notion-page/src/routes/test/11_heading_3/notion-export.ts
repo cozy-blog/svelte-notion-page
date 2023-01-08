@@ -37,7 +37,7 @@ export const json = {
 		Slug: {
 			id: 'S%3A%7B%3E',
 			type: 'rich_text',
-			rich_text: [
+			rich_rich_text: [
 				{
 					type: 'text',
 					text: {
@@ -60,7 +60,7 @@ export const json = {
 		Description: {
 			id: 'qTV%3E',
 			type: 'rich_text',
-			rich_text: []
+			rich_rich_text: []
 		},
 		Status: {
 			id: 'vu%7C%3B',
@@ -119,7 +119,7 @@ export const json = {
 			type: 'paragraph',
 			paragraph: {
 				color: 'gray_background',
-				text: []
+				rich_text: []
 			}
 		},
 		{
@@ -145,7 +145,7 @@ export const json = {
 			heading_3: {
 				is_toggleable: false,
 				color: 'green_background',
-				text: [
+				rich_text: [
 					{
 						type: 'text',
 						text: {
@@ -188,7 +188,7 @@ export const json = {
 			type: 'paragraph',
 			paragraph: {
 				color: 'gray_background',
-				text: []
+				rich_text: []
 			}
 		},
 		{
@@ -213,7 +213,7 @@ export const json = {
 			type: 'paragraph',
 			paragraph: {
 				color: 'gray_background',
-				text: []
+				rich_text: []
 			},
 			blocks: [
 				{
@@ -238,7 +238,7 @@ export const json = {
 					type: 'paragraph',
 					paragraph: {
 						color: 'blue_background',
-						text: [
+						rich_text: [
 							{
 								type: 'text',
 								text: {
@@ -282,7 +282,7 @@ export const json = {
 					heading_3: {
 						is_toggleable: false,
 						color: 'orange_background',
-						text: [
+						rich_text: [
 							{
 								type: 'text',
 								text: {
@@ -327,7 +327,7 @@ export const json = {
 			type: 'paragraph',
 			paragraph: {
 				color: 'default',
-				text: []
+				rich_text: []
 			}
 		}
 	]

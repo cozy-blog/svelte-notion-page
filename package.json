@@ -1,0 +1,26 @@
+{
+  "name": "cozy-notion",
+  "version": "1.0.0",
+  "description": "notion libraries",
+  "main": "index.js",
+  "scripts": {
+    "start:notion-page": "npm run dev -workspace=@cozy-blog/svelte-notion-page",
+    "test:notion-page": "npm run test -workspace=@cozy-blog/svelte-notion-page",
+    "reference:notion-page": "npm run reference -workspace=@cozy-blog/svelte-notion-page",
+    "build:notion-client": "npm run build -workspace=@cozy-blog/notion-client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cozy-log/svelte-notion-page.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cozy-log/svelte-notion-page/issues"
+  },
+  "homepage": "https://github.com/cozy-log/svelte-notion-page#readme",
+  "workspaces": [
+    "packages/notion-client",
+    "packages/svelte-notion-page"
+  ]
+}

@@ -1,14 +1,10 @@
-import type {
-	BlockObjectResponse,
-	GetPageResponse,
-	PartialBlockObjectResponse
-} from '@notionhq/client/build/src/api-endpoints';
+import type { GetPageResponse } from '@notionhq/client/build/src/api-endpoints';
+import type { ContentfulPage, Block as _Block } from '@cozy-blog/notion-client';
 
 export type Page = GetPageResponse;
-type _Block = PartialBlockObjectResponse & BlockObjectResponse;
-export type Block = _Block & { blocks?: Block[] };
+export type Block = _Block;
 export type ContextedBlock = _Block & BlockContext & { blocks?: ContextedBlock[] };
-export type Content = Page & { blocks: Block[] };
+export type Content = ContentfulPage;
 
 export type BlockContext = {
 	context: {
@@ -40,7 +36,7 @@ export type TextProps = {
 export type ParagraphProps = {
 	paragraph: {
 		color: string;
-		text: TextProps[];
+		rich_text: TextProps[];
 	};
 } & ContextedBlock;
 
@@ -57,7 +53,7 @@ export type CodeProps = {
 	code: {
 		caption: [];
 		language: string;
-		text: TextProps[];
+		rich_text: TextProps[];
 	};
 } & ContextedBlock;
 
@@ -79,19 +75,19 @@ export type Heading_3_Props = {
 export type HeadingProps = {
 	is_toggleable: boolean;
 	color: string;
-	text: TextProps[];
+	rich_text: TextProps[];
 };
 
 export type ColumnListProps = { type: 'column_list' } & Block;
 export type ColumnProps = { type: 'column' } & Block;
 export type BulletedListItemProps = {
 	type: 'bulleted_list_item';
-	bulleted_list_item: { color: string; text: TextProps[] };
+	bulleted_list_item: { color: string; rich_text: TextProps[] };
 } & ContextedBlock;
 
 export type NumberedListItemProps = {
 	type: 'numbered_list_item';
-	numbered_list_item: { color: string; text: TextProps[] };
+	numbered_list_item: { color: string; rich_text: TextProps[] };
 } & ContextedBlock;
 
 export type TodoProps = {
@@ -99,7 +95,7 @@ export type TodoProps = {
 	to_do: {
 		color: string;
 		checked: boolean;
-		text: TextProps[];
+		rich_text: TextProps[];
 	};
 } & ContextedBlock;
 
@@ -107,7 +103,7 @@ export type ToggleProps = {
 	type: 'toggle';
 	toggle: {
 		color: string;
-		text: TextProps[];
+		rich_text: TextProps[];
 	};
 } & ContextedBlock;
 
@@ -115,7 +111,7 @@ export type QuoteProps = {
 	type: 'quote';
 	quote: {
 		color: string;
-		text: TextProps[];
+		rich_text: TextProps[];
 	};
 } & ContextedBlock;
 
@@ -133,7 +129,7 @@ export type CalloutProps = {
 			};
 		};
 		color: string;
-		text: TextProps[];
+		rich_text: TextProps[];
 	};
 } & ContextedBlock;
 
