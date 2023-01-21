@@ -234,13 +234,14 @@
 	display: inline-block;
 }
 
-.notion-list-numbered[data-notion-marker-format='romans'] > li > .notion-list-marker {
+/* .notion-list-numbered[data-notion-marker-format='romans'] > li > .notion-list-marker {
 	width: 3em;
 	margin-right: 0em;
 }
 .notion-list-numbered[data-notion-marker-format='romans'] > .notion-block {
 	margin-left: 2.9em;
-}
+} */
+
 .notion-list-numbered .notion-list-marker::after {
 	content: '.';
 }
