@@ -9,10 +9,26 @@
 </script>
 
 <details class={`notion-block notion-toggle ${getColorCss(color)}`}>
-	<summary>
-		<p class="notion-paragraph notion-toggle-summary-content">
+	<summary class="notion-toggle-content">
+		<p>
 			<RichText props={texts} />
 		</p>
 	</summary>
 	<slot />
 </details>
+
+<style>
+	.notion-toggle {
+		--notion-toggle-padding-left: 9px;
+		padding-left: var(--notion-toggle-padding-left);
+	}
+
+	p {
+		display: inline-flex;
+		padding: 3px 2px;
+	}
+
+	:global(.notion-toggle > .notion-block) {
+		margin-left: calc(var(--notion-indent) - var(--notion-toggle-padding-left));
+	}
+</style>

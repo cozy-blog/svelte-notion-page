@@ -503,19 +503,6 @@
 	word-break: break-word;
 }
 
-.notion-toggle {
-	--notion-toggle-padding-left: 9px;
-	padding-left: var(--notion-toggle-padding-left);
-}
-
-.notion-toggle > summary > .notion-toggle-summary-content {
-	display: inline-flex;
-}
-
-.notion-toggle > .notion-block {
-	margin-left: calc(var(--notion-indent) - var(--notion-toggle-padding-left));
-}
-
 .notion-audio {
 	margin-top: 4px;
 	margin-bottom: 4px;
