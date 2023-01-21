@@ -13,7 +13,7 @@
 
 <div
 	data-notion-marker-format={format}
-	class={`notion-block notion-list notion-list-numbered ${getColorCss(color)}`}
+	class={`notion-block notion-list-numbered ${getColorCss(color)}`}
 >
 	<li>
 		<div class="notion-list-marker">{marker}</div>
@@ -23,7 +23,6 @@
 </div>
 
 <style>
-
 	:global(.notion-list-numbered[data-notion-marker-format='romans'] > li > .notion-list-marker) {
 		width: 3em !important;
 		margin-right: 0em;
@@ -31,11 +30,12 @@
 	:global(.notion-list-numbered[data-notion-marker-format='romans'] > .notion-block) {
 		margin-left: 2.9em;
 	}
-	.notion-list-numbered .notion-list-marker::after {
+
+	.notion-list-marker::after {
 		content: '.';
 	}
 
-	.notion-list-numbered > li > .notion-list-marker {
+	li > .notion-list-marker {
 		width: 26px;
 	}
 
@@ -51,5 +51,5 @@
 		padding-bottom: 4px;
 		list-style-type: none;
 		display: flex;
-	} 
+	}
 </style>
