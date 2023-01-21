@@ -516,20 +516,6 @@
 	margin-left: calc(var(--notion-indent) - var(--notion-toggle-padding-left));
 }
 
-
-.notion-to-do {
-	display: flex;
-}
-
-.notion-to-do .notion-property-checkbox {
-	margin: 8px 6px;
-}
-
-.notion-to-do-checked .notion-to-do-content {
-	text-decoration: line-through;
-	opacity: 0.6;
-}
-
 .notion-audio {
 	margin-top: 4px;
 	margin-bottom: 4px;
