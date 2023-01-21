@@ -13,7 +13,7 @@ import ColumnList from '$lib/components/ColumnList.svelte';
 import NumberedListItem from '$lib/components/NumberedListItem.svelte';
 import BulletedListItem from '$lib/components/BulletedListItem.svelte';
 import Todo from '$lib/components/Todo.svelte';
-import CheckBox from '$lib/components/CheckBox.svelte';
+import CheckBox from '$lib/components/base/CheckBox.svelte';
 import Toggle from '$lib/components/Toggle.svelte';
 import Quote from '$lib/components/Quote.svelte';
 import Callout from '$lib/components/Callout.svelte';

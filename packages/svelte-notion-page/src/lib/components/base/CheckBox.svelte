@@ -26,3 +26,35 @@
 		</svg>
 	{/if}
 </div>
+
+<style>
+	.notion-property-checkbox {
+		width: 16px;
+		height: 16px;
+	}
+
+	.notion-property-checkbox-checked {
+		width: 16px;
+		height: 16px;
+		background: var(--select-color-0);
+	}
+
+	.notion-property-checkbox-checked svg {
+		position: relative;
+		display: block;
+		top: 1px;
+		left: 1px;
+		width: 14px;
+		height: 14px;
+		fill: #fff;
+	}
+
+	.notion-property-checkbox-unchecked {
+		width: 16px;
+		height: 16px;
+	}
+
+	.notion-property-checkbox-unchecked svg {
+		fill: var(--fg-color);
+	}
+</style>

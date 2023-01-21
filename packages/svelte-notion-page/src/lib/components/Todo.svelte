@@ -2,7 +2,7 @@
 	import type { TodoProps } from '$lib/types';
 	import { getColorCss } from '$lib/utils/getColorCss';
 	import RichText from './base/richtext/RichText.svelte';
-	import CheckBox from './CheckBox.svelte';
+	import CheckBox from './base/CheckBox.svelte';
 	export let props: TodoProps;
 
 	const {
