@@ -58,6 +58,13 @@
 </div>
 
 <style global>
+	.notion-title {
+		width: 100%;
+		font-size: 2.5em;
+		font-weight: 600;
+		margin-bottom: 20px;
+		line-height: 1.2;
+	}
 	.notion-page-content {
 		width: 100%;
 		display: flex;
