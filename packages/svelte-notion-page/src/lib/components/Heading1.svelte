@@ -22,3 +22,36 @@
 		<RichText props={texts} />
 	</h1>
 {/if}
+
+<style>
+	.notion-h {
+		position: relative;
+		display: inline-block;
+
+		font-weight: 600;
+		line-height: 1.3;
+		padding: 3px 2px;
+
+		max-width: 100%;
+		white-space: pre-wrap;
+		word-break: break-word;
+	}
+
+	.notion-toggle-h1 {
+		margin-bottom: 2px;
+	}
+
+	.notion-h1 {
+		margin-bottom: 2px;
+		font-size: 1.875em;
+		margin-top: 1.08em;
+	}
+
+	.notion-toggle-h1 {
+		margin-top: 32px;
+	}
+
+	.notion-toggle-h1 > summary > .notion-h {
+		font-size: 1.875em;
+	}
+</style>
