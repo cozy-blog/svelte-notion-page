@@ -171,20 +171,6 @@
 	border-color: var(--bg-color-2);
 }
 
-.notion-audio {
-	margin-top: 4px;
-	margin-bottom: 4px;
-}
-
-.notion-audio-content {
-	display: flex;
-	flex-direction: column;
-}
-
-.notion-audio audio {
-	width: 100%;
-}
-
 @media only screen and (max-width: 730px) {
 	.notion-asset-wrapper {
 		max-width: 100%;
