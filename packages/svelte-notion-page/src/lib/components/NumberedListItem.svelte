@@ -25,7 +25,7 @@
 <style>
 
 	:global(.notion-list-numbered[data-notion-marker-format='romans'] > li > .notion-list-marker) {
-		width: 3em;
+		width: 3em !important;
 		margin-right: 0em;
 	}
 	:global(.notion-list-numbered[data-notion-marker-format='romans'] > .notion-block) {
@@ -35,18 +35,18 @@
 		content: '.';
 	}
 
-	/* .notion-list-numbered > li > .notion-list-marker {
+	.notion-list-numbered > li > .notion-list-marker {
 		width: 26px;
-	} */
+	}
 
 	.notion-list-marker {
-		display: flex;
+		display: inline-flex;
 		justify-content: center;
 		align-items: center;
 		height: fit-content;
 	}
 
-	.notion-list > li {
+	.notion-list-numbered > li {
 		padding-top: 4px;
 		padding-bottom: 4px;
 		list-style-type: none;

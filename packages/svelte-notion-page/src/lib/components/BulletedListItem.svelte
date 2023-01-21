@@ -23,21 +23,6 @@
 </div>
 
 <style>
-	.notion-list-marker {
-		display: inline-block;
-	}
-
-	.notion-list-numbered[data-notion-marker-format='romans'] > li > .notion-list-marker {
-		width: 3em;
-		margin-right: 0em;
-	}
-	.notion-list-numbered[data-notion-marker-format='romans'] > .notion-block {
-		margin-left: 2.9em;
-	}
-	.notion-list-numbered .notion-list-marker::after {
-		content: '.';
-	}
-
 	.notion-list-bulleted .notion-list-marker::after {
 		content: '';
 	}
@@ -49,18 +34,14 @@
 		padding: 4px 0px;
 	}
 
-	.notion-list-numbered > li > .notion-list-marker {
-		width: 26px;
-	}
-
 	.notion-list-marker {
-		display: flex;
+		display: inline-flex;
 		justify-content: center;
 		align-items: center;
 		height: fit-content;
 	}
 
-	.notion-list > li {
+	.notion-list-bulleted > li {
 		padding-top: 4px;
 		padding-bottom: 4px;
 		list-style-type: none;
