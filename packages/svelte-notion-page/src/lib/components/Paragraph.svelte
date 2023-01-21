@@ -9,8 +9,22 @@
 </script>
 
 <div class={`notion-block ${getColorCss(color)}`}>
-	<p class="notion-paragraph">
+	<p class="notion-paragraph-content">
 		<RichText props={texts} />
 	</p>
 	<slot />
 </div>
+
+<style>
+	.notion-paragraph {
+		margin-top: 0;
+		margin-bottom: 0;
+		margin-block-start: 0;
+		margin-end-start: 0;
+	}
+
+	.notion-paragraph-content {
+		padding: 3px 2px;
+	}
+
+</style>

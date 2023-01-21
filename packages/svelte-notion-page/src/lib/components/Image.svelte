@@ -17,10 +17,28 @@
 		{:else}
 			unsupported image
 		{/if}
-		{#if caption.length !== 0}
-			<div class="notion-asset-caption">
-				<RichText props={caption} />
-			</div>
-		{/if}
 	</div>
+	{#if caption.length !== 0}
+		<div class="notion-asset-caption">
+			<RichText props={caption} />
+		</div>
+	{/if}
 </div>
+
+<style>
+	.notion-image {
+		margin-top: 4px;
+		margin-bottom: 4px;
+	}
+
+	.notion-image-content {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.notion-image-content img {
+		width: 100%;
+		border-radius: 2px;
+		margin: 0 auto;
+	}
+</style>
