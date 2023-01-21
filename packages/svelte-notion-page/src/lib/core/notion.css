@@ -131,28 +131,10 @@
 	display: none;
 }
 
-.notion-row {
-	display: grid;
-	display: grid;
-	grid-template-columns: repeat(var(--notion-column-count), 1fr fit-content(0px));
-}
-
 @media (max-width: 640px) {
 	.notion-column {
 		padding-top: 0px;
 		padding-bottom: 0px;
-	}
-	.notion-row {
-		display: flex;
-		flex-direction: column;
-	}
-
-	.notion-row .notion-column {
-		flex-grow: 1;
-	}
-
-	.notion-row .notion-column-spacer {
-		display: none;
 	}
 }
 
