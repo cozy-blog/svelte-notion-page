@@ -14,3 +14,14 @@
 		<RichText props={texts} />
 	</p>
 </div>
+
+<style>
+	.notion-quote-content {
+		display: block;
+		word-break: break-word;
+		border-left: 3px solid currentcolor;
+		padding: 0.2em 0.9em;
+		margin: 3px 0px 3px 1px;
+		font-size: 1em;
+	}
+</style>
