@@ -47,13 +47,6 @@
 	font-size: 1em;
 }
 
-.notion-hr {
-	margin: 6px 0;
-	padding: 0;
-	border-top: none;
-	border-color: var(--fg-color-1);
-}
-
 .notion-blank {
 	width: 100%;
 	min-height: 1rem;
