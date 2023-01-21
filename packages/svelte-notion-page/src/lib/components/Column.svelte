@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { ColumnProps } from '$lib/types';
-	export let props: ColumnProps;
 </script>
 
 <div class="notion-column">
@@ -18,7 +17,6 @@
 		padding-bottom: 16px;
 	}
 
-	/* notion spaceer */
 	.notion-column-spacer {
 		width: 46px;
 	}

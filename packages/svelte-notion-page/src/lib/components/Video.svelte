@@ -27,12 +27,12 @@
 		{:else}
 			unsupported video
 		{/if}
-		{#if caption.length !== 0}
-			<div class="notion-asset-caption">
-				<RichText props={caption} />
-			</div>
-		{/if}
 	</div>
+	{#if caption.length !== 0}
+		<div class="notion-asset-caption">
+			<RichText props={caption} />
+		</div>
+	{/if}
 </div>
 
 <style>

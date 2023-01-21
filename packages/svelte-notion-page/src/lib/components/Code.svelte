@@ -48,9 +48,11 @@
 			{@html prismjs.highlight(content, prismjs.languages[language] || {}, language)}
 		</code>
 	</div>
-	<div class="notion-asset-caption">
-		<RichText props={caption} />
-	</div>
+	{#if caption.length !== 0}
+		<div class="notion-asset-caption">
+			<RichText props={caption} />
+		</div>
+	{/if}
 </div>
 
 <style>
