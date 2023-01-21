@@ -34,3 +34,21 @@
 		{/if}
 	</div>
 </div>
+
+<style>
+	.notion-video {
+		margin-top: 2px;
+		margin-bottom: 2px;
+	}
+
+	.notion-video-content {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.notion-video-content video {
+		width: 100%;
+		border-radius: 2px;
+		margin: 0 auto;
+	}
+</style>
