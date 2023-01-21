@@ -14,3 +14,14 @@
 	</p>
 	<slot />
 </div>
+
+<style>
+	.notion-paragraph {
+		margin: 0;
+	}
+
+	.notion-paragraph-content {
+		margin: 0;
+	}
+
+</style>

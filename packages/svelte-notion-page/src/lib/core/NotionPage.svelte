@@ -62,3 +62,6 @@
 		<NotionBlocks blocks={resolveToContextedBlocks(content.blocks)} />
 	</svelte:component>
 </svelte:component>
+
+<style>
+</style>
