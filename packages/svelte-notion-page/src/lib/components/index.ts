@@ -4,7 +4,7 @@ import Title from './Title.svelte';
 import Blocks from './Blocks';
 import _Notion from './Notion.svelte';
 
-const Notion = _Notion as NotionStatic;
+export const Notion = _Notion as NotionStatic;
 Notion.Blocks = Blocks;
 Notion.Title = Title;
 Notion.Body = Body;
