@@ -1,0 +1,34 @@
+import { Meta, Story } from '@storybook/blocks';
+import { Source } from '@storybook/addon-docs';
+import { dedent } from 'ts-dedent';
+import * as IntroductionStories from './Introduction.stories';
+
+<Meta of={IntroductionStories} />
+
+# Svelte Notion Page!!
+
+This is library that helps you to render notion page in svelte! Of course you can customize any component into what you want to be.
+
+<br />
+<br />
+
+## Usage
+
+<Source
+  language='jsx'
+  dark
+  format={false}
+  code={dedent`
+  <Notion>
+    <Notion.Cover src={src} alt={alt} />
+    <Notion.Body>
+      <Notion.Title title={title} />
+      <Notion.Blocks blocks={blocks} />
+    </Notion.Body>
+  </Notion>
+`}
+/>
+
+## Example
+
+<Story of={IntroductionStories.Introduction} />

@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start:notion-page": "npm run dev -workspace=@cozy-blog/svelte-notion-page",
-    "test:notion-page": "npm run test -workspace=@cozy-blog/svelte-notion-page",
-    "reference:notion-page": "npm run reference -workspace=@cozy-blog/svelte-notion-page",
+    "storybook:notion-page": "npm run storybook -workspace=@cozy-blog/svelte-notion-page",
+    "chromatic:notion-page": "npm run chromatic -workspace=@cozy-blog/svelte-notion-page",
     "build:notion-client": "npm run build -workspace=@cozy-blog/notion-client"
   },
   "repository": {
@@ -22,5 +22,7 @@
   "workspaces": [
     "packages/notion-client",
     "packages/svelte-notion-page"
-  ]
+  ],
+  "devDependencies": {
+  }
 }
