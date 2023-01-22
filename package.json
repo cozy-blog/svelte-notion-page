@@ -24,5 +24,6 @@
     "packages/svelte-notion-page"
   ],
   "devDependencies": {
+    "chromatic": "^6.14.0"
   }
 }

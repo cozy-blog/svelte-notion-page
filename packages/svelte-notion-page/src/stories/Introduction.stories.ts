@@ -1,16 +1,16 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import type { Meta, StoryObj } from '@storybook/svelte';
-import Example from './Example.svelte';
+import _Example from './Example.svelte';
 
 const meta = {
 	title: 'Introduction',
-	component: Example as any
-} satisfies Meta<Example>;
+	component: _Example as any
+} satisfies Meta<_Example>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Introduction: Story = {
+export const Example: Story = {
 	args: {},
 	parameters: {
 		viewport: {

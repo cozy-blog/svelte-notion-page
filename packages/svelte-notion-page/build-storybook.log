@@ -1,0 +1,261 @@
+@storybook/cli v7.0.0-beta.31
+
+info => Cleaning outputDir: /var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9
+info => Loading presets
+info => Building manager..
+info => Manager built (96 ms)
+
+vite v4.0.4 building for production...
+transforming...
+7:50:24 PM [vite-plugin-svelte] /src/lib/default-notion-components/layout/PageLayout.svelte:4:11 PageLayout has unused export property 'content'. If it is for external reference only, please consider using `export const content`
+2: import Header from "$lib/default-notion-components/layout/Header.svelte";
+3: import PageIcon from "$lib/default-notion-components/layout/PageIcon.svelte";
+4: export let content;
+              ^
+5: </script>
+6: 
+7:50:24 PM [vite-plugin-svelte] /src/lib/default-notion-components/layout/PageLayout.svelte:79:2 Unused CSS selector ".notion-page-content-has-aside .notion-aside"
+77:     }
+78: 
+79:     .notion-page-content-has-aside .notion-aside {
+        ^
+80:       display: flex;
+81:     }
+7:50:24 PM [vite-plugin-svelte] /src/lib/default-notion-components/layout/PageLayout.svelte:128:1 Unused CSS selector ".notion-aside-table-of-contents .notion-table-of-contents-item"
+126:   }
+127: 
+128:   .notion-aside-table-of-contents .notion-table-of-contents-item {
+       ^
+129:     line-height: 1;
+130:   }
+7:50:24 PM [vite-plugin-svelte] /src/lib/default-notion-components/layout/PageLayout.svelte:132:1 Unused CSS selector ".notion-aside-table-of-contents .notion-table-of-contents-item-indent-level-0:first-of-type"
+130:   }
+131: 
+132:   .notion-aside-table-of-contents .notion-table-of-contents-item-indent-level-0:first-of-type {
+       ^
+133:     margin-top: 0;
+134:   }
+7:50:24 PM [vite-plugin-svelte] /src/lib/default-notion-components/layout/PageLayout.svelte:136:1 Unused CSS selector ".notion-aside-table-of-contents .notion-table-of-contents-item-indent-level-0"
+134:   }
+135: 
+136:   .notion-aside-table-of-contents .notion-table-of-contents-item-indent-level-0 {
+       ^
+137:     margin-top: 0.25em;
+138:   }
+7:50:24 PM [vite-plugin-svelte] /src/lib/default-notion-components/layout/PageLayout.svelte:140:1 Unused CSS selector ".notion-aside-table-of-contents .notion-table-of-contents-item-indent-level-1"
+138:   }
+139: 
+140:   .notion-aside-table-of-contents .notion-table-of-contents-item-indent-level-1 {
+       ^
+141:     font-size: 13px;
+142:   }
+7:50:24 PM [vite-plugin-svelte] /src/lib/default-notion-components/layout/PageLayout.svelte:144:1 Unused CSS selector ".notion-aside-table-of-contents .notion-table-of-contents-item-indent-level-2"
+142:   }
+143: 
+144:   .notion-aside-table-of-contents .notion-table-of-contents-item-indent-level-2 {
+       ^
+145:     font-size: 12px;
+146:   }
+7:50:24 PM [vite-plugin-svelte] /src/lib/default-notion-components/layout/PageLayout.svelte:148:1 Unused CSS selector ".notion-aside-table-of-contents .notion-table-of-contents-item-body"
+146:   }
+147: 
+148:   .notion-aside-table-of-contents .notion-table-of-contents-item-body {
+       ^
+149:     border: 0 none;
+150:   }
+7:50:24 PM [vite-plugin-svelte] /src/lib/default-notion-components/layout/PageLayout.svelte:195:1 Unused CSS selector ".notion-collection-card-cover span"
+193:   }
+194: 
+195:   .notion-collection-card-cover span,
+       ^
+196:   .notion-collection-card-cover img {
+197:     min-height: 100% !important;
+7:50:24 PM [vite-plugin-svelte] /src/lib/default-notion-components/layout/PageLayout.svelte:196:1 Unused CSS selector ".notion-collection-card-cover img"
+194: 
+195:   .notion-collection-card-cover span,
+196:   .notion-collection-card-cover img {
+       ^
+197:     min-height: 100% !important;
+198:     max-height: 100% !important;
+7:50:24 PM [vite-plugin-svelte] /src/lib/default-notion-components/layout/PageLayout.svelte:201:1 Unused CSS selector ".notion-page-cover-wrapper span"
+199:   }
+200: 
+201:   .notion-page-cover-wrapper span,
+       ^
+202:   .notion-page-cover-wrapper img {
+203:     width: 100% !important;
+7:50:24 PM [vite-plugin-svelte] /src/lib/default-notion-components/layout/PageLayout.svelte:202:1 Unused CSS selector ".notion-page-cover-wrapper img"
+200: 
+201:   .notion-page-cover-wrapper span,
+202:   .notion-page-cover-wrapper img {
+       ^
+203:     width: 100% !important;
+204:     height: 30vh !important;
+7:50:24 PM [vite-plugin-svelte] /src/lib/default-notion-components/layout/PageLayout.svelte:272:1 Unused CSS selector ".notion-page-icon-hero .notion-page-icon"
+270:   }
+271: 
+272:   .notion-page-icon-hero .notion-page-icon {
+       ^
+273:     position: relative;
+274:     display: block;
+7:50:24 PM [vite-plugin-svelte] /src/lib/default-notion-components/layout/PageLayout.svelte:277:1 Unused CSS selector ".notion-page-has-cover .notion-page-icon-hero.notion-page-icon-image"
+275:   }
+276: 
+277:   .notion-page-has-cover .notion-page-icon-hero.notion-page-icon-image {
+       ^
+278:     top: -62px;
+279:   }
+7:50:24 PM [vite-plugin-svelte] /src/lib/default-notion-components/layout/PageLayout.svelte:281:1 Unused CSS selector ".notion-page-has-cover .notion-page-icon-hero.notion-page-icon-span"
+279:   }
+280: 
+281:   .notion-page-has-cover .notion-page-icon-hero.notion-page-icon-span {
+       ^
+282:     top: -42px;
+283:   }
+7:50:24 PM [vite-plugin-svelte] /src/lib/default-notion-components/layout/PageLayout.svelte:285:1 Unused CSS selector ".notion-page-icon-hero.notion-page-icon-span .notion-page-icon"
+283:   }
+284: 
+285:   .notion-page-icon-hero.notion-page-icon-span .notion-page-icon {
+       ^
+286:     font-size: 78px;
+287:     line-height: 1.1;
+7:50:24 PM [vite-plugin-svelte] /src/lib/default-notion-components/layout/PageLayout.svelte:292:1 Unused CSS selector ".notion-page-icon-hero.notion-page-icon-image .notion-page-icon"
+290:   }
+291: 
+292:   .notion-page-icon-hero.notion-page-icon-image .notion-page-icon {
+       ^
+293:     display: block;
+294:     border-radius: 3px;
+7:50:24 PM [vite-plugin-svelte] /src/lib/default-notion-components/layout/PageLayout.svelte:301:1 Unused CSS selector ".notion-page-icon-hero.notion-page-icon-image img"
+299:   }
+300: 
+301:   .notion-page-icon-hero.notion-page-icon-image img {
+       ^
+302:     object-fit: cover;
+303:   }
+7:50:24 PM [vite-plugin-svelte] /src/lib/default-notion-components/layout/PageLayout.svelte:313:1 Unused CSS selector ".notion-search .notion-page-icon"
+311:   }
+312: 
+313:   .notion-search .notion-page-icon {
+       ^
+314:     fill: var(--fg-color-6);
+315:     color: var(--fg-color);
+7:50:24 PM [vite-plugin-svelte] /src/lib/default-notion-components/layout/PageLayout.svelte:318:1 Unused CSS selector "img.notion-page-icon"
+316:   }
+317: 
+318:   img.notion-page-icon,
+       ^
+319:   svg.notion-page-icon {
+320:     display: block;
+7:50:24 PM [vite-plugin-svelte] /src/lib/default-notion-components/layout/PageLayout.svelte:319:1 Unused CSS selector "svg.notion-page-icon"
+317: 
+318:   img.notion-page-icon,
+319:   svg.notion-page-icon {
+       ^
+320:     display: block;
+321:     object-fit: fill;
+7:50:24 PM [vite-plugin-svelte] /src/lib/default-notion-components/layout/PageLayout.svelte:335:1 Unused CSS selector ".notion-page-icon-inline span"
+333:   }
+334: 
+335:   .notion-page-icon-inline span {
+       ^
+336:     max-width: 100%;
+337:     max-height: 100%;
+7:50:24 PM [vite-plugin-svelte] /src/lib/default-notion-components/layout/PageLayout.svelte:340:1 Unused CSS selector ".notion-page-icon-inline img"
+338:   }
+339: 
+340:   .notion-page-icon-inline img {
+       ^
+341:     object-fit: cover;
+342:     width: 100%;
+7:50:24 PM [vite-plugin-svelte] /src/lib/default-notion-components/Code.svelte:119:1 Unused CSS selector ".notion-code-copy-button svg"
+117:   }
+118: 
+119:   .notion-code-copy-button svg {
+       ^
+120:     display: block;
+121:   }
+7:50:25 PM [vite-plugin-svelte] /Users/daeseungmoon/work/cozy-notion/node_modules/svelte-youtube-embed/Youtube.svelte:29:6 A11y: visible, non-interactive elements with an on:click event must be accompanied by an on:keydown, on:keyup, or on:keypress event.
+27:     {:else}
+28:       <Image {id} {title} {altThumb} {play} />
+29:       <div class="b__overlay" on:click={() => (play = true)} />
+          ^
+30:       <div class="v__title"><h3>{title}</h3></div>
+31:     {/if}
+7:50:25 PM [vite-plugin-svelte] /Users/daeseungmoon/work/cozy-notion/node_modules/svelte-youtube-embed/Button.svelte:6:2 A11y: visible, non-interactive elements with an on:click event must be accompanied by an on:keydown, on:keyup, or on:keypress event.
+4: 
+5: {#if isCustomPlayButton}
+6:   <div class="play-button" on:click>
+     ^
+7:     <slot />
+8:   </div>
+✓ 662 modules transformed.
+7:50:26 PM [vite-plugin-svelte] dom compile done.
+package                      	files	  time	   avg
+@cozy-blog/svelte-notion-page	   49	 0.34s	 7.0ms
+@storybook/svelte            	    2	50.4ms	25.2ms
+svelte-youtube-embed         	    4	40.4ms	10.1ms
+rendering chunks...
+computing gzip size...
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/copy-e7900300.svg                              0.68 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/iframe.html                                          12.40 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/index-f2d58877.css                            28.75 kB │ gzip:   5.64 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/index-d475d2ea.js                              0.21 kB │ gzip:   0.17 kB │ map:     0.80 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/index-3593a8ca.js                              0.25 kB │ gzip:   0.20 kB │ map:     0.10 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/_commonjsHelpers-725317a4.js                   0.29 kB │ gzip:   0.23 kB │ map:     0.11 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/chunk-R4NKYYJA-96bb58e6.js                     0.30 kB │ gzip:   0.23 kB │ map:     0.78 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/preview-b46f2f50.js                            0.40 kB │ gzip:   0.28 kB │ map:     1.13 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/chunk-FD4M6EBV-8d27da22.js                     0.44 kB │ gzip:   0.32 kB │ map:     1.46 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/syntaxhighlighter-6JBF4TYN-4f25998d.js         0.48 kB │ gzip:   0.32 kB │ map:     0.12 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/index-29c21c16.js                              0.51 kB │ gzip:   0.33 kB │ map:     3.92 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/chunk-NNAAFZ4U-67fa674f.js                     0.59 kB │ gzip:   0.39 kB │ map:     2.06 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/DocsRenderer-QMFTTPNP-915ff923.js              0.59 kB │ gzip:   0.35 kB │ map:     0.11 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/preview-dfb0c9df.js                            0.72 kB │ gzip:   0.43 kB │ map:     0.57 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/index-356e4a49.js                              0.81 kB │ gzip:   0.51 kB │ map:     3.24 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/preload-helper-41c905a7.js                     0.81 kB │ gzip:   0.52 kB │ map:     0.11 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/preview-6143cde0.js                            0.85 kB │ gzip:   0.54 kB │ map:     4.18 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/preview-7148253c.js                            0.94 kB │ gzip:   0.60 kB │ map:     2.91 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/preview-8c177ab5.js                            2.38 kB │ gzip:   1.27 kB │ map:    10.21 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/Introduction-147d8a38.js                       2.51 kB │ gzip:   1.29 kB │ map:     4.26 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/preview-3c25c213.js                            3.35 kB │ gzip:   1.41 kB │ map:    10.11 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/memoizerific-a8c4a000.js                       3.38 kB │ gzip:   1.43 kB │ map:    12.60 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/Example.stories-83cf9eed.js                    7.21 kB │ gzip:   2.06 kB │ map:    13.53 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/index-2812c619.js                              7.25 kB │ gzip:   2.97 kB │ map:    15.68 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/iframe-9369cfff.js                             7.55 kB │ gzip:   1.73 kB │ map:     8.14 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/Example.stories-4edce254.js                    7.59 kB │ gzip:   2.09 kB │ map:    14.90 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/Example.stories-0279fc53.js                    7.61 kB │ gzip:   2.08 kB │ map:    14.34 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/Example.stories-6930c91a.js                    7.64 kB │ gzip:   2.09 kB │ map:    15.02 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/Example.stories-8dd95ab4.js                    7.64 kB │ gzip:   2.09 kB │ map:    15.02 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/Example.stories-76eed6ce.js                    7.64 kB │ gzip:   2.09 kB │ map:    15.02 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/Example.stories-1b8d1d40.js                    7.69 kB │ gzip:   2.11 kB │ map:    15.32 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/preview-cbc388ef.js                            7.70 kB │ gzip:   1.58 kB │ map:    13.65 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/preview-5c62f53b.js                            7.97 kB │ gzip:   3.02 kB │ map:    28.16 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/Example.stories-60445b92.js                    8.23 kB │ gzip:   2.19 kB │ map:    16.35 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/Example.stories-711adda7.js                    9.28 kB │ gzip:   2.23 kB │ map:    19.27 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/Introduction.stories-fc200382.js               9.96 kB │ gzip:   2.27 kB │ map:    24.32 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/config-517c7d88.js                            10.21 kB │ gzip:   3.65 kB │ map:    17.10 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/GlobalScrollAreaStyles-XIHNDKUY-213b0a53.js   10.29 kB │ gzip:   2.30 kB │ map:    15.68 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/Example.stories-1a76bd9b.js                   10.33 kB │ gzip:   2.32 kB │ map:    25.25 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/_getTag-0e9125c2.js                           10.55 kB │ gzip:   4.34 kB │ map:    75.37 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/Example.stories-1aa94c5b.js                   11.13 kB │ gzip:   2.36 kB │ map:    24.37 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/Example.stories-f4773a8e.js                   12.36 kB │ gzip:   2.36 kB │ map:    29.37 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/Example.stories-3ee6e44f.js                   12.36 kB │ gzip:   2.36 kB │ map:    29.37 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/index-cbf3d471.js                             12.38 kB │ gzip:   5.09 kB │ map:   104.48 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/Example.stories-c393d3ac.js                   14.24 kB │ gzip:   2.61 kB │ map:    38.44 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/WithTooltip-6RTI5BE5-cced8d59.js              16.92 kB │ gzip:   5.38 kB │ map:    48.00 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/preview-53fdcd36.js                           21.33 kB │ gzip:   7.04 kB │ map:    68.20 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/Color-32FDEX32-8af69eee.js                    31.15 kB │ gzip:  11.72 kB │ map:   112.50 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/index-5ca3c18d.js                             53.70 kB │ gzip:  14.15 kB │ map:   180.02 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/OverlayScrollbars-VAV6LJAB-a20dc0ad.js        58.81 kB │ gzip:  25.22 kB │ map:   277.65 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/index-ce0dfd76.js                             69.42 kB │ gzip:  25.55 kB │ map:   177.47 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/chunk-XHUUYXNA-ea721329.js                   105.14 kB │ gzip:  40.01 kB │ map:   274.72 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/index-bc43edd9.js                            154.72 kB │ gzip:  50.57 kB │ map:   416.41 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/chunk-MA2MUXQN-d9cc6ff8.js                   266.87 kB │ gzip:  81.44 kB │ map:   783.99 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/index-63afa65e.js                            344.95 kB │ gzip: 100.37 kB │ map: 1,154.27 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9/assets/formatter-GBS43WFC-7957d0ea.js               601.23 kB │ gzip: 185.03 kB │ map: 1,323.04 kB
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/guide/en/#outputmanualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+info => Output directory: /var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--4948-G584KmzYa7G9

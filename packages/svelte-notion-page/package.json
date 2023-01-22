@@ -12,11 +12,11 @@
     "test": "npx backstop test",
     "reference": "npx backstop reference",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "chromatic": "npx chromatic --project-token=df5341e409a6"
   },
   "devDependencies": {
     "@notionhq/client": "^2.2.3",
-    "@storybook/addon-docs": "^7.0.0-beta.31",
     "@storybook/addon-essentials": "^7.0.0-beta.31",
     "@storybook/addon-interactions": "^7.0.0-beta.31",
     "@storybook/addon-links": "^7.0.0-beta.31",

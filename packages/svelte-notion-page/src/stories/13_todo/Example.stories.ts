@@ -24,6 +24,9 @@ export const Mobile: Story = {
 	parameters: {
 		viewport: {
 			defaultViewport: 'mobile'
+		},
+		chromatic: {
+			viewports: [320, 640]
 		}
 	}
 };

@@ -12,4 +12,3 @@
 		<Notion.Blocks blocks={content.blocks} />
 	</Notion.Body>
 </Notion>
-
