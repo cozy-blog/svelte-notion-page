@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { ContextedBlock } from '../types';
-	import { notionComponentProviderContext } from './context';
+	import type { ContextedBlock } from '../../types';
+	import { notionComponentProviderContext } from '../../context';
 	export let blocks: ContextedBlock[];
 	export let depth: number = 0
 	const componentProvider = notionComponentProviderContext.get();

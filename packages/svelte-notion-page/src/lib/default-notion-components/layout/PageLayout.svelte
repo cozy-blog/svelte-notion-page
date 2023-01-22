@@ -1,7 +1,7 @@
 <script lang="ts">
-	import Cover from '$lib/components/layout/Cover.svelte';
-	import Header from '$lib/components/layout/Header.svelte';
-	import PageIcon from '$lib/components/layout/PageIcon.svelte';
+	import Cover from '$lib/default-notion-components/layout/Cover.svelte';
+	import Header from '$lib/default-notion-components/layout/Header.svelte';
+	import PageIcon from '$lib/default-notion-components/layout/PageIcon.svelte';
 	import type { Content } from '$lib/types';
 	export let content: Content;
 </script>

@@ -1,22 +1,7 @@
 <script lang="ts">
-	import type { Block, ContextedBlock, Content, BlockContext } from '../types';
-	import NotionBlocks from './NotionBlocks.svelte';
-	import { setContext } from 'svelte';
-	import { defaultProvider } from './NotionComponentProvider';
-	import { NOTION_PAGE_INFO_KEY, notionComponentProviderContext } from './context';
-	import './notion.css';
-
-	export let content: Content;
-
-	if (!notionComponentProviderContext.exist()) {
-		notionComponentProviderContext.set(defaultProvider);
-	}
-
-	const componentProvider = notionComponentProviderContext.get();
-
-	setContext(NOTION_PAGE_INFO_KEY, {
-		pageId: content.id
-	});
+	import type { Block, ContextedBlock } from '$lib/types';
+	import RecursiveBlocks from './RecursiveBlocks.svelte';
+	export let blocks: Block[];
 
 	function resolveToContextedBlock(
 		block: Block,
@@ -57,11 +42,4 @@
 	}
 </script>
 
-<svelte:component this={componentProvider.resolve('theme')}>
-	<svelte:component this={componentProvider.resolve('pageLayout')} {content}>
-		<NotionBlocks blocks={resolveToContextedBlocks(content.blocks)} />
-	</svelte:component>
-</svelte:component>
-
-<style>
-</style>
+<RecursiveBlocks blocks={resolveToContextedBlocks(blocks)} />
