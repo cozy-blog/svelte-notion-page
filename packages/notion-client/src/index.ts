@@ -3,6 +3,7 @@ import type { ClientOptions } from "@notionhq/client/build/src/Client"
 import type {
   BlockObjectResponse,
   GetPageResponse,
+  PageObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints"
 
 export default class NotionClient extends Client {
@@ -45,7 +46,7 @@ export default class NotionClient extends Client {
 
   async fetchFullPage(pageId: string): Promise<ContentfulPage> {
     const [page, blocks] = await Promise.all([
-      this.pages.retrieve({ page_id: pageId }),
+      this.pages.retrieve({ page_id: pageId }) as Promise<PageObjectResponse>,
       this.fetchBlocks(pageId),
     ])
 
@@ -54,5 +55,5 @@ export default class NotionClient extends Client {
 }
 
 export type Block = BlockObjectResponse & { blocks: Block[] }
-export type ContentfulPage = GetPageResponse & { blocks: Block[] }
+export type ContentfulPage = PageObjectResponse & { blocks: Block[] }
 export { ClientOptions }
