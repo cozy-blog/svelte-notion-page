@@ -1,6 +1,6 @@
 {
   "name": "@cozy-blog/svelte-notion-page",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "scripts": {
     "dev": "vite dev",
     "build": "svelte-kit sync && svelte-package",
@@ -45,7 +45,6 @@
     "storybook": "^7.0.0-beta.31",
     "svelte": "^3.54.0",
     "svelte-check": "^2.9.2",
-    "svelte-youtube-embed": "^0.1.8",
     "tailwindcss": "^3.2.4",
     "ts-dedent": "^2.2.0",
     "tslib": "^2.4.1",
@@ -59,6 +58,7 @@
     "katex": "^0.16.4",
     "prismjs": "^1.29.0",
     "romans": "^2.0.8",
-    "svelte-katex": "^0.1.2"
+    "svelte-katex": "^0.1.2",
+    "svelte-youtube-embed": "^0.1.8"
   }
 }

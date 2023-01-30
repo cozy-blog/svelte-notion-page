@@ -1,3 +1,6 @@
+<script lang="ts">
+	export let depth: number
+</script>
 <hr class="notion-block notion-hr" />
 
 <style>

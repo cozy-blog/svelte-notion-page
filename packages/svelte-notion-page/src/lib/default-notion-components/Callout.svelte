@@ -3,6 +3,7 @@
 	import { getColorCss } from '$lib/utils/getColorCss';
 	import RichText from './base/richtext/RichText.svelte';
 	export let props: CalloutProps;
+	export let depth: number
 	const {
 		callout: { color, rich_text: texts, icon }
 	} = props;

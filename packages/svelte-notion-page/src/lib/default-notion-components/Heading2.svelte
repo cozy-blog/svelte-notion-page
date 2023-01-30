@@ -6,6 +6,7 @@
 	const {
 		heading_2: { color, rich_text: texts, is_toggleable }
 	} = props;
+	export let depth: number
 </script>
 
 {#if is_toggleable}

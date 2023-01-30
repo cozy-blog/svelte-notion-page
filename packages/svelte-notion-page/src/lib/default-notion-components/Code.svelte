@@ -7,6 +7,7 @@
 	import RichText from './base/richtext/RichText.svelte';
 
 	export let props: CodeProps;
+	export let depth: number
 
 	const {
 		code: { caption, rich_text: texts, language }

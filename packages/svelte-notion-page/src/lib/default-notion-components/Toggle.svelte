@@ -6,6 +6,7 @@
 	const {
 		toggle: { color, rich_text: texts }
 	} = props;
+	export let depth: number
 </script>
 
 <details class={`notion-block notion-toggle ${getColorCss(color)}`}>

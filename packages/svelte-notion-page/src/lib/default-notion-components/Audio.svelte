@@ -3,6 +3,7 @@
 	import RichText from './base/richtext/RichText.svelte';
 
 	export let props: AudioProps;
+	export let depth: number
 	const {
 		audio: { type, file, external, caption }
 	} = props;

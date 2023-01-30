@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { ColumnProps } from '$lib/types';
+	export let depth: number
 </script>
 
 <div class="notion-column">
