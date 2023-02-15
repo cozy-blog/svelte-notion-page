@@ -181,3 +181,11 @@ export type AudioProps = {
 		};
 	};
 } & ContextedBlock;
+
+export type BookmarkProps = {
+	type: 'bookmark';
+	bookmark: {
+		caption: TextProps[];
+		url: string;
+	};
+} & ContextedBlock;

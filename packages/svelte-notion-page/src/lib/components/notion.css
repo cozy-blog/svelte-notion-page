@@ -29,6 +29,14 @@
 	outline: 0;
 }
 
+.notion-block:first-of-type {
+	margin-top: 0px !important;
+}
+
+.notion-block:last-of-type {
+	margin-bottom: 0px !important;
+}
+
 .notion-block {
 	display: flex;
 	flex-direction: column;
@@ -47,6 +55,17 @@
 	font-size: 14px;
 	line-height: 1.4;
 	color: var(--fg-color-3);
+}
+
+.notion-bookmark {
+	container-type: inline-size;
+	container-name: bookmark;
+}
+
+@container bookmark (max-width: 340px) {
+	.notion-bookmark-image {
+		display: none !important;
+	}
 }
 
 [data-notion-theme='dark'] .notion-callout {
