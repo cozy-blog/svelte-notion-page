@@ -1,6 +1,6 @@
 {
   "name": "@cozy-blog/notion-client",
-  "version": "0.0.1",
+  "version": "0.0.19",
   "description": "",
   "main": "src/index.ts",
   "scripts": {
