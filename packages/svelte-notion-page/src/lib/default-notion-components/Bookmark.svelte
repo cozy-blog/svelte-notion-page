@@ -13,7 +13,7 @@
 		favicon: string;
 	} = (url: string) => {
 		return {
-			title: '',
+			title: 'You must replace this component with something that have own getMeta method',
 			description: '',
 			image: '',
 			favicon: ''
