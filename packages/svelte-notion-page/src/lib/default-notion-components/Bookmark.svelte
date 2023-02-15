@@ -71,6 +71,10 @@
 		background-color: rgb(245, 245, 245);
 	}
 
+	/*
+	* container query is implemented on notion.css
+	* if notion-bookmark's width is under 320px, Image will be hidden;
+	*/
 	.notion-bookmark-image {
 		flex: 1 1 180px;
 		width: 0px;

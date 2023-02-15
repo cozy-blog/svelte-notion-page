@@ -57,6 +57,17 @@
 	color: var(--fg-color-3);
 }
 
+.notion-bookmark {
+	container-type: inline-size;
+	container-name: bookmark;
+}
+
+@container bookmark (max-width: 340px) {
+	.notion-bookmark-image {
+		display: none !important;
+	}
+}
+
 [data-notion-theme='dark'] .notion-callout {
 	border-color: var(--bg-color-2);
 }
