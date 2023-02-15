@@ -6,15 +6,20 @@
 		bookmark: { url, caption }
 	} = props;
 	export let depth: number;
-	export let getMeta = (url: string) => {
+	export let getMeta: (url: string) => {
+		title: string;
+		description: string;
+		image: string;
+		favicon: string;
+	} = (url: string) => {
 		return {
 			title: '',
 			description: '',
-			image: 'https://www.notion.so/images/page-cover/nasa_robert_stewart_spacewalk.jpg',
-			icon: 'https://www.notion.so/images/page-cover/nasa_robert_stewart_spacewalk.jpg'
+			image: '',
+			favicon: ''
 		};
 	};
-	$: ({ title, description, image, icon } = getMeta(url));
+	$: ({ title, description, image, favicon } = getMeta(url));
 </script>
 
 <div class="notion-block notion-bookmark">
@@ -24,13 +29,17 @@
 			<p class="notion-bookmark-description">{description}</p>
 			<div class="notion-bookmark-link">
 				<div class="notion-bookmark-link-icon">
-					<img src={icon} alt="favicon" />
+					{#if favicon}
+						<img src={favicon} alt="favicon" />
+					{/if}
 				</div>
 				<p class="notion-bookmark-link-text">{url}</p>
 			</div>
 		</div>
 		<div class="notion-bookmark-image">
-			<img src={image} alt="thumbnail" />
+			{#if image}
+				<img src={image} alt="thumbnail" />
+			{/if}
 		</div>
 	</a>
 	{#if caption.length !== 0}

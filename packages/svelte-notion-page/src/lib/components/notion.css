@@ -33,6 +33,10 @@
 	margin-top: 0px !important;
 }
 
+.notion-block:last-of-type {
+	margin-bottom: 0px !important;
+}
+
 .notion-block {
 	display: flex;
 	flex-direction: column;
