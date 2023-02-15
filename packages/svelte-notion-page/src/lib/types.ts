@@ -184,14 +184,22 @@ export type AudioProps = {
 
 export type TableProps = {
 	table: {
-		table_width: number
-		has_column_header: boolean
-		has_row_header: boolean
+		table_width: number;
+		has_column_header: boolean;
+		has_row_header: boolean;
 	};
 } & ContextedBlock;
 
 export type TableRowProps = {
 	table_row: {
-		cells: TextProps[][]
+		cells: TextProps[][];
+	};
+};
+
+export type BookmarkProps = {
+	type: 'bookmark';
+	bookmark: {
+		caption: TextProps[];
+		url: string;
 	};
 } & ContextedBlock;

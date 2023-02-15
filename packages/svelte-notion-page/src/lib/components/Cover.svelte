@@ -11,11 +11,7 @@
 	.notion-cover-wrapper {
 		width: 100%;
 		height: 30vh;
-		min-height: 30vh;
-		max-height: 30vh;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		min-height: 200px;
 	}
 
 	img {

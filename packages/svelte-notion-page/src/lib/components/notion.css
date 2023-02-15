@@ -29,6 +29,14 @@
 	outline: 0;
 }
 
+.notion-block:first-child {
+	margin-top: 0px !important;
+}
+
+.notion-block:last-child {
+	margin-bottom: 0px !important;
+}
+
 .notion-block {
 	display: flex;
 	flex-direction: column;
@@ -49,6 +57,17 @@
 	color: var(--fg-color-3);
 }
 
+.notion-bookmark {
+	container-type: inline-size;
+	container-name: bookmark;
+}
+
+@container bookmark (max-width: 340px) {
+	.notion-bookmark-image {
+		display: none !important;
+	}
+}
+
 [data-notion-theme='dark'] .notion-callout {
 	border-color: var(--bg-color-2);
 }
@@ -61,7 +80,7 @@
 	--fg-color-2: rgba(55, 53, 47, 0.4);
 	--fg-color-3: rgba(55, 53, 47, 0.6);
 	--fg-color-4: #000;
-	--fg-color-5: rgba(55, 53, 47, 0.024);
+	--fg-color-5: rgb(233, 233, 231);
 	--fg-color-6: rgba(55, 53, 47, 0.8);
 	--fg-color-icon: var(--fg-color);
 
@@ -88,7 +107,7 @@
 	--notion-green_background: rgb(237, 243, 236);
 	--notion-red_background: rgb(251, 228, 228);
 	--notion-pink_background: rgb(244, 223, 235);
-	--notion-blue_background: rgb(221, 235, 241);
+	--notion-blue_background: rgb(231, 243, 248);
 	--notion-purple_background: rgb(234, 228, 242);
 	--notion-teal_background: rgb(221, 237, 234);
 	--notion-yellow_background: rgb(251, 243, 219);
