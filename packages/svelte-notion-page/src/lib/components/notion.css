@@ -29,6 +29,10 @@
 	outline: 0;
 }
 
+.notion-block:first-of-type {
+	margin-top: 0px !important;
+}
+
 .notion-block {
 	display: flex;
 	flex-direction: column;

@@ -23,6 +23,7 @@ import Image from '$lib/default-notion-components/Image.svelte';
 import Video from '$lib/default-notion-components/Video.svelte';
 import Divider from '$lib/default-notion-components/Divider.svelte';
 import Audio from '$lib/default-notion-components/Audio.svelte';
+import Bookmark from '$lib/default-notion-components/Bookmark.svelte';
 
 export type NotionComponentProviderOptions = {
 	fallBackComponent?: ComponentType;
@@ -79,6 +80,7 @@ export const defaultComponents: Record<string, ComponentType> = {
 	video: Video,
 	divider: Divider,
 	audio: Audio,
+	bookmark: Bookmark,
 
 	// low level custom. 넣을까 말까 고민중.., 
 	checkbox: CheckBox,
