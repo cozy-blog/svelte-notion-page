@@ -37,8 +37,11 @@
 		background: var(--bg-color-1);
 	}
 
-	.notion-table {
+	.notion-table:not(:first-child) {
 		margin-top: 8px;
+	}
+
+	.notion-table:not(:last-child) {
 		margin-bottom: 4px;
 	}
 </style>
