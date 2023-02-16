@@ -19,6 +19,8 @@ import Video from './Video.svelte';
 import Divider from './Divider.svelte';
 import Audio from './Audio.svelte';
 import Bookmark from './Bookmark.svelte';
+import Table from './Table.svelte';
+import TableRow from './TableRow.svelte';
 
 export {
   Audio,
@@ -41,5 +43,7 @@ export {
   Video,
   Toggle,
   Equation,
-  Quote
+  Quote,
+  Table,
+  TableRow
 }

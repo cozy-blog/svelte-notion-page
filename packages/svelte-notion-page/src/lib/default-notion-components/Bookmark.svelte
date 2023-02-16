@@ -50,8 +50,11 @@
 </div>
 
 <style>
-	.notion-bookmark {
+	.notion-bookmark:not(:first-child) {
 		margin-top: 2px;
+	}
+
+	.notion-bookmark:not(:last-child) {
 		margin-bottom: 2px;
 	}
 

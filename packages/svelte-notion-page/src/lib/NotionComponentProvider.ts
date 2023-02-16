@@ -20,7 +20,9 @@ import {
 	Heading2,
 	Heading3,
 	NumberedListItem,
-	Quote
+	Quote,
+	Table,
+	TableRow
 } from '$lib/default-notion-components'
 
 
@@ -77,6 +79,8 @@ export const defaultComponents: Record<string, ComponentType> = {
 	divider: Divider,
 	audio: Audio,
 	bookmark: Bookmark,
+	table: Table,
+	table_row: TableRow,
 
 	// low level custom. 넣을까 말까 고민중.., 
 	checkbox: CheckBox,
