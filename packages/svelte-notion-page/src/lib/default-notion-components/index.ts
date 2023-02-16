@@ -43,11 +43,7 @@ export {
   Video,
   Toggle,
   Equation,
-<<<<<<< HEAD
   Quote,
   Table,
   TableRow
-=======
-  Quote
->>>>>>> origin
 }
