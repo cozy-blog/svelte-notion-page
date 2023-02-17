@@ -10,4 +10,4 @@ vite.config.ts.timestamp-*
 /packages/*/build
 /packages/*/.svelte-kit
 /packages/*/package
-/packages/*/build-storybook.log
+packages/svelte-notion-page/build-storybook.log
