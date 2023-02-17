@@ -29,7 +29,7 @@
 		padding: 3px 2px;
 	}
 
-	:global(.notion-toggle > .notion-block) {
+	/* :global(.notion-toggle > .notion-block) {
 		margin-left: calc(var(--notion-indent) - var(--notion-toggle-padding-left));
-	}
+	} */
 </style>

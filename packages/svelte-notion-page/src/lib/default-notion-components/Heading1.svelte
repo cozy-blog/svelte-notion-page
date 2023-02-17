@@ -10,32 +10,29 @@
 	let open = false;
 </script>
 
-<h1 class={`${getColorCss(color)} notion-block notion-h1`}>
+<div
+	class:notion-toggle-open={open}
+	class={`${getColorCss(color)} notion-block notion-h1 notion-toggle`}
+>
 	{#if is_toggleable}
-		<div class:notion-toggle-open={open} class="notion-h-content notion-h1-content notion-toggle">
-			<button on:click={() => open = !open} class="notion-toggle-button" />
-			<RichText props={texts} />
+		<div class="notion-toggle-content">
+			<button on:click={() => (open = !open)} class="notion-toggle-button">
+				<div class:notion-toggle-button-arrow-opened={open} class="notion-toggle-button-arrow" />
+			</button>
+			<h1 class="notion-h-content notion-h1-content">
+				<RichText props={texts} />
+			</h1>
 		</div>
-		<div class="notion-toggle-child">
-			<slot />
-		</div>
+		<slot />
 	{:else}
-		<div class="notion-h-content notion-h1-content">
+		<h1 class="notion-h-content notion-h1-content">
 			<RichText props={texts} />
-		</div>
+		</h1>
 	{/if}
-</h1>
+</div>
 
 <style>
-	.notion-toggle {
-		display: flex;
-		align-items: center;
-	}
-
 	.notion-toggle-child {
-		display: contents;
-	}
-	.notion-toggle-open .notion-toggle-child {
 		display: contents;
 	}
 
