@@ -32,16 +32,8 @@
 </div>
 
 <style>
-	.notion-toggle-child {
-		display: contents;
-	}
-
 	.notion-toggle-h1 {
 		margin-bottom: 2px;
-	}
-
-	summary::marker {
-		font-size: 1rem;
 	}
 
 	.notion-h1:not(:last-child) {
@@ -49,7 +41,7 @@
 	}
 
 	.notion-h1:not(:first-child) {
-		margin-top: 1.08em;
+		margin-top: 2.025rem;
 	}
 
 	.notion-h1-content {

@@ -7,34 +7,37 @@
 		heading_2: { color, rich_text: texts, is_toggleable }
 	} = props;
 	export let depth: number;
+	let open = false;
 </script>
 
-<h2 class={`${getColorCss(color)} notion-block notion-h2`}>
+<div
+	class:notion-toggle-open={open}
+	class={`${getColorCss(color)} notion-block notion-h2 notion-toggle`}
+>
 	{#if is_toggleable}
-		<details>
-			<summary class="notion-h-content notion-h2-content">
+		<div class="notion-toggle-content">
+			<button on:click={() => (open = !open)} class="notion-toggle-button">
+				<div class:notion-toggle-button-arrow-opened={open} class="notion-toggle-button-arrow" />
+			</button>
+			<h2 class="notion-h-content notion-h2-content">
 				<RichText props={texts} />
-			</summary>
-			<slot />
-		</details>
-	{:else}
-		<div class="notion-h-content notion-h2-content">
-			<RichText props={texts} />
+			</h2>
 		</div>
+		<slot />
+	{:else}
+		<h2 class="notion-h-content notion-h2-content">
+			<RichText props={texts} />
+		</h2>
 	{/if}
-</h2>
+</div>
 
 <style>
-	summary::marker {
-		font-size: 1rem;
-	}
-
 	.notion-h2:not(:last-child) {
 		margin-bottom: 2px;
 	}
 
 	.notion-h2:not(:first-child) {
-		margin-top: 1.08em;
+		margin-top: 1.62rem;
 	}
 
 	.notion-h2-content {

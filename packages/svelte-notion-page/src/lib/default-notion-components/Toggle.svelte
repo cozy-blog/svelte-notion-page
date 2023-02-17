@@ -6,30 +6,27 @@
 	const {
 		toggle: { color, rich_text: texts }
 	} = props;
-	export let depth: number
+	export let depth: number;
+	let open = false;
 </script>
 
-<details class={`notion-block notion-toggle ${getColorCss(color)}`}>
-	<summary class="notion-toggle-content">
+<div
+	class:notion-toggle-open={open}
+	class={`${getColorCss(color)} notion-block notion-h1 notion-toggle`}
+>
+	<div class="notion-toggle-content">
+		<button on:click={() => (open = !open)} class="notion-toggle-button">
+			<div class:notion-toggle-button-arrow-opened={open} class="notion-toggle-button-arrow" />
+		</button>
 		<p>
 			<RichText props={texts} />
 		</p>
-	</summary>
-	<slot />
-</details>
+	</div>
+	<slot/>
+</div>
 
 <style>
-	.notion-toggle {
-		--notion-toggle-padding-left: 9px;
-		padding-left: var(--notion-toggle-padding-left);
-	}
-
-	p {
-		display: inline-flex;
+	.notion-toggle-content > p {
 		padding: 3px 2px;
 	}
-
-	/* :global(.notion-toggle > .notion-block) {
-		margin-left: calc(var(--notion-indent) - var(--notion-toggle-padding-left));
-	} */
 </style>
