@@ -6,53 +6,56 @@
 	const {
 		heading_1: { color, rich_text: texts, is_toggleable }
 	} = props;
-	export let depth: number
+	export let depth: number;
+	let open = false;
 </script>
 
-{#if is_toggleable}
-	<details class={`notion-toggle notion-toggle-h1 ${getColorCss(color)}`}>
-		<summary>
-			<h1 class="notion-h notion-toggle-summary-content">
-				<RichText props={texts} />
-			</h1>
-		</summary>
-		<slot />
-	</details>
-{:else}
-	<h1 class={`${getColorCss(color)} notion-h notion-h1`}>
-		<RichText props={texts} />
-	</h1>
-{/if}
+<h1 class={`${getColorCss(color)} notion-block notion-h1`}>
+	{#if is_toggleable}
+		<div class:notion-toggle-open={open} class="notion-h-content notion-h1-content notion-toggle">
+			<button on:click={() => open = !open} class="notion-toggle-button" />
+			<RichText props={texts} />
+		</div>
+		<div class="notion-toggle-child">
+			<slot />
+		</div>
+	{:else}
+		<div class="notion-h-content notion-h1-content">
+			<RichText props={texts} />
+		</div>
+	{/if}
+</h1>
 
 <style>
-	.notion-h {
-		position: relative;
-		display: inline-block;
+	.notion-toggle {
+		display: flex;
+		align-items: center;
+	}
 
-		font-weight: 600;
-		line-height: 1.3;
-		padding: 3px 2px;
-
-		max-width: 100%;
-		white-space: pre-wrap;
-		word-break: break-word;
+	.notion-toggle-child {
+		display: contents;
+	}
+	.notion-toggle-open .notion-toggle-child {
+		display: contents;
 	}
 
 	.notion-toggle-h1 {
 		margin-bottom: 2px;
 	}
 
-	.notion-h1 {
+	summary::marker {
+		font-size: 1rem;
+	}
+
+	.notion-h1:not(:last-child) {
 		margin-bottom: 2px;
-		font-size: 1.875em;
+	}
+
+	.notion-h1:not(:first-child) {
 		margin-top: 1.08em;
 	}
 
-	.notion-toggle-h1 {
-		margin-top: 32px;
-	}
-
-	.notion-toggle-h1 > summary > .notion-h {
-		font-size: 1.875em;
+	.notion-h1-content {
+		font-size: 1.875rem;
 	}
 </style>

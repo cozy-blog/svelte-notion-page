@@ -6,53 +6,38 @@
 	const {
 		heading_2: { color, rich_text: texts, is_toggleable }
 	} = props;
-	export let depth: number
+	export let depth: number;
 </script>
 
-{#if is_toggleable}
-	<details class={`notion-toggle notion-toggle-h2 ${getColorCss(color)}`}>
-		<summary>
-			<h2 class="notion-h notion-toggle-summary-content">
+<h2 class={`${getColorCss(color)} notion-block notion-h2`}>
+	{#if is_toggleable}
+		<details>
+			<summary class="notion-h-content notion-h2-content">
 				<RichText props={texts} />
-			</h2>
-		</summary>
-		<slot />
-	</details>
-{:else}
-	<h2 class={`${getColorCss(color)} notion-h notion-h2`}>
-		<RichText props={texts} />
-	</h2>
-{/if}
+			</summary>
+			<slot />
+		</details>
+	{:else}
+		<div class="notion-h-content notion-h2-content">
+			<RichText props={texts} />
+		</div>
+	{/if}
+</h2>
 
 <style>
-	.notion-h {
-		position: relative;
-		display: inline-block;
-
-		font-weight: 600;
-		line-height: 1.3;
-		padding: 3px 2px;
-
-		max-width: 100%;
-		white-space: pre-wrap;
-		word-break: break-word;
+	summary::marker {
+		font-size: 1rem;
 	}
 
-	.notion-toggle-h2 {
+	.notion-h2:not(:last-child) {
 		margin-bottom: 2px;
 	}
 
-	.notion-h2 {
-		margin-bottom: 2px;
-		font-size: 1.5em;
-		margin-top: 1.1em;
+	.notion-h2:not(:first-child) {
+		margin-top: 1.08em;
 	}
 
-	.notion-toggle-h2 {
-		margin-top: 24.5px;
-	}
-
-	.notion-toggle-h2 > summary > .notion-h {
-		font-size: 1.5em;
+	.notion-h2-content {
+		font-size: 1.5rem;
 	}
 </style>
