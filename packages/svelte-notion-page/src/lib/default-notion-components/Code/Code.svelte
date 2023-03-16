@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { CodeProps } from '$lib/types';
-	import CopyIcon from './icons/copy.svg';
 	import copyToClipboard from 'clipboard-copy';
 	import Prism from 'prismjs';
 	import 'prismjs/themes/prism.css';
@@ -10,9 +9,10 @@
 	import 'prismjs/components/prism-java';
 	import 'prismjs/components/prism-markdown';
 	import 'prismjs/components/prism-python';
-	import 'prismjs/components/prism-sql'
+	import 'prismjs/components/prism-sql';
 
 	import RichText from '../base/richtext/RichText.svelte';
+	import { fade, fly } from 'svelte/transition';
 
 	export let props: CodeProps;
 	export let depth: number;
@@ -33,27 +33,39 @@
 
 	let copyTimeout: NodeJS.Timeout | null = null;
 	const handleCopy = () => {
+		copied = true;
 		copyToClipboard(content);
 		if (copyTimeout != null) {
 			clearTimeout(copyTimeout);
 			copyTimeout = null;
 		}
 
-		copyTimeout = setTimeout(() => (copied = true), 1200);
+		copyTimeout = setTimeout(() => {
+			copied = false;
+		}, 2500);
 	};
 </script>
 
 <div class="notion-block notion-code">
 	<div class="notion-code-content">
-		<div class="notion-code-copy">
-			<button class="notion-code-copy-button" on:click={handleCopy}>
-				<img src={CopyIcon} alt="copy" />
+		<div class="notion-code-meta">
+			<div class="notion-code-language">
+				{language.replace(/^[a-z]/, (char) => char.toUpperCase())}
+			</div>
+			<button class="notion-code-copy" on:click={handleCopy}>
+				<svg
+					stroke="currentColor"
+					stroke-width="0"
+					viewBox="0 0 448 512"
+					height="1em"
+					width="1em"
+					xmlns="http://www.w3.org/2000/svg"
+					><path
+						d="M433.941 65.941l-51.882-51.882A48 48 0 0 0 348.118 0H176c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h224c26.51 0 48-21.49 48-48v-48h80c26.51 0 48-21.49 48-48V99.882a48 48 0 0 0-14.059-33.941zM266 464H54a6 6 0 0 1-6-6V150a6 6 0 0 1 6-6h74v224c0 26.51 21.49 48 48 48h96v42a6 6 0 0 1-6 6zm128-96H182a6 6 0 0 1-6-6V54a6 6 0 0 1 6-6h106v88c0 13.255 10.745 24 24 24h88v202a6 6 0 0 1-6 6zm6-256h-64V48h9.632c1.591 0 3.117.632 4.243 1.757l48.368 48.368a6 6 0 0 1 1.757 4.243V112z"
+					/></svg
+				>
+				<span>copy</span>
 			</button>
-			{#if copied}
-				<div class="notion-code-copy-tooltip">
-					<div>{'Copied'}</div>
-				</div>
-			{/if}
 		</div>
 		<code>
 			{@html Prism.highlight(
@@ -66,6 +78,15 @@
 	{#if caption.length !== 0}
 		<div class="notion-asset-caption">
 			<RichText props={caption} />
+		</div>
+	{/if}
+
+	{#if copied}
+		<div
+			in:fly={{y: 40}}
+			out:fade
+		 class="notion-code-copy-tooltip">
+			<div>{'Copied'}</div>
 		</div>
 	{/if}
 </div>
@@ -91,60 +112,83 @@
 		font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;
 	}
 
-	.notion-code-copy {
-		position: absolute;
-		top: 1em;
-		right: 1em;
+	.notion-code-language {
+		font-size: 12px;
+		caret-color: var(--fg-color);
+		color: var(--fg-color-3);
+		background-color: var(--fg-color-0);
 		user-select: none;
 		z-index: 9;
-		transition: opacity 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+		transition: opacity 0.4s cubic-bezier(0.3, 0, 0.5, 1);
+		padding: 0px 6px;
+		border-radius: 2px;
 	}
 
-	.notion-code-copy-button {
-		display: inline-block;
-		padding: 0.6em;
-		font-size: 1.25em;
+	.notion-code-meta {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 8px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		transition: opacity 0.3s cubic-bezier(0.3, 0, 0.5, 1);
+	}
+
+	.notion-code-copy {
+		user-select: none;
+		z-index: 9;
+		display: flex;
+		padding: 6px 4px;
+		align-items: center;
+		font-size: 12px;
 		line-height: 1em;
 		cursor: pointer;
+		gap: 4px;
+		caret-color: var(--fg-color);
+		color: var(--fg-color-3);
+		background-color: var(--fg-color-0);
 
 		transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1),
 			color 0.2s cubic-bezier(0.3, 0, 0.5, 1), border-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
 		box-shadow: 0 1px 0 rgba(27, 31, 36, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.25);
-		background-color: #f6f8fa;
 
 		color: #24292f;
-		border: 1px solid rgba(27, 31, 36, 0.15);
-		border-radius: 6px;
+		border: none;
+		border-radius: 2px;
 	}
 
-	.notion-code-copy-button:hover {
-		background-color: #f3f4f6;
+	.notion-code-copy:hover {
+		background-color: var(--fg-color-1);
 		border-color: rgba(27, 31, 36, 0.15);
 		transition-duration: 0.1s;
 	}
 
-	.notion-code-copy-button:active {
+	.notion-code-copy:active {
 		background: hsla(220, 14%, 93%, 1);
 		border-color: rgba(27, 31, 36, 0.15);
 		transition: none;
 	}
 
-	.notion-code .notion-code-copy {
+	.notion-code .notion-code-meta {
 		opacity: 0;
 	}
 
-	.notion-code:hover .notion-code-copy {
+	.notion-code:hover .notion-code-meta {
 		opacity: 1;
 	}
 
 	.notion-code-copy-button svg {
 		display: block;
+		height: 14px;
+		width: 14px;
 	}
 
 	.notion-code-copy-tooltip {
 		pointer-events: none;
-		position: absolute;
-		bottom: -38px;
+		position: fixed;
+		bottom: 16px;
 		left: 0;
 		width: 100%;
 		display: flex;
