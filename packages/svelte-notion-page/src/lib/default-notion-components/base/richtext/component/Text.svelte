@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { TextProps } from '$lib/types';
 	import { getColorCss } from '$lib/utils/getColorCss';
+	import he from 'he';
 	export let props: TextProps;
 	const {
 		href,
@@ -34,7 +35,7 @@
 			default:
 				throw { message: `unexpected type: ${type}` };
 		}
-	}, `<span class="${getColorCss(color)} notion-span">${content}</span>`);
+	}, `<span class="${getColorCss(color)} notion-span">${he.encode(content)}</span>`);
 </script>
 
 {@html text}
