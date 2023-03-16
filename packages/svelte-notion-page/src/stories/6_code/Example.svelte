@@ -1,14 +1,17 @@
 <script lang="ts">
-	import { json } from './notion-export';
 	import type { Content } from '$lib/types.js';
 	import Notion from '$lib/components';
-	const content = json as unknown as Content;
+	export let content: Content;
+	export let cover: string = '';
+	export let title = 'Notion Title';
 </script>
 
 <Notion>
-	<Notion.Cover src="https://www.notion.so/images/page-cover/nasa_robert_stewart_spacewalk.jpg" />
+	{#if cover}
+		<Notion.Cover src={cover} />
+	{/if}
 	<Notion.Body>
-		<Notion.Title title="Notion Title" />
+		<Notion.Title {title} />
 		<Notion.Blocks blocks={content.blocks} />
 	</Notion.Body>
 </Notion>
