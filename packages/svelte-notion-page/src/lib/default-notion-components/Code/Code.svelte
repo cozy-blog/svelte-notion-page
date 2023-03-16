@@ -10,6 +10,8 @@
 	import 'prismjs/components/prism-markdown';
 	import 'prismjs/components/prism-python';
 	import 'prismjs/components/prism-sql';
+	import 'prismjs/components/prism-go';
+	import 'prismjs/components/prism-elixir';
 
 	import RichText from '../base/richtext/RichText.svelte';
 	import { fade, fly } from 'svelte/transition';
@@ -82,10 +84,7 @@
 	{/if}
 
 	{#if copied}
-		<div
-			in:fly={{y: 40}}
-			out:fade
-		 class="notion-code-copy-tooltip">
+		<div in:fly={{ y: 40 }} out:fade class="notion-code-copy-tooltip">
 			<div>{'Copied'}</div>
 		</div>
 	{/if}

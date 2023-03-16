@@ -11,7 +11,9 @@ import {
 	typescript,
 	markdown,
 	python,
-	sql
+	sql,
+	elixir,
+	go
 } from './support-code-examples';
 
 const meta = {
@@ -101,3 +103,18 @@ export const Sql: Story = {
 		content: getCodeExampleJson(sql, 'sql')
 	}
 };
+
+export const Go: Story = {
+	args: {
+		title: 'Go',
+		content: getCodeExampleJson(go, 'go')
+	}
+};
+
+export const Elixir: Story = {
+	args: {
+		title: 'Elixir',
+		content: getCodeExampleJson(elixir, 'elixir')
+	}
+};
+
