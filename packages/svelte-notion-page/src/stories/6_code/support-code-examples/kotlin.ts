@@ -1,34 +1,27 @@
 import { dedent } from 'ts-dedent';
 export const kotlin = dedent`
-class Calculator {
-  num num1;
-  num num2;
-  
-  Calculator(this.num1, this.num2);
-  
-  num add() {
-    return num1 + num2;
-  }
-  
-  num subtract() {
-    return num1 - num2;
-  }
-  
-  num multiply() {
-    return num1 * num2;
-  }
-  
-  num divide() {
-    return num1 / num2;
-  }
+data class Post(val id: Int, val title: String, val content: String, val type: PostType)
+
+enum class PostType {
+    TEXT,
+    IMAGE,
+    VIDEO
 }
 
-void main() {
-  Calculator calc = Calculator(10, 5);
-  
-  print('Addition result: \${calc.add()}');
-  print('Subtraction result: \${calc.subtract()}');
-  print('Multiplication result: \${calc.multiply()}');
-  print('Division result: \${calc.divide()}');
+fun processPost(post: Post) {
+    when (post.type) {
+        PostType.TEXT -> {
+            println("Processing text post: \${post.title}")
+            // Text post processing logic goes here
+        }
+        PostType.IMAGE -> {
+            println("Processing image post: \${post.title}")
+            // Image post processing logic goes here
+        }
+        PostType.VIDEO -> {
+            println("Processing video post: \${post.title}")
+            // Video post processing logic goes here
+        }
+    }
 }
 `;

@@ -3,7 +3,16 @@ import type { Meta, StoryObj } from '@storybook/svelte';
 import Example from './Example.svelte';
 import { json } from './notion-export';
 import { getCodeExampleJson } from './getCodeExampleJson';
-import { java, javascript, dart, kotlin, typescript } from './support-code-examples';
+import {
+	java,
+	javascript,
+	dart,
+	kotlin,
+	typescript,
+	markdown,
+	python,
+	sql
+} from './support-code-examples';
 
 const meta = {
 	title: 'Example/6. Code',
@@ -46,7 +55,49 @@ export const Dart: Story = {
 
 export const Java: Story = {
 	args: {
-		title: 'Dart',
-		content: getCodeExampleJson(java, 'dart')
+		title: 'Java',
+		content: getCodeExampleJson(java, 'java')
+	}
+};
+
+export const Javascript: Story = {
+	args: {
+		title: 'Javascript',
+		content: getCodeExampleJson(javascript, 'javascript')
+	}
+};
+
+export const Kotlin: Story = {
+	args: {
+		title: 'Kotlin',
+		content: getCodeExampleJson(kotlin, 'kotlin')
+	}
+};
+
+export const Typescript: Story = {
+	args: {
+		title: 'Typescript',
+		content: getCodeExampleJson(typescript, 'typescript')
+	}
+};
+
+export const Markdown: Story = {
+	args: {
+		title: 'Markdown',
+		content: getCodeExampleJson(markdown, 'markdown')
+	}
+};
+
+export const Python: Story = {
+	args: {
+		title: 'Python',
+		content: getCodeExampleJson(python, 'python')
+	}
+};
+
+export const Sql: Story = {
+	args: {
+		title: 'Sql',
+		content: getCodeExampleJson(sql, 'sql')
 	}
 };

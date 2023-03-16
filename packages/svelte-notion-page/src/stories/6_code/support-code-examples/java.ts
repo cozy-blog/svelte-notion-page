@@ -1,8 +1,34 @@
 import { dedent } from 'ts-dedent';
+
 export const java = dedent`
-function sum(n) {
-	if(n == 1) return 1;
-	if(n % 2 == 1) return n + sum(n-1)
-	return Math.pow(n/2, 2) + 2 * sum(n / 2)
+public class Animal {
+  private String name;
+  private int age;
+
+  public Animal(String name, int age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public int getAge() {
+    return age;
+  }
+}
+
+public class Cat extends Animal {
+  private String color;
+
+  public Cat(String name, int age, String color) {
+    super(name, age);
+    this.color = color;
+  }
+
+  public String getColor() {
+    return color;
+  }
 }
 `;

@@ -4,34 +4,32 @@
 	import copyToClipboard from 'clipboard-copy';
 	import Prism from 'prismjs';
 	import 'prismjs/themes/prism.css';
+	import 'prismjs/components/prism-dart';
+	import 'prismjs/components/prism-typescript';
+	import 'prismjs/components/prism-kotlin';
+	import 'prismjs/components/prism-java';
+	import 'prismjs/components/prism-markdown';
+	import 'prismjs/components/prism-python';
+	import 'prismjs/components/prism-sql'
+
 	import RichText from '../base/richtext/RichText.svelte';
-	import customPrismGrammars from './custom-prism-grammars';
 
 	export let props: CodeProps;
 	export let depth: number;
 
-
 	/*
-	prismjs가 지원하는 언어: 
-	['plain', 'plaintext', 'text', 'txt', 
-	 'extend', 'insertBefore', 'DFS', 'markup',
-	 'html', 'mathml', 'svg', 'xml', 'ssml',  'atom',
-	 'rss', 'css', 'clike', 'javascript', 'js']
+	prismjs가 기본적으로 지원하는 언어: 
+	[ 'plaintext', 'markup', 'clike',
+	 'html', 'svg', 'xml', 'css',  'javascript',
+	]
 	*/
-	const grammars = { ...Prism.languages };
 
-	console.log(Object.keys(grammars));
 	const {
 		code: { caption, rich_text: texts, language }
 	} = props;
 
 	let copied = false;
-	let codeEl: HTMLElement;
 	$: content = texts.map(({ plain_text }) => plain_text).join('');
-	$: {
-		if (typeof window != 'undefined') {
-		}
-	}
 
 	let copyTimeout: NodeJS.Timeout | null = null;
 	const handleCopy = () => {
@@ -57,8 +55,12 @@
 				</div>
 			{/if}
 		</div>
-		<code bind:this={codeEl}>
-			{@html Prism.highlight(content, grammars[language] || grammars['plain'], language)}
+		<code>
+			{@html Prism.highlight(
+				content,
+				Prism.languages[language] || Prism.languages['plain'],
+				language
+			)}
 		</code>
 	</div>
 	{#if caption.length !== 0}

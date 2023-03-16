@@ -1,9 +1,28 @@
 import { dedent } from 'ts-dedent';
 export const javascript = dedent`
-function sum(n) {
-	if(n == 1) return 1;
-	if(n % 2 == 1) return n + sum(n-1)
-	return Math.pow(n/2, 2) + 2 * sum(n / 2)
+class Animal {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  getName() {
+    return this.name;
+  }
+
+  getAge() {
+    return this.age;
+  }
+}
+
+class Cat extends Animal {
+  constructor(name, age, color) {
+    super(name, age);
+    this.color = color;
+  }
+
+  getColor() {
+    return this.color;
+  }
 }
 `;
-
