@@ -2,13 +2,25 @@
 	import type { CodeProps } from '$lib/types';
 	import CopyIcon from './icons/copy.svg';
 	import copyToClipboard from 'clipboard-copy';
-	import prismjs from 'prismjs';
+	import Prism from 'prismjs';
 	import 'prismjs/themes/prism.css';
-	import RichText from './base/richtext/RichText.svelte';
+	import RichText from '../base/richtext/RichText.svelte';
+	import customPrismGrammars from './custom-prism-grammars';
 
 	export let props: CodeProps;
-	export let depth: number
+	export let depth: number;
 
+
+	/*
+	prismjs가 지원하는 언어: 
+	['plain', 'plaintext', 'text', 'txt', 
+	 'extend', 'insertBefore', 'DFS', 'markup',
+	 'html', 'mathml', 'svg', 'xml', 'ssml',  'atom',
+	 'rss', 'css', 'clike', 'javascript', 'js']
+	*/
+	const grammars = { ...Prism.languages };
+
+	console.log(Object.keys(grammars));
 	const {
 		code: { caption, rich_text: texts, language }
 	} = props;
@@ -46,7 +58,7 @@
 			{/if}
 		</div>
 		<code bind:this={codeEl}>
-			{@html prismjs.highlight(content, prismjs.languages[language] || {}, language)}
+			{@html Prism.highlight(content, grammars[language] || grammars['plain'], language)}
 		</code>
 	</div>
 	{#if caption.length !== 0}

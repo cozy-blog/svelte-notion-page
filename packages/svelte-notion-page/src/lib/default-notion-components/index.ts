@@ -13,7 +13,7 @@ import Toggle from './Toggle.svelte';
 import Quote from './Quote.svelte';
 import Callout from './Callout.svelte';
 import Equation from './Equation.svelte';
-import Code from './Code.svelte';
+import Code from './Code/Code.svelte';
 import Image from './Image.svelte';
 import Video from './Video.svelte';
 import Divider from './Divider.svelte';
