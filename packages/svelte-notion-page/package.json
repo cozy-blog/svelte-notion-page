@@ -27,6 +27,7 @@
     "@sveltejs/adapter-auto": "^1.0.0",
     "@sveltejs/kit": "^1.0.0",
     "@sveltejs/package": "^1.0.0",
+    "@types/he": "^1.2.0",
     "@types/katex": "^0.16.0",
     "@types/prismjs": "^1.26.0",
     "@typescript-eslint/eslint-plugin": "^5.45.0",
@@ -54,6 +55,7 @@
   "type": "module",
   "dependencies": {
     "clipboard-copy": "^4.0.1",
+    "he": "^1.2.0",
     "highlight.js": "^11.7.0",
     "katex": "^0.16.4",
     "prismjs": "^1.29.0",
