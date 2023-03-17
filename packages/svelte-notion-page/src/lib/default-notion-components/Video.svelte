@@ -1,14 +1,13 @@
 <script lang="ts">
-	import type { ImageProps, VideoProps } from '$lib/types';
+	import type {  VideoProps } from '$lib/types';
 	import RichText from './base/richtext/RichText.svelte';
-	import Youtube from 'svelte-youtube-embed';
 	import { getYoutubeId } from '$lib/utils/getYoutubeId';
 
 	export let props: VideoProps;
 	const {
 		video: { type, file, external, caption }
 	} = props;
-	export let depth: number
+	export let depth: number;
 </script>
 
 <div class="notion-block notion-video">
@@ -21,7 +20,14 @@
 			{@const youtubeId = getYoutubeId(external.url)}
 
 			{#if youtubeId}
-				<Youtube id={youtubeId} />
+				<iframe
+          style="width: 100%; aspect-ratio: 560 / 315;"
+					src="https://www.youtube.com/embed/{youtubeId}"
+					title="YouTube video player"
+					frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					allowfullscreen
+				/>
 			{:else}
 				unsupported embeded video
 			{/if}
@@ -37,9 +43,12 @@
 </div>
 
 <style>
-	.notion-video {
-		margin-top: 2px;
-		margin-bottom: 2px;
+	.notion-video:not(:last-child) {
+		margin-bottom: 4px;
+	}
+
+	.notion-video:not(:first-child) {
+		margin-top: 4px;
 	}
 
 	.notion-video-content {
