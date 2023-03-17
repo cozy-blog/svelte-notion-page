@@ -5,7 +5,7 @@
 	import RichText from './base/richtext/RichText.svelte';
 
 	export let props: BulletedListItemProps;
-	export let depth: number
+	export let depth: number;
 
 	const {
 		bulleted_list_item: { color, rich_text: texts }
@@ -14,9 +14,8 @@
 </script>
 
 <div class={`notion-block notion-list-bulleted ${getColorCss(color)}`}>
-	<li>
-		<span class="notion-list-marker">{marker}</span>
-		<div />
+	<li class="notion-list-bulleted-content">
+		<span class="notion-list-marker" >{marker}</span>
 		<RichText props={texts} />
 	</li>
 	<slot />
@@ -26,25 +25,24 @@
 	.notion-list-marker::after {
 		content: '';
 	}
-
-	li > .notion-list-marker {
-		font-size: 1px;
-		width: 26px;
-		transform: scale(0.8);
-		padding: 4px 0px;
+	.notion-list-bulleted-content {
+		display: flex;
+		align-items: center;
+		padding-left: 2px;
+		padding-top: 3px;
+		padding-bottom: 3px;
+		list-style-type: none;
 	}
 
 	.notion-list-marker {
-		display: inline-flex;
+		user-select: none;
+		width: 24px;
+		margin-right: 2px;
+		line-height: 1;
+		display: flex;
 		justify-content: center;
 		align-items: center;
-		height: fit-content;
-	}
-
-	.notion-list-bulleted > li {
-		padding-top: 4px;
-		padding-bottom: 4px;
-		list-style-type: none;
-		display: flex;
+		font-family: Arial;
+		font-size: 1.5em;
 	}
 </style>

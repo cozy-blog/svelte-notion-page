@@ -1,10 +1,10 @@
-import type { ContextedBlock, BlockContext } from '$lib/types';
+import type { ContextedBlock } from '$lib/types';
 import romans from 'romans';
 
 export class ListItemMarker {
-	private resolvers: ((stpe: number) => string)[];
+	private resolvers: ((step: number) => string)[];
 
-	constructor(resolvers: ((stpe: number) => string)[]) {
+	constructor(resolvers: ((step: number) => string)[]) {
 		this.resolvers = resolvers;
 	}
 
@@ -45,7 +45,7 @@ export const numberedListItemMarker = new ListItemMarker([
 	(step) => alphaCount(step),
 	(step) => romans.romanize(step).toLowerCase()
 ]);
-export const bulletedListItemMarker = new ListItemMarker([() => '●', () => '○', () => '■']);
+export const bulletedListItemMarker = new ListItemMarker([() => '•', () => '◦', () => '▪']);
 
 const charCode = 'a'.charCodeAt(0);
 
