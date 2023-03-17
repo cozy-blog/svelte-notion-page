@@ -1,0 +1,16 @@
+name: 'Chromatic'
+on: 
+  push:
+  pull_request:
+jobs:
+  chromatic-deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Publish to Chromatic and auto accept changes
+        if: github.ref == 'refs/heads/temp'
+        uses: chromaui/action@v1
+        # Required options for the Chromatic GitHub Action
+        with:
+          # 👇 Chromatic projectToken, refer to the manage page to obtain it.
+          projectToken: df5341e409a6
+          autoAcceptChanges: true # 👈 Option to accept all changes
