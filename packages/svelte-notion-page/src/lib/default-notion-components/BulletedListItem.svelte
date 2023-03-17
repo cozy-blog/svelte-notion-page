@@ -15,7 +15,7 @@
 
 <div class={`notion-block notion-list-bulleted ${getColorCss(color)}`}>
 	<li class="notion-list-bulleted-content">
-		<span class="notion-list-marker" >{marker}</span>
+		<span class="notion-list-marker">{marker}</span>
 		<RichText props={texts} />
 	</li>
 	<slot />
