@@ -22,9 +22,6 @@
 </div>
 
 <style>
-	.notion-list-marker::after {
-		content: '';
-	}
 	.notion-list-bulleted-content {
 		display: flex;
 		align-items: center;
