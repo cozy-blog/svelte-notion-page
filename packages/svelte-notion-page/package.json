@@ -1,6 +1,5 @@
 {
 	"name": "@cozy-blog/svelte-notion-page",
-	"description": "redering notion",
 	"version": "0.0.6",
 	"scripts": {
 		"dev": "vite dev",
