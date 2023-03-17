@@ -1,7 +1,7 @@
 {
   "name": "cozy-notion",
-  "version": "1.0.0",
   "description": "notion libraries",
+  "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "start:notion-page": "npm run dev -workspace=@cozy-blog/svelte-notion-page",
