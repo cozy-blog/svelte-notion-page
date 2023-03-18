@@ -1,12 +1,11 @@
-import { Client } from "@notionhq/client"
+import { Client as _Client } from "@notionhq/client"
 import type { ClientOptions } from "@notionhq/client/build/src/Client"
 import type {
   BlockObjectResponse,
-  GetPageResponse,
   PageObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints"
 
-export default class NotionClient extends Client {
+export class Client extends _Client {
   constructor(options: ClientOptions = {}) {
     super(options)
   }
@@ -57,3 +56,4 @@ export default class NotionClient extends Client {
 export type Block = BlockObjectResponse & { blocks: Block[] }
 export type ContentfulPage = PageObjectResponse & { blocks: Block[] }
 export { ClientOptions }
+export default Client
