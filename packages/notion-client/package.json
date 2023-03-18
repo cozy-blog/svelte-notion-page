@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sync": "tsc --build .",
-    "package": "cp package.json package/package.json && cd package && npm pkg delete main",
+    "package": "cp package.json package/package.json && cd package && npm pkg set exports='{\".\": \"./index.js\"}' --json",
     "build": "npm run sync && npm run package"
   },
   "repository": {
@@ -26,8 +26,7 @@
     "@notionhq/client": "^2.2.3"
   },
   "type": "module",
-  "main": "./src/index.ts",
   "exports": {
-    ".": "./index.js"
+    ".": "./src/index.ts"
   }
 }
