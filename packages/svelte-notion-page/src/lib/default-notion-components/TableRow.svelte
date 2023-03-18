@@ -5,7 +5,6 @@
 	const {
 		table_row: { cells }
 	} = props;
-	export let depth: number;
 </script>
 
 <tr class="notion-table-row">

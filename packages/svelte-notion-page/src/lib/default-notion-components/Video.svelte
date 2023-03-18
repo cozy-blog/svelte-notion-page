@@ -7,7 +7,6 @@
 	const {
 		video: { type, file, external, caption }
 	} = props;
-	export let depth: number;
 </script>
 
 <div class="notion-block notion-video">

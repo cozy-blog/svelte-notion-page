@@ -7,7 +7,7 @@
 
 <Notion>
 	<Notion.Body>
-		<Notion.Title title="Video" />
+		<Notion.Title title="Callout" />
 		<Notion.Blocks blocks={content.blocks} />
 	</Notion.Body>
 </Notion>

@@ -8,7 +8,6 @@
 	const {
 		to_do: { color, rich_text: texts, checked }
 	} = props;
-	export let depth: number
 </script>
 
 <div class={`notion-block notion-to-do ${getColorCss(color)}`}>

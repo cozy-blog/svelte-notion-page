@@ -4,7 +4,6 @@
 	import { numberedListItemMarker } from '$lib/utils/listItemMarker';
 	import RichText from './base/richtext/RichText.svelte';
 
-	export let depth: number
 	export let props: NumberedListItemProps;
 	const {
 		numbered_list_item: { rich_text: texts, color }

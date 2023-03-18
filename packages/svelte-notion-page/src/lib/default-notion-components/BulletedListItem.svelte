@@ -5,7 +5,6 @@
 	import RichText from './base/richtext/RichText.svelte';
 
 	export let props: BulletedListItemProps;
-	export let depth: number;
 
 	const {
 		bulleted_list_item: { color, rich_text: texts }

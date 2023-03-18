@@ -6,7 +6,6 @@
 	const {
 		toggle: { color, rich_text: texts }
 	} = props;
-	export let depth: number;
 	let open = false;
 </script>
 

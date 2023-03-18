@@ -4,8 +4,6 @@
 	const {
 		table: { has_column_header, has_row_header }
 	} = props;
-	export let depth: number;
-	console.log(has_column_header);
 </script>
 
 <table class="notion-block notion-table">
@@ -25,7 +23,6 @@
 		border-collapse: collapse;
 		border-spacing: 0;
 		font-size: 14px;
-		border-spacing: 0;
 		padding-bottom: 12px;
 	}
 

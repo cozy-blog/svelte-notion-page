@@ -5,7 +5,6 @@
 	const {
 		bookmark: { url, caption }
 	} = props;
-	export let depth: number;
 	export let getMeta: (url: string) => {
 		title: string;
 		description: string;

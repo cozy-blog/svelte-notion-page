@@ -6,7 +6,6 @@
 	const {
 		heading_1: { color, rich_text: texts, is_toggleable }
 	} = props;
-	export let depth: number;
 	let open = false;
 </script>
 

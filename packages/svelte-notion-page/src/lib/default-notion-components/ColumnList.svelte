@@ -1,7 +1,6 @@
 <script lang="ts">
-	import type { Block, ColumnListProps } from '$lib/types';
+	import type {  ColumnListProps } from '$lib/types';
 	export let props: ColumnListProps;
-	export let depth: number
 	const columnCount = props.blocks?.length || 0;
 </script>
 

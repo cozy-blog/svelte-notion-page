@@ -137,10 +137,13 @@ export type ImageProps = {
 	type: 'image';
 	image: {
 		caption: TextProps[];
-		type: 'external' | 'file';
-		file?: {
+		type: 'file';
+		file: {
 			url: string;
 		};
+	} | {
+		caption: TextProps[];
+		type: 'external' ;
 		external?: {
 			url: string;
 		};
