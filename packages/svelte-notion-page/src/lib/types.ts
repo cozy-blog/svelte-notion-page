@@ -135,19 +135,21 @@ export type CalloutProps = {
 
 export type ImageProps = {
 	type: 'image';
-	image: {
-		caption: TextProps[];
-		type: 'file';
-		file: {
-			url: string;
-		};
-	} | {
-		caption: TextProps[];
-		type: 'external' ;
-		external?: {
-			url: string;
-		};
-	};
+	image:
+		| {
+				caption: TextProps[];
+				type: 'file';
+				file: {
+					url: string;
+				};
+		  }
+		| {
+				caption: TextProps[];
+				type: 'external';
+				external?: {
+					url: string;
+				};
+		  };
 } & ContextedBlock;
 
 export type VideoProps = {
@@ -206,3 +208,7 @@ export type BookmarkProps = {
 		url: string;
 	};
 } & ContextedBlock;
+
+export type SyncedBlock = {
+	type: 'synced_block';
+};
