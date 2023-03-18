@@ -3,19 +3,19 @@
 	import RichText from './base/richtext/RichText.svelte';
 
 	export let props: ImageProps;
-	const {
-		image: { type, file, external, caption }
-	} = props;
+	const { image } = props;
+	const { type, caption } = image;
+
+	const { url } =
+		type === 'file' ? image.file : type === 'external' ? image.external : { url: null };
 </script>
 
 <div class="notion-block notion-image">
 	<div class="notion-image-content">
-		{#if type === 'file' && file != null}
-			<img alt="file" src={file.url} />
-		{:else if type === 'external' && external != null}
-			<img alt="external" src={external.url} />
+		{#if url}
+			<img alt={type} src={url} />
 		{:else}
-			unsupported image
+			unsupported type: ${type}
 		{/if}
 	</div>
 	{#if caption.length !== 0}
@@ -26,9 +26,12 @@
 </div>
 
 <style>
-	.notion-image {
-		margin-top: 4px;
+	.notion-image:not(:last-child) {
 		margin-bottom: 4px;
+	}
+
+	.notion-image:not(:first-child) {
+		margin-top: 4px;
 	}
 
 	.notion-image-content {
@@ -38,7 +41,7 @@
 
 	.notion-image-content img {
 		width: 100%;
-		border-radius: 2px;
 		margin: 0 auto;
+    object-fit: contain;
 	}
 </style>
