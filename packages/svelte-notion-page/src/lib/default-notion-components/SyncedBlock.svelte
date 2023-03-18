@@ -1,18 +1,14 @@
 <script lang="ts">
-	import type {  SyncedBlock } from '$lib/types';
+	import type { SyncedBlock } from '$lib/types';
 	export let props: SyncedBlock;
 </script>
 
-<div class="notion-synced-block">
-  <div class="notion-synced-block-content">
-
-  </div>
+<div class="notion-block notion-synced-block">
 	<slot />
 </div>
 
 <style>
-  .notion-synced-block-content {
-
-  }
-
+	:global(.notion-block.notion-synced-block > .notion-block) {
+		margin-left: 0px;
+	}
 </style>
