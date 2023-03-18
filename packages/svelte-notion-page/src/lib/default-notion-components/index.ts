@@ -21,6 +21,7 @@ import Audio from './Audio.svelte';
 import Bookmark from './Bookmark.svelte';
 import Table from './Table.svelte';
 import TableRow from './TableRow.svelte';
+import SyncedBlock from './SyncedBlock.svelte';
 
 export {
   Audio,
@@ -45,5 +46,6 @@ export {
   Equation,
   Quote,
   Table,
-  TableRow
+  TableRow,
+  SyncedBlock
 }

@@ -22,7 +22,8 @@ import {
 	NumberedListItem,
 	Quote,
 	Table,
-	TableRow
+	TableRow,
+  SyncedBlock
 } from '$lib/default-notion-components'
 
 
@@ -81,6 +82,7 @@ export const defaultComponents: Record<string, ComponentType> = {
 	bookmark: Bookmark,
 	table: Table,
 	table_row: TableRow,
+  synced_block: SyncedBlock,
 
 	// low level custom. 넣을까 말까 고민중.., 
 	checkbox: CheckBox,
