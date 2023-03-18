@@ -6,9 +6,8 @@
 </script>
 
 <Notion>
-	<Notion.Cover src="https://www.notion.so/images/page-cover/nasa_robert_stewart_spacewalk.jpg" />
 	<Notion.Body>
-		<Notion.Title title="Notion Title" />
+		<Notion.Title title="Paragraph" />
 		<Notion.Blocks blocks={content.blocks} />
 	</Notion.Body>
 </Notion>

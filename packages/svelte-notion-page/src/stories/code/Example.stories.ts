@@ -26,7 +26,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Desktop: Story = {
 	args: {
-		cover: 'https://www.notion.so/images/page-cover/nasa_robert_stewart_spacewalk.jpg',
 		content: json
 	},
 	parameters: {
@@ -38,7 +37,6 @@ export const Desktop: Story = {
 
 export const Mobile: Story = {
 	args: {
-		cover: 'https://www.notion.so/images/page-cover/nasa_robert_stewart_spacewalk.jpg',
 		content: json
 	},
 	parameters: {
