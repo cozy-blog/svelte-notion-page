@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/svelte';
 import Example from './Example.svelte';
 
 const meta = {
-	title: 'Example/1. Paragraph',
+	title: 'Example/Equation',
 	component: Example as any
 } satisfies Meta<Example>;
 

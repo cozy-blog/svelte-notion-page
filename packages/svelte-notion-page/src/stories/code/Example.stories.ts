@@ -17,7 +17,7 @@ import {
 } from './support-code-examples';
 
 const meta = {
-	title: 'Example/6. Code',
+	title: 'Example/Code',
 	component: Example as any
 } satisfies Meta<Example>;
 
