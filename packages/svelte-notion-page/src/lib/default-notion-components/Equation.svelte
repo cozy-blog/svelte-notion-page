@@ -2,7 +2,6 @@
 	import type { EquationProps } from '$lib/types';
 	import renderEquation from '$lib/utils/renderEquation';
 
-	export let depth: number
 	export let props: EquationProps;
 	const {
 		equation: { expression }

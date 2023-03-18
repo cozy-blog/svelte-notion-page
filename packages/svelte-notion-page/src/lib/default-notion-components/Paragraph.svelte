@@ -6,7 +6,6 @@
 	const {
 		paragraph: { color, rich_text: texts }
 	} = props;
-	export let depth: number
 </script>
 
 <div class={`notion-block ${getColorCss(color)}`}>

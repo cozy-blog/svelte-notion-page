@@ -1,7 +1,6 @@
 <script lang="ts">
 	import type { Block } from '../types';
 
-	export let depth: number
 	export let block: Block;
 
 	console.warn(`Fail to resolve ${block?.type}`);

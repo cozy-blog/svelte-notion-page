@@ -7,7 +7,6 @@
 	const {
 		quote: { color, rich_text: texts }
 	} = props;
-	export let depth: number
 </script>
 
 <div class={`notion-block notion-quote ${getColorCss(color)}`}>
