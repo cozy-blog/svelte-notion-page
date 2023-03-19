@@ -5,12 +5,12 @@
 	const {
 		bookmark: { url, caption }
 	} = props;
-	export let getMeta: (url: string) => {
+	export let getMeta: (url: string) => Promise<{
 		title: string;
 		description: string;
 		image: string;
 		favicon: string;
-	} = (url: string) => {
+	}> = async (url: string) => {
 		return {
 			title: 'You must replace this component with something that have own getMeta method',
 			description: '',
@@ -18,7 +18,20 @@
 			favicon: ''
 		};
 	};
-	$: ({ title, description, image, favicon } = getMeta(url));
+	let { title, description, image, favicon } = {
+		title: '',
+		description: '',
+		image: '',
+		favicon: ''
+	};
+	$: {
+		getMeta(url).then((result) => {
+			title = result.title;
+			description = result.description;
+			image = result.image;
+			favicon = result.favicon;
+		});
+	}
 </script>
 
 <div class="notion-block notion-bookmark">
@@ -67,6 +80,9 @@
 		border-radius: 3px;
 		box-sizing: border-box;
 		user-select: none;
+    max-height: 106px;
+    min-height: 74px;
+    
 		text-decoration: none;
 	}
 

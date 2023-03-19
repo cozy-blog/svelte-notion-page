@@ -328,7 +328,7 @@ export const json = {
 						href: null
 					}
 				],
-				url: 'https://medium.com/@BlogAuthor/the-medium-author-guide-to-valentines-day-the-entertainment-earth-s-way-2423f4233268'
+				url: 'https://www.naver.com'
 			}
 		},
 		{
@@ -439,7 +439,7 @@ export const json = {
 					type: 'bookmark',
 					bookmark: {
 						caption: [],
-						url: 'https://medium.com/@BlogAuthor/the-medium-author-guide-to-valentines-day-the-entertainment-earth-s-way-2423f4233268'
+						url: 'https://www.naver.com'
 					}
 				}
 			]
