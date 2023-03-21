@@ -5,12 +5,12 @@
 	const {
 		bookmark: { url, caption }
 	} = props;
-	export let getMeta: (url: string) => {
-		title: string;
-		description: string;
-		image: string;
-		favicon: string;
-	} = (url: string) => {
+	export let getMeta: (url: string) => Promise<{
+		title?: string;
+		description?: string;
+		image?: string;
+		favicon?: string;
+	}> = async (url: string) => {
 		return {
 			title: 'You must replace this component with something that have own getMeta method',
 			description: '',
@@ -18,14 +18,29 @@
 			favicon: ''
 		};
 	};
-	$: ({ title, description, image, favicon } = getMeta(url));
+	let { title, description, image, favicon } = {
+		title: '',
+		description: '',
+		image: '',
+		favicon: ''
+	};
+	$: {
+		getMeta(url).then((result) => {
+			title = result.title || '';
+			description = result.description || '';
+			image = result.image || '';
+			favicon = result.favicon || '';
+		});
+	}
 </script>
 
 <div class="notion-block notion-bookmark">
 	<a target="_blank" rel="noopener noreferrer" href={url} class="notion-bookmark-content">
 		<div class="notion-bookmark-details">
 			<h3 class="notion-bookmark-title">{title}</h3>
-			<p class="notion-bookmark-description">{description}</p>
+			{#if description}
+				<p class="notion-bookmark-description">{description}</p>
+			{/if}
 			<div class="notion-bookmark-link">
 				<div class="notion-bookmark-link-icon">
 					{#if favicon}
@@ -35,11 +50,11 @@
 				<p class="notion-bookmark-link-text">{url}</p>
 			</div>
 		</div>
-		<div class="notion-bookmark-image">
-			{#if image}
+		{#if image}
+			<div class="notion-bookmark-image">
 				<img src={image} alt="thumbnail" />
-			{/if}
-		</div>
+			</div>
+		{/if}
 	</a>
 	{#if caption.length !== 0}
 		<div class="notion-asset-caption">
@@ -58,7 +73,6 @@
 	}
 
 	.notion-bookmark-content {
-		height: 106px;
 		cursor: pointer;
 		display: flex;
 		overflow: hidden;
@@ -66,6 +80,9 @@
 		border-radius: 3px;
 		box-sizing: border-box;
 		user-select: none;
+		max-height: 106px;
+		min-height: 74px;
+
 		text-decoration: none;
 	}
 
