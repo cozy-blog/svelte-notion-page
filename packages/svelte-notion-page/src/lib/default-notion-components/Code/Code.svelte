@@ -1,30 +1,38 @@
 <script lang="ts">
 	import type { CodeProps } from '$lib/types';
 	import copyToClipboard from 'clipboard-copy';
-	import Prism from 'prismjs';
-	import 'prismjs/themes/prism.css';
-	import 'prismjs/components/prism-dart';
-	import 'prismjs/components/prism-typescript';
-	import 'prismjs/components/prism-kotlin';
-	import 'prismjs/components/prism-java';
-	import 'prismjs/components/prism-markdown';
-	import 'prismjs/components/prism-python';
-	import 'prismjs/components/prism-sql';
-	import 'prismjs/components/prism-go';
-	import 'prismjs/components/prism-elixir';
-
 	import RichText from '../base/richtext/RichText.svelte';
 	import { fade, fly } from 'svelte/transition';
+	import Prisim from 'prismjs';
+	import 'prismjs/themes/prism.css';
+	import loadDart from './support-language/dart';
+	import loadElixir from './support-language/elixir';
+	import loadGo from './support-language/go';
+	import loadJava from './support-language/java';
+	import loadKotlin from './support-language/kotlin';
+	import loadMarkdown from './support-language/markdown';
+	import loadPython from './support-language/python';
+	import loadSql from './support-language/sql';
+	import loadTypescript from './support-language/typescript';
 
 	export let props: CodeProps;
-	export let depth: number;
 
 	/*
 	prismjs가 기본적으로 지원하는 언어: 
-	[ 'plaintext', 'markup', 'clike',
-	 'html', 'svg', 'xml', 'css',  'javascript',
-	]
+	 'plaintext', 'markup', 'clike',
+	 'html', 'svg', 'xml', 'css', 'javascript'
 	*/
+	[
+		loadDart,
+		loadTypescript,
+		loadElixir,
+		loadGo,
+		loadJava,
+		loadKotlin,
+		loadMarkdown,
+		loadPython,
+		loadSql
+	].forEach((load) => load(Prisim));
 
 	const {
 		code: { caption, rich_text: texts, language }
@@ -70,9 +78,9 @@
 			</button>
 		</div>
 		<code>
-			{@html Prism.highlight(
+			{@html Prisim.highlight(
 				content,
-				Prism.languages[language] || Prism.languages['plain'],
+				Prisim.languages[language] || Prisim.languages['plain'],
 				language
 			)}
 		</code>
