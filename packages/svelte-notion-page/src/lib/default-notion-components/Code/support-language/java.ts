@@ -1,6 +1,14 @@
 /* eslint-disable no-useless-escape */
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export default function java(Prism: any) {
+/* eslint-disable @typescript-eslint/no-explicit-any */
+let loaded = false;
+
+export default function load(Prism: any) {
+	if (loaded) return;
+	_load(Prism);
+	loaded = true;
+}
+
+function _load(Prism: any) {
 	const keywords =
 		/\b(?:abstract|assert|boolean|break|byte|case|catch|char|class|const|continue|default|do|double|else|enum|exports|extends|final|finally|float|for|goto|if|implements|import|instanceof|int|interface|long|module|native|new|non-sealed|null|open|opens|package|permits|private|protected|provides|public|record(?!\s*[(){}[\]<>=%~.:,;?+\-*/&|^])|requires|return|sealed|short|static|strictfp|super|switch|synchronized|this|throw|throws|to|transient|transitive|try|uses|const|void|volatile|while|with|yield)\b/;
 
