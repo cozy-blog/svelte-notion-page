@@ -1,6 +1,14 @@
 /* eslint-disable no-useless-escape */
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export default function kotlin(Prism: any) {
+/* eslint-disable @typescript-eslint/no-explicit-any */
+let loaded = false;
+
+export default function load(Prism: any) {
+	if (loaded) return;
+	_load(Prism);
+	loaded = true;
+}
+
+function _load(Prism: any) {
 	Prism.languages.kotlin = Prism.languages.extend('clike', {
 		keyword: {
 			// The lookbehind prevents wrong highlighting of e.g. kotlin.properties.get

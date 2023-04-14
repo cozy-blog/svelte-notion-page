@@ -1,7 +1,15 @@
 /* eslint-disable prefer-const */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable no-useless-escape */
-export default function markdown(Prism: any) {
+let loaded = false;
+
+export default function load(Prism: any) {
+	if (loaded) return;
+	_load(Prism);
+	loaded = true;
+}
+
+function _load(Prism: any) {
 	// Allow only one line break
 	let inner = /(?:\\.|[^\\\n\r]|(?:\n|\r\n?)(?![\r\n]))/.source;
 

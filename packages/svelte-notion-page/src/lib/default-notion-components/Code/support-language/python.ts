@@ -1,5 +1,13 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-export default function python(Prism: any) {
+let loaded = false;
+
+export default function load(Prism: any) {
+	if (loaded) return;
+	_load(Prism);
+	loaded = true;
+}
+
+function _load(Prism: any) {
 Prism.languages.python = {
 	'comment': {
 		pattern: /(^|[^\\])#.*/,
