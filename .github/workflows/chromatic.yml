@@ -3,7 +3,7 @@ name: Deploy to Chromatic
 on:
   push:
     branches:
-      - '*'
+      - temp
 
 jobs:
   chromatic-deployment:
