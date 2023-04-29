@@ -1,19 +1,33 @@
 <script lang="ts">
 	import type { ImageProps } from '$lib/types';
-	import RichText from './base/richtext/RichText.svelte';
+	import RichText from '../base/richtext/RichText.svelte';
+	import ImageViewer from './ImageViewer.svelte';
 
 	export let props: ImageProps;
 	const { image } = props;
 	const { type, caption } = image;
-
+	export let convertUrl: (url: string) => string = (url) => url;
+	let opened = true;
 	const { url } =
 		type === 'file' ? image.file : type === 'external' ? image.external : { url: null };
+	const urls = url ? [convertUrl(url)] : [];
+	//lazy하게 계산하자 그때마다..
+	$: {
+		[opened];
+		getUrlsEffect();
+	}
+
+	function getUrlsEffect() {
+		if (!opened) return;
+		if (!url) return;
+		///
+	}
 </script>
 
 <div class="notion-block notion-image">
 	<div class="notion-image-content">
 		{#if url}
-			<img alt={type} src={url} />
+			<ImageViewer bind:opened index={urls.findIndex((data) => data === url)} {urls} />
 		{:else}
 			unsupported type: ${type}
 		{/if}
@@ -42,6 +56,6 @@
 	.notion-image-content img {
 		width: 100%;
 		margin: 0 auto;
-    object-fit: contain;
+		object-fit: contain;
 	}
 </style>
