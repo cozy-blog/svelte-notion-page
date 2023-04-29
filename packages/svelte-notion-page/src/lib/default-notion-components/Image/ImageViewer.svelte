@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition';
 	import { focusAction } from 'svelte-legos';
+	import { onMount } from 'svelte';
 	export let initialIndex: number;
 	export let opened = true;
 	export let urls: string[] = [];
-	$: console.log(urls);
 
 	$: imgIndex = initialIndex;
 	$: url = urls[imgIndex];
@@ -118,6 +118,17 @@
 			imgIndex = initialIndex;
 		}
 	}
+	$: {
+		[imgIndex];
+		imgIndexChangeEffect();
+	}
+	function imgIndexChangeEffect() {
+		scale = 1;
+	}
+	onMount(() => {
+		window.addEventListener('keydown', handleCloseOnEsc);
+		return () => window.removeEventListener('keydown', handleCloseOnEsc);
+	});
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
@@ -131,21 +142,22 @@
 		tabindex="0"
 		on:mousemove={handleHideCursorOnMouseStop}
 		use:focusAction={opened}
-		on:keydown={handleCloseOnEsc}
 		transition:fade={{ duration: 200 }}
 		class:hide-cursor={!cursorVisible}
 		class="notion-viewer-container"
 	>
 		<!-- svelte-ignore a11y-click-events-have-key-events -->
 		<div on:click={() => (opened = false)} class="notion-viewer-overlay" />
-		<img
-			use:zoomInOutActionOnClick
-			style="transform: scale({scale}); transform-origin: {scaleOrigin.x * 100}% {scaleOrigin.y *
-				100}%;"
-			class:hide-cursor={!cursorVisible}
-			src={url}
-			alt="posting img"
-		/>
+		{#key url}
+			<img
+				use:zoomInOutActionOnClick
+				style="transform: scale({scale}); transform-origin: {scaleOrigin.x * 100}% {scaleOrigin.y *
+					100}%;"
+				class:hide-cursor={!cursorVisible}
+				src={url}
+				alt="posting img"
+			/>
+		{/key}
 
 		<div class="tools">
 			<button on:click={() => (imgIndex -= 1)} disabled={!hasPrevious}>{'<'}</button>
