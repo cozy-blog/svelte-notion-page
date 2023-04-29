@@ -16,10 +16,9 @@
 		const handleSetScale = (e: KeyboardEvent) => {
 			if (e.key === 'Enter') {
 				if (node.value !== '') {
-					scale = clampScale(+node.value / 100);
-					if(scale < 1) {
-						scaleOrigin = scaleOriginCenter
-
+					scale = clampScale(Math.floor(+node.value) / 100);
+					if (scale < 1) {
+						scaleOrigin = scaleOriginCenter;
 					}
 				}
 				node.value = `${scale * 100}`;
@@ -55,21 +54,71 @@
 			cursorVisible = false;
 		}, 3000);
 	};
-	/*
-		1. image border-radius 주기
-		2. scale
-		3. scale-origin
-		4. input으로 scale 바꾸기 handleDown으로 ..
-		5. urls 받기..
-	*/
+
+	function handleDownloadLoading() {
+		const xhr = new XMLHttpRequest();
+		xhr.open('GET', url);
+		xhr.responseType = 'blob';
+		xhr.onload = function () {
+			const blob = xhr.response;
+			const link = document.createElement('a');
+			link.href = window.URL.createObjectURL(blob);
+			link.download = '';
+			link.click();
+			window.URL.revokeObjectURL(link.href);
+		};
+		xhr.send();
+	}
 
 	function clampScale(value: number) {
 		return Math.max(0.5, Math.min(value, 2));
 	}
+
+	const handleZoomPlusClick = () => {
+		let changedScale = scale + 0.5;
+		if (changedScale >= 1.75) {
+			scale = 2;
+		} else if (changedScale >= 1.25) {
+			scale = 1.5;
+		} else if (changedScale >= 0.75) {
+			scale = 1;
+		}
+	};
+	const handleZoomMinusClick = () => {
+		const changedScale = scale - 0.5;
+		if (changedScale <= 0.75) {
+			scale = 0.5;
+		} else if (changedScale <= 1.25) {
+			scale = 1;
+		} else if (changedScale <= 1.75) {
+			scale = 1.5;
+		}
+	};
+
+	$: {
+		[opened];
+		onExitEffect();
+	}
+	$: {
+		[scale];
+		scaleUnderOneEffect();
+	}
+	function scaleUnderOneEffect() {
+		if (scale < 1) {
+			scaleOrigin = scaleOriginCenter;
+		}
+	}
+	function onExitEffect() {
+		if (!opened) {
+			scaleOrigin = scaleOriginCenter;
+			scale = 1;
+		}
+	}
 </script>
 
-<div class="notion-viewer-opener" on:dblclick={() => (opened = true)}>
-	<img src={url} alt="asdf" />
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<div class="notion-viewer-opener" on:click={() => (opened = true)}>
+	<img src={url} alt="posting img" />
 </div>
 
 {#if opened}
@@ -91,11 +140,17 @@
 				100}%;"
 			class:hide-cursor={!cursorVisible}
 			src={url}
-			alt="asdf"
+			alt="posting img"
 		/>
 
 		<div class="tools">
+			<button>{'<'}</button>
+			<button>{'>'}</button>
+			<button on:click={handleZoomMinusClick}>-</button>
 			<input type="number" value={scale * 100} use:scaleActionOnEnter />
+			<button on:click={handleZoomPlusClick}>+</button>
+			<button on:click={handleDownloadLoading}>down</button>
+			<button on:click={() => (opened = false)}>exit</button>
 		</div>
 	</div>
 {/if}
@@ -154,7 +209,7 @@
 		max-height: 100%;
 		object-fit: contain;
 		pointer-events: auto;
-		cursor: pointer;
+		cursor: default;
 	}
 
 	.tools {

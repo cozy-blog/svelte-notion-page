@@ -11,8 +11,7 @@ export const json = {
 		object: 'user',
 		id: '95fc0174-8fc6-4114-8e45-f67eacd99f07'
 	},
-	cover: {
-	},
+	cover: {},
 	icon: null,
 	parent: {
 		type: 'database_id',
@@ -147,7 +146,7 @@ export const json = {
 				caption: [],
 				type: 'external',
 				external: {
-					url: 'https://www.notion.so/images/page-cover/nasa_robert_stewart_spacewalk.jpg'
+					url: 'https://imagedelivery.net/7neptq_CvhcnBjKt8qQ9PQ/dbb6e58b-a468-4418-caad-1ffd28de2f00/public'
 				}
 			}
 		},
