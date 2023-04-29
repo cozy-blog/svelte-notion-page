@@ -4,12 +4,12 @@
 	import { onMount } from 'svelte';
 	export let initialIndex: number;
 	export let opened = true;
-	export let urls: string[] = [];
+	export let urls: string[];
 
 	$: imgIndex = initialIndex;
-	$: url = urls[imgIndex];
 	$: [hasPrevious, hasNext] = [imgIndex > 0, imgIndex < urls.length - 1];
 	const scaleOriginCenter = { x: 0.5, y: 0.5 };
+	let url = urls[imgIndex];
 	let cursorVisible = false;
 	let cursorTimeout: ReturnType<typeof setTimeout>;
 	let scale = 1;
@@ -118,12 +118,14 @@
 			imgIndex = initialIndex;
 		}
 	}
+
 	$: {
 		[imgIndex];
 		imgIndexChangeEffect();
 	}
 	function imgIndexChangeEffect() {
 		scale = 1;
+		url = urls[imgIndex];
 	}
 	onMount(() => {
 		window.addEventListener('keydown', handleCloseOnEsc);
