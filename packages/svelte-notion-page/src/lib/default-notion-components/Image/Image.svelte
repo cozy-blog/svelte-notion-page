@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { ImageProps } from '$lib/types';
+	import type { ImageProps, ContextedBlock } from '$lib/types';
 	import RichText from '../base/richtext/RichText.svelte';
 	import ImageViewer from './ImageViewer.svelte';
 
@@ -7,27 +7,56 @@
 	const { image } = props;
 	const { type, caption } = image;
 	export let convertUrl: (url: string) => string = (url) => url;
-	let opened = true;
-	const { url } =
-		type === 'file' ? image.file : type === 'external' ? image.external : { url: null };
-	const urls = url ? [convertUrl(url)] : [];
-	//lazy하게 계산하자 그때마다..
+	let opened = false;
+	const url = getImgUrlOrNull(props);
+	let urls: string[] = url ? [convertUrl(url)] : [];
+	let initialIndex = 0;
+	let urlLoaded = false;
 	$: {
-		[opened];
-		getUrlsEffect();
+		// lazy load
+		opened && !urlLoaded && loadImageUrlsEffect();
 	}
 
-	function getUrlsEffect() {
-		if (!opened) return;
+	function loadImageUrlsEffect() {
 		if (!url) return;
-		///
+		urlLoaded = true;
+		urls = [];
+
+		let startBlock: ContextedBlock = props;
+		while (startBlock.context.parent != null) {
+			startBlock = startBlock.context.parent;
+		}
+		while (startBlock.context.previous != null) {
+			startBlock = startBlock.context.previous;
+		}
+
+		extract(startBlock);
+
+		initialIndex = urls.findIndex((data) => data === url);
+
+		function extract(block: ContextedBlock) {
+			const imagUrl = getImgUrlOrNull(block);
+			if (imagUrl) {
+				urls = [...urls, imagUrl];
+			}
+			block.blocks.forEach(extract);
+			block.context.after && extract(block.context.after);
+		}
+	}
+
+	function getImgUrlOrNull(block: ContextedBlock): string | null {
+		if (block.type !== 'image') return null;
+		const { image } = block;
+		const { url } =
+			image.type === 'file' ? image.file : type === 'external' ? image.external : { url: null };
+		return url && convertUrl(url);
 	}
 </script>
 
 <div class="notion-block notion-image">
 	<div class="notion-image-content">
 		{#if url}
-			<ImageViewer bind:opened index={urls.findIndex((data) => data === url)} {urls} />
+			<ImageViewer bind:opened {initialIndex} {urls} />
 		{:else}
 			unsupported type: ${type}
 		{/if}

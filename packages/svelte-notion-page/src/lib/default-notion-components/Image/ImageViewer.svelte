@@ -1,13 +1,16 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition';
 	import { focusAction } from 'svelte-legos';
+	export let initialIndex: number;
 	export let opened = true;
 	export let urls: string[] = [];
-	export let index: number;
+	$: console.log(urls);
 
-	$: url = urls[index];
+	$: imgIndex = initialIndex;
+	$: url = urls[imgIndex];
+	$: [hasPrevious, hasNext] = [imgIndex > 0, imgIndex < urls.length - 1];
 	const scaleOriginCenter = { x: 0.5, y: 0.5 };
-	let cursorVisible = true;
+	let cursorVisible = false;
 	let cursorTimeout: ReturnType<typeof setTimeout>;
 	let scale = 1;
 	let scaleOrigin = scaleOriginCenter;
@@ -112,6 +115,7 @@
 		if (!opened) {
 			scaleOrigin = scaleOriginCenter;
 			scale = 1;
+			imgIndex = initialIndex;
 		}
 	}
 </script>
@@ -144,8 +148,8 @@
 		/>
 
 		<div class="tools">
-			<button>{'<'}</button>
-			<button>{'>'}</button>
+			<button on:click={() => (imgIndex -= 1)} disabled={!hasPrevious}>{'<'}</button>
+			<button on:click={() => (imgIndex += 1)} disabled={!hasNext}>{'>'}</button>
 			<button on:click={handleZoomMinusClick}>-</button>
 			<input type="number" value={scale * 100} use:scaleActionOnEnter />
 			<button on:click={handleZoomPlusClick}>+</button>
