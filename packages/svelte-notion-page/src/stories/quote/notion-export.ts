@@ -327,6 +327,225 @@ export const json = {
 				color: 'default',
 				rich_text: []
 			}
+		},
+		{
+			id: '38f40b7a-544a-470f-9090-6577f340cc16',
+			type: 'quote',
+			quote: {
+				color: 'gray_background',
+				rich_text: [
+					{
+						href: null,
+						text: {
+							link: null,
+							content: 'Pure presentational pages'
+						},
+						type: 'text',
+						plain_text: 'Pure presentational pages',
+						annotations: {
+							bold: true,
+							code: false,
+							color: 'default',
+							italic: false,
+							underline: false,
+							strikethrough: false
+						}
+					}
+				]
+			},
+			blocks: [
+				{
+					id: '6b2126eb-c5e3-42ee-bb46-d8bb7d1ba753',
+					type: 'paragraph',
+					blocks: [],
+					object: 'block',
+					parent: {
+						type: 'block_id',
+						block_id: '38f40b7a-544a-470f-9090-6577f340cc16'
+					},
+					archived: false,
+					paragraph: {
+						color: 'default',
+						rich_text: [
+							{
+								href: null,
+								text: {
+									link: null,
+									content:
+										"Teams at the BBC, The Guardian, and the Storybook maintainers themselves build pure presentational pages. If you take this approach, you don't need to do anything special to render your pages in Storybook."
+								},
+								type: 'text',
+								plain_text:
+									"Teams at the BBC, The Guardian, and the Storybook maintainers themselves build pure presentational pages. If you take this approach, you don't need to do anything special to render your pages in Storybook.",
+								annotations: {
+									bold: false,
+									code: false,
+									color: 'default',
+									italic: false,
+									underline: false,
+									strikethrough: false
+								}
+							}
+						]
+					},
+					created_by: {
+						id: '95fc0174-8fc6-4114-8e45-f67eacd99f07',
+						object: 'user'
+					},
+					created_time: '2023-04-28T01:11:00.000Z',
+					has_children: false,
+					last_edited_by: {
+						id: '95fc0174-8fc6-4114-8e45-f67eacd99f07',
+						object: 'user'
+					},
+					last_edited_time: '2023-04-28T01:11:00.000Z'
+				},
+				{
+					id: 'cb11c74d-2f2c-4d97-bfe6-07e745de00f8',
+					type: 'paragraph',
+					blocks: [],
+					object: 'block',
+					parent: {
+						type: 'block_id',
+						block_id: '38f40b7a-544a-470f-9090-6577f340cc16'
+					},
+					archived: false,
+					paragraph: {
+						color: 'default',
+						rich_text: [
+							{
+								href: null,
+								text: {
+									link: null,
+									content:
+										"It's straightforward to write components to be fully presentational up to the screen level. That makes it easy to show in Storybook. The idea is that you do all the messy “connected” logic in a single wrapper component in your app outside of Storybook. You can see an example of this approach in the "
+								},
+								type: 'text',
+								plain_text:
+									"It's straightforward to write components to be fully presentational up to the screen level. That makes it easy to show in Storybook. The idea is that you do all the messy “connected” logic in a single wrapper component in your app outside of Storybook. You can see an example of this approach in the ",
+								annotations: {
+									bold: false,
+									code: false,
+									color: 'default',
+									italic: false,
+									underline: false,
+									strikethrough: false
+								}
+							},
+							{
+								href: 'https://storybook.js.org/tutorials/intro-to-storybook/react/en/data/',
+								text: {
+									link: {
+										url: 'https://storybook.js.org/tutorials/intro-to-storybook/react/en/data/'
+									},
+									content: 'Data'
+								},
+								type: 'text',
+								plain_text: 'Data',
+								annotations: {
+									bold: false,
+									code: false,
+									color: 'default',
+									italic: false,
+									underline: false,
+									strikethrough: false
+								}
+							},
+							{
+								href: null,
+								text: {
+									link: null,
+									content: ' chapter of the Intro to Storybook tutorial.'
+								},
+								type: 'text',
+								plain_text: ' chapter of the Intro to Storybook tutorial.',
+								annotations: {
+									bold: false,
+									code: false,
+									color: 'default',
+									italic: false,
+									underline: false,
+									strikethrough: false
+								}
+							}
+						]
+					},
+					created_by: {
+						id: '95fc0174-8fc6-4114-8e45-f67eacd99f07',
+						object: 'user'
+					},
+					created_time: '2023-04-28T01:11:00.000Z',
+					has_children: false,
+					last_edited_by: {
+						id: '95fc0174-8fc6-4114-8e45-f67eacd99f07',
+						object: 'user'
+					},
+					last_edited_time: '2023-04-28T01:11:00.000Z'
+				},
+				{
+					id: '6f41fabe-46fc-4c06-8a58-5a13b24fca2d',
+					type: 'paragraph',
+					blocks: [],
+					object: 'block',
+					parent: {
+						type: 'block_id',
+						block_id: '38f40b7a-544a-470f-9090-6577f340cc16'
+					},
+					archived: false,
+					paragraph: {
+						color: 'default',
+						rich_text: [
+							{
+								href: 'https://storybook.js.org/docs/react/writing-stories/build-pages-with-storybook',
+								text: {
+									link: {
+										url: 'https://storybook.js.org/docs/react/writing-stories/build-pages-with-storybook'
+									},
+									content: 'Building pages with Storybook'
+								},
+								type: 'text',
+								plain_text: 'Building pages with Storybook',
+								annotations: {
+									bold: false,
+									code: false,
+									color: 'default',
+									italic: false,
+									underline: false,
+									strikethrough: false
+								}
+							}
+						]
+					},
+					created_by: {
+						id: '95fc0174-8fc6-4114-8e45-f67eacd99f07',
+						object: 'user'
+					},
+					created_time: '2023-04-28T00:55:00.000Z',
+					has_children: false,
+					last_edited_by: {
+						id: '95fc0174-8fc6-4114-8e45-f67eacd99f07',
+						object: 'user'
+					},
+					last_edited_time: '2023-04-28T01:14:00.000Z'
+				}
+			],
+			object: 'block',
+			parent: {
+				type: 'page_id',
+				page_id: '624ba69d-195e-40d6-b0e3-00f4bb681f59'
+			},
+			archived: false,
+			created_by: {
+				id: '95fc0174-8fc6-4114-8e45-f67eacd99f07',
+				object: 'user'
+			},
+			created_time: '2023-04-28T01:11:00.000Z',
+			has_children: true,
+			last_edited_by: {
+				id: '95fc0174-8fc6-4114-8e45-f67eacd99f07',
+				object: 'user'
+			},
+			last_edited_time: '2023-04-28T01:14:00.000Z'
 		}
 	]
 };

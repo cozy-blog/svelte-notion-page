@@ -10,17 +10,24 @@
 </script>
 
 <div class={`notion-block notion-quote ${getColorCss(color)}`}>
-	<p class="notion-quote-content">
-		<RichText props={texts} />
-	</p>
+	<div class="notion-quote-content">
+		<p>
+			<RichText props={texts} />
+		</p>
+		<slot />
+	</div>
 </div>
 
 <style>
 	.notion-quote-content {
 		display: block;
 		word-break: break-word;
+		padding-left: 14px;
+		padding-right: 14px;
 		border-left: 3px solid currentcolor;
-		padding: 0.2em 0.9em;
+	}
+	.notion-quote {
+		padding: 3px 2px;
 		margin: 3px 0px 3px 1px;
 		font-size: 1em;
 	}
