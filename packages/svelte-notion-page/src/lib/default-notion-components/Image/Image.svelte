@@ -7,7 +7,7 @@
 	const { image } = props;
 	const { type, caption } = image;
 	export let convertUrl: (url: string) => string = (url) => url;
-	let opened = true;
+	let opened = false;
 	const url = getImgUrlOrNull(props);
 	let urls: string[] = url ? [convertUrl(url)] : [];
 	let initialIndex = 0;

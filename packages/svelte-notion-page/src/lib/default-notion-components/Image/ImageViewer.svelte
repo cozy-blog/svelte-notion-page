@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition';
-	import { focusAction } from 'svelte-legos';
-	import { onMount, tick } from 'svelte';
+	import { focusAction, tooltipAction } from 'svelte-legos';
+	import { onMount } from 'svelte';
 	import Icon from './assets';
 	export let initialIndex: number;
 	export let opened = false;
@@ -16,6 +16,16 @@
 	let scale = 1;
 	let scaleOrigin = scaleOriginCenter;
 	let scaleInputFocused = false;
+
+	function toNextImage() {
+		if (imgIndex >= urls.length - 1) return;
+		imgIndex += 1;
+	}
+
+	function toPreviousImage() {
+		if (imgIndex <= 0) return;
+		imgIndex -= 1;
+	}
 
 	const scaleInputAction = (node: HTMLInputElement) => {
 		node.select();
@@ -48,11 +58,6 @@
 		};
 		node.addEventListener('click', handleZoomInOutOnClick);
 	};
-	const handleCloseOnEsc = (e: KeyboardEvent) => {
-		if (e.key === 'Escape') {
-			opened = false;
-		}
-	};
 	const handleHideCursorOnMouseStop = (e: MouseEvent) => {
 		if (!cursorVisible) {
 			cursorVisible = true;
@@ -82,7 +87,7 @@
 		return Math.max(0.5, Math.min(value, 2));
 	}
 
-	const handleZoomPlusClick = () => {
+	function scaleUp() {
 		let changedScale = scale + 0.5;
 		if (changedScale >= 1.75) {
 			scale = 2;
@@ -91,8 +96,8 @@
 		} else if (changedScale >= 0.75) {
 			scale = 1;
 		}
-	};
-	const handleZoomMinusClick = () => {
+	}
+	function scaleDown() {
 		const changedScale = scale - 0.5;
 		if (changedScale <= 0.75) {
 			scale = 0.5;
@@ -101,6 +106,13 @@
 		} else if (changedScale <= 1.75) {
 			scale = 1.5;
 		}
+	}
+
+	const handleZoomPlusClick = () => {
+		scaleUp();
+	};
+	const handleZoomMinusClick = () => {
+		scaleDown();
 	};
 
 	$: {
@@ -133,8 +145,38 @@
 		url = urls[imgIndex];
 	}
 	onMount(() => {
-		window.addEventListener('keydown', handleCloseOnEsc);
-		return () => window.removeEventListener('keydown', handleCloseOnEsc);
+		const handleKeyDownOnOpened = (e: KeyboardEvent) => {
+			if (!opened) return;
+
+			if (e.key === 'Escape') {
+				opened = false;
+				return;
+			}
+
+			if (['+', '='].includes(e.key)) {
+				scaleUp();
+				return;
+			}
+
+			if (['-', '_'].includes(e.key)) {
+				scaleDown();
+				return;
+			}
+
+			if (e.key === 'ArrowLeft') {
+				e.preventDefault();
+				toPreviousImage();
+				return;
+			}
+
+			if (e.key === 'ArrowRight') {
+				e.preventDefault();
+				toNextImage();
+				return;
+			}
+		};
+		window.addEventListener('keydown', handleKeyDownOnOpened);
+		return () => window.removeEventListener('keydown', handleKeyDownOnOpened);
 	});
 </script>
 
@@ -168,15 +210,35 @@
 
 		<div class="tools">
 			<nav>
-				<button on:click={() => (imgIndex -= 1)} disabled={!hasPrevious}>
+				<button
+					use:tooltipAction={{
+						content: '뒤로',
+						pointer: false,
+						placement: 'left'
+					}}
+					on:click={toPreviousImage}
+					class:disabled={!hasPrevious}
+				>
 					<img src={Icon.ArrowBack} alt="arrow_back" />
 				</button>
-				<button on:click={() => (imgIndex += 1)} disabled={!hasNext}>
-					<img src={Icon.ArrowForward} alt="arrow_back" />
+				<button
+					use:tooltipAction={{
+						content: '다음',
+						pointer: false,
+						placement: 'left'
+					}}
+					on:click={toNextImage}
+					class:disabled={!hasNext}
+				>
+					<img src={Icon.ArrowForward} alt="arrow_forward" />
 				</button>
 			</nav>
 			<div class="scaler">
-				<button disabled={scale <= 0.5} on:click={handleZoomMinusClick}>
+				<button
+					use:tooltipAction={{ content: '축소 -', placement: 'left' }}
+					class:disabled={scale <= 0.5}
+					on:click={scaleDown}
+				>
 					<img src={Icon.Minus} alt="minus" />
 				</button>
 
@@ -201,14 +263,26 @@
 						<span>{scale * 100}%</span>
 					</button>
 				{/if}
-				<button disabled={scale >= 2} on:click={handleZoomPlusClick}>
+				<button
+					use:tooltipAction={{ content: '확대 +', placement: 'left', pointer: false }}
+					class:disabled={scale >= 2}
+					on:click={scaleUp}
+				>
 					<img src={Icon.Plus} alt="plus" />
 				</button>
 			</div>
-			<button class="download" on:click={handleDownloadLoading}>
+			<button
+				use:tooltipAction={{ content: '다운로드', placement: 'left', pointer: false }}
+				class="download"
+				on:click={handleDownloadLoading}
+			>
 				<img src={Icon.Download} alt="download" />
 			</button>
-			<button class="close" on:click={() => (opened = false)}>
+			<button
+				use:tooltipAction={{ content: '닫기 esc', placement: 'left', pointer: false }}
+				class="close"
+				on:click={() => (opened = false)}
+			>
 				<img src={Icon.Close} alt="close" />
 			</button>
 		</div>
@@ -225,7 +299,7 @@
 		margin: 0;
 		user-select: none;
 	}
-	.tools button:disabled {
+	.tools button.disabled {
 		opacity: 0.5;
 		pointer-events: none;
 		cursor: default;
@@ -372,11 +446,11 @@
 		pointer-events: auto;
 		cursor: zoom-in;
 		transition: transform 0.2s ease;
+		user-select: none;
 	}
 
 	.notion-viewer-opener > img {
-		max-width: 100%;
-		max-height: 100%;
+		width: 100%;
 		object-fit: contain;
 		pointer-events: auto;
 		cursor: default;

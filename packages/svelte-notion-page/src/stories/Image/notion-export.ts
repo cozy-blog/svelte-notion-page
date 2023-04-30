@@ -17,7 +17,7 @@ export const json = {
 				caption: [],
 				type: 'external',
 				external: {
-					url: ReasonToLiveImg
+					url: FrogImg
 				}
 			}
 		}
