@@ -15,9 +15,12 @@
 	let cursorTimeout: ReturnType<typeof setTimeout>;
 	let scale = 1;
 	let scaleOrigin = scaleOriginCenter;
+	let scaleInputFocused = false;
 
-	const scaleInputOnEnter = (node: HTMLInputElement) => {
+	const scaleInputAction = (node: HTMLInputElement) => {
+		node.select();
 		node.addEventListener('keydown', (e) => e.key === 'Enter' && node.blur());
+		node.addEventListener('blur', () => (scaleInputFocused = false));
 	};
 
 	const scaleActionOnBlur = (node: HTMLInputElement) => {
@@ -173,21 +176,32 @@
 				</button>
 			</nav>
 			<div class="scaler">
-				<button on:click={handleZoomMinusClick}>
+				<button disabled={scale <= 0.5} on:click={handleZoomMinusClick}>
 					<img src={Icon.Minus} alt="minus" />
 				</button>
-				<!-- svelte-ignore a11y-click-events-have-key-events -->
-				<div class="scaler-input" id="scaler-input">
-					<input
+
+				{#if scaleInputFocused}
+					<div class="scaler-input" id="scaler-input">
+						<input
+							id="scaler-input"
+							type="number"
+							value={scale * 100}
+							use:focusAction={scaleInputFocused}
+							use:scaleActionOnBlur
+							use:scaleInputAction
+						/>
+						<span style="cursor: default;">%</span>
+					</div>
+				{:else}
+					<button
+						on:click={() => (scaleInputFocused = true)}
+						class="scaler-input"
 						id="scaler-input"
-						type="number"
-						value={scale * 100}
-						use:scaleActionOnBlur
-						use:scaleInputOnEnter
-					/>
-					<span>%</span>
-				</div>
-				<button on:click={handleZoomPlusClick}>
+					>
+						<span>{scale * 100}%</span>
+					</button>
+				{/if}
+				<button disabled={scale >= 2} on:click={handleZoomPlusClick}>
 					<img src={Icon.Plus} alt="plus" />
 				</button>
 			</div>
@@ -209,9 +223,10 @@
 		height: 32px;
 		border: 0;
 		margin: 0;
+		user-select: none;
 	}
 	.tools button:disabled {
-		opacity: 0.6;
+		opacity: 0.5;
 		pointer-events: none;
 		cursor: default;
 	}
@@ -242,41 +257,38 @@
 	}
 	.tools .scaler {
 		display: flex;
-		color: #888888;
 		font-size: 14px;
 	}
 	.tools .scaler > .scaler-input {
 		background-color: rgba(0, 0, 0, 0.4);
 		display: flex;
 		align-items: center;
-		cursor: pointer;
-		padding: 0px 4px;
+		justify-content: center;
+		color: #888888;
+		padding: 0px;
+		width: 48px;
 	}
 	.tools .scaler > .scaler-input:hover {
 		background-color: rgba(0, 0, 0, 0.2);
 		display: flex;
 		align-items: center;
 	}
-	.tools .scaler > .scaler-input:focus-within {
-		cursor: default;
-		pointer-events: none;
-	}
 
 	.tools .scaler input {
 		background-color: transparent;
 		border: 0;
-		width: 24px;
 		font-size: inherit;
 		color: inherit;
 		padding: 0px;
 		padding-top: 1px;
 		overflow: hidden;
 		line-height: 1;
+		text-align: center;
 	}
 	.tools .scaler input:focus {
 		color: white;
-		outline: 1px solid blue;
-		width: 26px;
+		outline: 1px solid #008080;
+		width: 28px;
 	}
 	/* Chrome, Safari, Edge, Opera */
 	input::-webkit-outer-spin-button,
