@@ -14,7 +14,7 @@ import Quote from './Quote.svelte';
 import Callout from './Callout.svelte';
 import Equation from './Equation.svelte';
 import Code from './Code/Code.svelte';
-import Image from './Image.svelte';
+import Image from './Image/Image.svelte';
 import Video from './Video.svelte';
 import Divider from './Divider.svelte';
 import Audio from './Audio.svelte';

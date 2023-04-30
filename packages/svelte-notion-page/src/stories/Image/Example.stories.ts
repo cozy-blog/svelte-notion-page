@@ -1,10 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import type { Meta, StoryObj } from '@storybook/svelte';
 import Example from './Example.svelte';
+import { multipleImageJson } from './notion-export';
 
 const meta = {
 	title: 'Example/Image',
-	component: Example as any
+	component: Example
 } satisfies Meta<Example>;
 
 export default meta;
@@ -27,6 +28,17 @@ export const Mobile: Story = {
 		},
 		chromatic: {
 			viewports: [320, 640]
+		}
+	}
+};
+
+export const MultipleImage: Story = {
+	args: {
+		content: multipleImageJson as any
+	},
+	parameters: {
+		viewport: {
+			defaultViewport: 'desktop'
 		}
 	}
 };

@@ -37,6 +37,9 @@
 			if (i !== 0) {
 				current.context.previous = contextedBlocks[i - 1];
 			}
+			if (i < contextedBlocks.length - 1) {
+				current.context.after = contextedBlocks[i + 1];
+			}
 		});
 		return contextedBlocks;
 	}

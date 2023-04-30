@@ -2,7 +2,7 @@
 	import { json } from './notion-export';
 	import type { Content } from '$lib/types.js';
 	import Notion from '$lib/components';
-	const content = json as unknown as Content;
+	export let content = json as unknown as Content;
 </script>
 
 <Notion>

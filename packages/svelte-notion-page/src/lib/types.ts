@@ -14,6 +14,7 @@ export type Content = ContentfulPage;
 export type BlockContext = {
 	context: {
 		previous?: ContextedBlock | null;
+		after?: ContextedBlock | null;
 		parent?: ContextedBlock | null;
 	};
 };
