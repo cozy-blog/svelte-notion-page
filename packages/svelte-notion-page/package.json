@@ -13,7 +13,7 @@
 		"reference": "npx backstop reference",
 		"storybook": "storybook dev -p 6006",
 		"build-storybook": "storybook build",
-		"chromatic": "npx chromatic --project-token=df5341e409a6 --branch temp"
+		"chromatic": "npx chromatic --project-token=df5341e409a6"
 	},
 	"devDependencies": {
 		"@notionhq/client": "^2.2.3",
