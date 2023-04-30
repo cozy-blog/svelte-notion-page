@@ -6,6 +6,28 @@ export const json = {
 	blocks: [
 		{
 			object: 'block',
+			id: 'f3eab6d3-fa21-4f62-b586-9fffc93c3fdd',
+			parent: {
+				type: 'page_id',
+				page_id: 'dffa6fc2-7f09-4640-9ab0-a6e26309140b'
+			},
+			has_children: false,
+			type: 'image',
+			image: {
+				caption: [],
+				type: 'external',
+				external: {
+					url: ReasonToLiveImg
+				}
+			}
+		}
+	]
+};
+
+export const multipleImageJson = {
+	blocks: [
+		{
+			object: 'block',
 			id: 'eeacc1d6-d8d8-4d3a-a57f-6d2a30403074',
 			parent: {
 				type: 'page_id',

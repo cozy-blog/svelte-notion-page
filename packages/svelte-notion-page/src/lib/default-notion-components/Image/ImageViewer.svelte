@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition';
 	import { focusAction } from 'svelte-legos';
-	import { onMount } from 'svelte';
+	import { onMount, tick } from 'svelte';
+	import Icon from './assets';
 	export let initialIndex: number;
-	export let opened = true;
+	export let opened = false;
 	export let urls: string[];
 
 	$: imgIndex = initialIndex;
@@ -15,20 +16,21 @@
 	let scale = 1;
 	let scaleOrigin = scaleOriginCenter;
 
-	const scaleActionOnEnter = (node: HTMLInputElement) => {
-		const handleSetScale = (e: KeyboardEvent) => {
-			if (e.key === 'Enter') {
-				if (node.value !== '') {
-					scale = clampScale(Math.floor(+node.value) / 100);
-					if (scale < 1) {
-						scaleOrigin = scaleOriginCenter;
-					}
+	const scaleInputOnEnter = (node: HTMLInputElement) => {
+		node.addEventListener('keydown', (e) => e.key === 'Enter' && node.blur());
+	};
+
+	const scaleActionOnBlur = (node: HTMLInputElement) => {
+		const handleSetScale = () => {
+			if (node.value !== '') {
+				scale = clampScale(Math.floor(+node.value) / 100);
+				if (scale < 1) {
+					scaleOrigin = scaleOriginCenter;
 				}
-				node.value = `${scale * 100}`;
-				node.blur();
 			}
+			node.value = `${scale * 100}`;
 		};
-		node.addEventListener('keydown', handleSetScale);
+		node.addEventListener('blur', handleSetScale);
 	};
 	const zoomInOutActionOnClick = (node: HTMLElement) => {
 		const handleZoomInOutOnClick = ({ clientX, clientY }: MouseEvent) => {
@@ -149,7 +151,7 @@
 		class="notion-viewer-container"
 	>
 		<!-- svelte-ignore a11y-click-events-have-key-events -->
-		<div on:click={() => (opened = false)} class="notion-viewer-overlay" />
+		<div on:click={() => (opened = true)} class="notion-viewer-overlay" />
 		{#key url}
 			<img
 				use:zoomInOutActionOnClick
@@ -162,18 +164,156 @@
 		{/key}
 
 		<div class="tools">
-			<button on:click={() => (imgIndex -= 1)} disabled={!hasPrevious}>{'<'}</button>
-			<button on:click={() => (imgIndex += 1)} disabled={!hasNext}>{'>'}</button>
-			<button on:click={handleZoomMinusClick}>-</button>
-			<input type="number" value={scale * 100} use:scaleActionOnEnter />
-			<button on:click={handleZoomPlusClick}>+</button>
-			<button on:click={handleDownloadLoading}>down</button>
-			<button on:click={() => (opened = false)}>exit</button>
+			<nav>
+				<button on:click={() => (imgIndex -= 1)} disabled={!hasPrevious}>
+					<img src={Icon.ArrowBack} alt="arrow_back" />
+				</button>
+				<button on:click={() => (imgIndex += 1)} disabled={!hasNext}>
+					<img src={Icon.ArrowForward} alt="arrow_back" />
+				</button>
+			</nav>
+			<div class="scaler">
+				<button on:click={handleZoomMinusClick}>
+					<img src={Icon.Minus} alt="minus" />
+				</button>
+				<!-- svelte-ignore a11y-click-events-have-key-events -->
+				<div class="scaler-input" id="scaler-input">
+					<input
+						id="scaler-input"
+						type="number"
+						value={scale * 100}
+						use:scaleActionOnBlur
+						use:scaleInputOnEnter
+					/>
+					<span>%</span>
+				</div>
+				<button on:click={handleZoomPlusClick}>
+					<img src={Icon.Plus} alt="plus" />
+				</button>
+			</div>
+			<button class="download" on:click={handleDownloadLoading}>
+				<img src={Icon.Download} alt="download" />
+			</button>
+			<button class="close" on:click={() => (opened = false)}>
+				<img src={Icon.Close} alt="close" />
+			</button>
 		</div>
 	</div>
 {/if}
 
 <style>
+	.tools button {
+		background-color: rgba(0, 0, 0, 0.4);
+		padding: 6px;
+		width: 32px;
+		height: 32px;
+		border: 0;
+		margin: 0;
+	}
+	.tools button:disabled {
+		opacity: 0.6;
+		pointer-events: none;
+		cursor: default;
+	}
+	.tools button:hover {
+		background-color: rgba(0, 0, 0, 0.2);
+	}
+	.tools > nav {
+		display: flex;
+		margin-right: 12px;
+	}
+	.tools > nav > button:first-child {
+		width: 36px;
+		padding-left: 8px;
+		border-top-left-radius: 6px;
+		border-bottom-left-radius: 6px;
+	}
+	.tools > nav > button:last-child {
+		width: 36px;
+		padding-right: 8px;
+		border-top-right-radius: 6px;
+		border-bottom-right-radius: 6px;
+	}
+	.tools > .scaler > button:first-child {
+		width: 36px;
+		padding-left: 8px;
+		border-top-left-radius: 6px;
+		border-bottom-left-radius: 6px;
+	}
+	.tools .scaler {
+		display: flex;
+		color: #888888;
+		font-size: 14px;
+	}
+	.tools .scaler > .scaler-input {
+		background-color: rgba(0, 0, 0, 0.4);
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		padding: 0px 4px;
+	}
+	.tools .scaler > .scaler-input:hover {
+		background-color: rgba(0, 0, 0, 0.2);
+		display: flex;
+		align-items: center;
+	}
+	.tools .scaler > .scaler-input:focus-within {
+		cursor: default;
+		pointer-events: none;
+	}
+
+	.tools .scaler input {
+		background-color: transparent;
+		border: 0;
+		width: 24px;
+		font-size: inherit;
+		color: inherit;
+		padding: 0px;
+		padding-top: 1px;
+		overflow: hidden;
+		line-height: 1;
+	}
+	.tools .scaler input:focus {
+		color: white;
+		outline: 1px solid blue;
+		width: 26px;
+	}
+	/* Chrome, Safari, Edge, Opera */
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+	/* Firefox */
+	input[type='number'] {
+		-moz-appearance: textfield;
+	}
+	.tools .scaler > button:first-of-type {
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+	.tools .scaler > button:last-of-type {
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+	}
+	.tools button > img {
+		width: 100%;
+		height: 100%;
+	}
+	.tools button.download {
+		border-left: solid 1px gray;
+		border-right: solid 1px gray;
+		margin: 0px 1px;
+	}
+	.tools button.close {
+		width: 36px;
+		padding-right: 8px;
+		border-top-right-radius: 6px;
+		border-bottom-right-radius: 6px;
+	}
+	button:not(:disabled) {
+		cursor: pointer;
+	}
 	.hide-cursor {
 		cursor: none !important;
 	}
