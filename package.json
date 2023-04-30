@@ -26,8 +26,5 @@
   "devDependencies": {
     "chromatic": "^6.14.0",
     "ts-dedent": "^2.2.0"
-  },
-  "dependencies": {
-    "svelte-legos": "^0.2.1"
   }
 }
