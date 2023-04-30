@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition';
 	import { focusAction, tooltipAction } from 'svelte-legos';
-	import { onMount } from 'svelte';
+	import { onMount, tick } from 'svelte';
 	import Icon from './assets';
 	export let initialIndex: number;
 	export let opened = false;
@@ -17,12 +17,14 @@
 	let scaleOrigin = scaleOriginCenter;
 	let scaleInputFocused = false;
 
-	function toNextImage() {
+	async function toNextImage() {
+		await tick();
 		if (imgIndex >= urls.length - 1) return;
 		imgIndex += 1;
 	}
 
-	function toPreviousImage() {
+	async function toPreviousImage() {
+		await tick();
 		if (imgIndex <= 0) return;
 		imgIndex -= 1;
 	}
@@ -107,13 +109,6 @@
 			scale = 1.5;
 		}
 	}
-
-	const handleZoomPlusClick = () => {
-		scaleUp();
-	};
-	const handleZoomMinusClick = () => {
-		scaleDown();
-	};
 
 	$: {
 		[opened];
