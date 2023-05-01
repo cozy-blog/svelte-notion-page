@@ -7,9 +7,13 @@
 		heading_2: { color, rich_text: texts, is_toggleable }
 	} = props;
 	let open = false;
+
+	// Give id to make it convenient to write TableOfContents
+	export let id = texts.map(({ plain_text }) => plain_text).join('');
 </script>
 
 <div
+	{id}
 	class:notion-toggle-open={open}
 	class={`${getColorCss(color)} notion-block notion-h2 notion-toggle`}
 >
