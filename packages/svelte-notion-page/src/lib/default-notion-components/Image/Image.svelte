@@ -9,7 +9,7 @@
 	export let convertUrl: (url: string) => string = (url) => url;
 	let opened = false;
 	const url = getImgUrlOrNull(props);
-	let urls: string[] = url ? [convertUrl(url)] : [];
+	let urls: string[] = url ? [url] : [];
 	let initialIndex = 0;
 	let urlLoaded = false;
 	$: {
