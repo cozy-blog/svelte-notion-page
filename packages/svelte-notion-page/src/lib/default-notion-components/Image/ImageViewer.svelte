@@ -177,7 +177,7 @@
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <div class="notion-viewer-opener" on:click={() => (opened = true)}>
-	<img src={url} alt="posting img" />
+	<img src={urls[initialIndex]} alt="posting img" />
 </div>
 
 {#if opened}
