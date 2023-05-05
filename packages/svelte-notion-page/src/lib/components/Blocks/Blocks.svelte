@@ -43,6 +43,14 @@
 		});
 		return contextedBlocks;
 	}
+	let contextedBlocks = resolveToContextedBlocks(blocks);
+	$: {
+		[blocks];
+		reactive();
+	}
+	function reactive() {
+		contextedBlocks = resolveToContextedBlocks(blocks);
+	}
 </script>
 
-<RecursiveBlocks blocks={resolveToContextedBlocks(blocks)} />
+<RecursiveBlocks blocks={contextedBlocks} />
