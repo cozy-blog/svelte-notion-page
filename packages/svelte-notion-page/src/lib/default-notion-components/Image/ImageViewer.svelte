@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition';
 	import { focusAction, tooltipAction } from 'svelte-legos';
-	import { onMount, tick } from 'svelte';
+	import { tick } from 'svelte';
 	import Icon from './assets';
 	export let initialIndex: number;
 	export let opened = false;
@@ -139,41 +139,39 @@
 		scale = 1;
 		url = urls[imgIndex];
 	}
-	onMount(() => {
-		const handleKeyDownOnOpened = (e: KeyboardEvent) => {
-			if (!opened) return;
+	const handleKeyDownOnOpened = (e: KeyboardEvent) => {
+		if (!opened) return;
 
-			if (e.key === 'Escape') {
-				opened = false;
-				return;
-			}
+		if (e.key === 'Escape') {
+			opened = false;
+			return;
+		}
 
-			if (['+', '='].includes(e.key)) {
-				scaleUp();
-				return;
-			}
+		if (['+', '='].includes(e.key)) {
+			scaleUp();
+			return;
+		}
 
-			if (['-', '_'].includes(e.key)) {
-				scaleDown();
-				return;
-			}
+		if (['-', '_'].includes(e.key)) {
+			scaleDown();
+			return;
+		}
 
-			if (e.key === 'ArrowLeft') {
-				e.preventDefault();
-				toPreviousImage();
-				return;
-			}
+		if (e.key === 'ArrowLeft') {
+			e.preventDefault();
+			toPreviousImage();
+			return;
+		}
 
-			if (e.key === 'ArrowRight') {
-				e.preventDefault();
-				toNextImage();
-				return;
-			}
-		};
-		window.addEventListener('keydown', handleKeyDownOnOpened);
-		return () => window.removeEventListener('keydown', handleKeyDownOnOpened);
-	});
+		if (e.key === 'ArrowRight') {
+			e.preventDefault();
+			toNextImage();
+			return;
+		}
+	};
 </script>
+
+<svelte:window on:keydown={handleKeyDownOnOpened} />
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <div class="notion-viewer-opener" on:click={() => (opened = true)}>
@@ -191,7 +189,7 @@
 		class="notion-viewer-container"
 	>
 		<!-- svelte-ignore a11y-click-events-have-key-events -->
-		<div on:click={() => (opened = true)} class="notion-viewer-overlay" />
+		<div on:click={() => (opened = false)} class="notion-viewer-overlay" />
 		{#key url}
 			<img
 				use:zoomInOutActionOnClick
