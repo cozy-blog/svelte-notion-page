@@ -717,6 +717,134 @@ export const json = {
 					}
 				]
 			}
+		},
+		{
+			object: 'block',
+			id: '61fd2e57-e1e7-477a-b21d-69b3fa5f9779',
+			parent: {
+				type: 'block_id',
+				block_id: '11d67279-49d5-4afa-b45e-4a7fa31291e9'
+			},
+			created_time: '2023-01-07T04:02:00.000Z',
+			last_edited_time: '2023-01-07T04:05:00.000Z',
+			created_by: {
+				object: 'user',
+				id: '95fc0174-8fc6-4114-8e45-f67eacd99f07'
+			},
+			last_edited_by: {
+				object: 'user',
+				id: '95fc0174-8fc6-4114-8e45-f67eacd99f07'
+			},
+			has_children: false,
+			archived: false,
+			type: 'numbered_list_item',
+			numbered_list_item: {
+				color: 'blue_background',
+				rich_text: [
+					{
+						type: 'text',
+						text: {
+							content: 'clone',
+							link: null
+						},
+						annotations: {
+							bold: false,
+							italic: false,
+							strikethrough: false,
+							underline: false,
+							code: true,
+							color: 'default'
+						},
+						plain_text: '',
+						href: null
+					},
+					{
+						type: 'text',
+						text: {
+							content: 'add',
+							link: null
+						},
+						annotations: {
+							bold: false,
+							italic: false,
+							strikethrough: false,
+							underline: false,
+							code: true,
+							color: 'default'
+						},
+						plain_text: '',
+						href: null
+					},
+					{
+						type: 'text',
+						text: {
+							content: 'commit',
+							link: null
+						},
+						annotations: {
+							bold: false,
+							italic: false,
+							strikethrough: false,
+							underline: false,
+							code: true,
+							color: 'default'
+						},
+						plain_text: '',
+						href: null
+					},
+					{
+						type: 'text',
+						text: {
+							content: 'push',
+							link: null
+						},
+						annotations: {
+							bold: false,
+							italic: false,
+							strikethrough: false,
+							underline: false,
+							code: true,
+							color: 'default'
+						},
+						plain_text: '',
+						href: null
+					},
+					{
+						type: 'text',
+						text: {
+							content: 'pull',
+							link: null
+						},
+						annotations: {
+							bold: false,
+							italic: false,
+							strikethrough: false,
+							underline: false,
+							code: true,
+							color: 'default'
+						},
+						plain_text: '',
+						href: null
+					},
+					{
+						type: 'text',
+						text: {
+							content: '명령을 충분히 익혀다고 생각되면, 자신의 저장소에 이력을 push합니다.',
+							link: null
+						},
+						annotations: {
+							bold: false,
+							italic: false,
+							strikethrough: false,
+							underline: false,
+							code: false,
+							color: 'default'
+						},
+						plain_text: '',
+						href: null
+					}
+				]
+			}
 		}
 	]
 };

@@ -17,7 +17,9 @@
 >
 	<li class="notion-list-numbered-content">
 		<div class="notion-list-marker">{marker}</div>
-		<RichText props={texts} />
+		<p>
+			<RichText props={texts} />
+		</p>
 	</li>
 	<slot />
 </div>
