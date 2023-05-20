@@ -23,7 +23,6 @@
 <style>
 	.notion-list-bulleted-content {
 		display: flex;
-		align-items: center;
 		padding-left: 2px;
 		padding-top: 3px;
 		padding-bottom: 3px;
@@ -33,11 +32,11 @@
 	.notion-list-marker {
 		user-select: none;
 		width: 24px;
+		flex-shrink: 0;
 		margin-right: 2px;
 		line-height: 1;
 		display: flex;
 		justify-content: center;
-		align-items: center;
 		font-family: Arial;
 		font-size: 1.5em;
 	}
