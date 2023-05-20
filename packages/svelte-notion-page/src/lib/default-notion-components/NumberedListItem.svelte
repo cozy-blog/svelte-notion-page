@@ -41,6 +41,7 @@
 
 	.notion-list-marker {
 		display: inline-flex;
+		flex-shrink: 0;
 		justify-content: center;
 		align-items: center;
 		height: fit-content;
