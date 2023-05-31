@@ -4,7 +4,7 @@ import Example from './Example.svelte';
 
 const meta = {
 	title: 'Example/Paragraph',
-	component: Example as any
+	component: Example,
 } satisfies Meta<Example>;
 
 export default meta;

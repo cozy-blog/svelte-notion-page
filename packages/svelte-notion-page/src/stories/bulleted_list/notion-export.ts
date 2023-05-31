@@ -23,78 +23,7 @@ export const json = {
 		database_id: 'be65d799-9e98-4426-86a6-72072991e27b'
 	},
 	archived: false,
-	properties: {
-		HashTags: {
-			id: 'Hhkx',
-			type: 'multi_select',
-			multi_select: []
-		},
-		'생성 일시': {
-			id: 'J%7C%3BZ',
-			type: 'created_time',
-			created_time: '2022-12-28T23:30:00.000Z'
-		},
-		Slug: {
-			id: 'S%3A%7B%3E',
-			type: 'rich_text',
-			rich_rich_text: [
-				{
-					type: 'text',
-					text: {
-						content: 'test',
-						link: null
-					},
-					annotations: {
-						bold: false,
-						italic: false,
-						strikethrough: false,
-						underline: false,
-						code: false,
-						color: 'default'
-					},
-					plain_text: 'test',
-					href: null
-				}
-			]
-		},
-		Description: {
-			id: 'qTV%3E',
-			type: 'rich_text',
-			rich_rich_text: []
-		},
-		Status: {
-			id: 'vu%7C%3B',
-			type: 'select',
-			select: {
-				id: '|QrX',
-				name: 'Publishable',
-				color: 'green'
-			}
-		},
-		Name: {
-			id: 'title',
-			type: 'title',
-			title: [
-				{
-					type: 'text',
-					text: {
-						content: '테스트 paragrap',
-						link: null
-					},
-					annotations: {
-						bold: false,
-						italic: false,
-						strikethrough: false,
-						underline: false,
-						code: false,
-						color: 'default'
-					},
-					plain_text: '테스트 paragrap',
-					href: null
-				}
-			]
-		}
-	},
+	properties: {},
 	url: 'https://www.notion.so/paragrap-591d29d3cb194273bb3a82644ed4faa4',
 	blocks: [
 		{
@@ -671,6 +600,179 @@ export const json = {
 			paragraph: {
 				color: 'gray_background',
 				rich_text: []
+			}
+		},
+		{
+			object: 'block',
+			id: '61fd2e57-e1e7-477a-b21d-69b3fa5f9779',
+			parent: {
+				type: 'block_id',
+				block_id: '11d67279-49d5-4afa-b45e-4a7fa31291e9'
+			},
+			created_time: '2023-01-07T04:02:00.000Z',
+			last_edited_time: '2023-01-07T04:05:00.000Z',
+			created_by: {
+				object: 'user',
+				id: '95fc0174-8fc6-4114-8e45-f67eacd99f07'
+			},
+			last_edited_by: {
+				object: 'user',
+				id: '95fc0174-8fc6-4114-8e45-f67eacd99f07'
+			},
+			has_children: false,
+			archived: false,
+			type: 'bulleted_list_item',
+			bulleted_list_item: {
+				color: 'blue_background',
+				rich_text: [
+					{
+						type: 'text',
+						text: {
+							content:
+								'very very long text very very long text very very long text very very long text very very long text',
+							link: null
+						},
+						annotations: {
+							bold: false,
+							italic: false,
+							strikethrough: false,
+							underline: false,
+							code: false,
+							color: 'default'
+						},
+						plain_text:
+							'very very long text very very long text very very long text very very long text very very long text',
+						href: null
+					}
+				]
+			}
+		},
+		{
+			object: 'block',
+			id: '61fd2e57-e1e7-477a-b21d-69b3fa5f9779',
+			parent: {
+				type: 'block_id',
+				block_id: '11d67279-49d5-4afa-b45e-4a7fa31291e9'
+			},
+			created_time: '2023-01-07T04:02:00.000Z',
+			last_edited_time: '2023-01-07T04:05:00.000Z',
+			created_by: {
+				object: 'user',
+				id: '95fc0174-8fc6-4114-8e45-f67eacd99f07'
+			},
+			last_edited_by: {
+				object: 'user',
+				id: '95fc0174-8fc6-4114-8e45-f67eacd99f07'
+			},
+			has_children: false,
+			archived: false,
+			type: 'bulleted_list_item',
+			bulleted_list_item: {
+				color: 'blue_background',
+				rich_text: [
+					{
+						type: 'text',
+						text: {
+							content: 'clone',
+							link: null
+						},
+						annotations: {
+							bold: false,
+							italic: false,
+							strikethrough: false,
+							underline: false,
+							code: true,
+							color: 'default'
+						},
+						plain_text: '',
+						href: null
+					},
+					{
+						type: 'text',
+						text: {
+							content: 'add',
+							link: null
+						},
+						annotations: {
+							bold: false,
+							italic: false,
+							strikethrough: false,
+							underline: false,
+							code: true,
+							color: 'default'
+						},
+						plain_text: '',
+						href: null
+					},
+					{
+						type: 'text',
+						text: {
+							content: 'commit',
+							link: null
+						},
+						annotations: {
+							bold: false,
+							italic: false,
+							strikethrough: false,
+							underline: false,
+							code: true,
+							color: 'default'
+						},
+						plain_text: '',
+						href: null
+					},
+					{
+						type: 'text',
+						text: {
+							content: 'push',
+							link: null
+						},
+						annotations: {
+							bold: false,
+							italic: false,
+							strikethrough: false,
+							underline: false,
+							code: true,
+							color: 'default'
+						},
+						plain_text: '',
+						href: null
+					},
+					{
+						type: 'text',
+						text: {
+							content: 'pull',
+							link: null
+						},
+						annotations: {
+							bold: false,
+							italic: false,
+							strikethrough: false,
+							underline: false,
+							code: true,
+							color: 'default'
+						},
+						plain_text: '',
+						href: null
+					},
+					{
+						type: 'text',
+						text: {
+							content: '명령을 충분히 익혀다고 생각되면, 자신의 저장소에 이력을 push합니다.',
+							link: null
+						},
+						annotations: {
+							bold: false,
+							italic: false,
+							strikethrough: false,
+							underline: false,
+							code: false,
+							color: 'default'
+						},
+						plain_text: '',
+						href: null
+					}
+				]
 			}
 		}
 	]

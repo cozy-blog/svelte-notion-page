@@ -15,7 +15,9 @@
 <div class={`notion-block notion-list-bulleted ${getColorCss(color)}`}>
 	<li class="notion-list-bulleted-content">
 		<span class="notion-list-marker">{marker}</span>
-		<RichText props={texts} />
+		<p>
+			<RichText props={texts} />
+		</p>
 	</li>
 	<slot />
 </div>
@@ -23,7 +25,7 @@
 <style>
 	.notion-list-bulleted-content {
 		display: flex;
-		align-items: center;
+		align-items: start;
 		padding-left: 2px;
 		padding-top: 3px;
 		padding-bottom: 3px;
@@ -33,11 +35,11 @@
 	.notion-list-marker {
 		user-select: none;
 		width: 24px;
+		flex-shrink: 0;
 		margin-right: 2px;
 		line-height: 1;
-		display: flex;
+		display: inline-flex;
 		justify-content: center;
-		align-items: center;
 		font-family: Arial;
 		font-size: 1.5em;
 	}

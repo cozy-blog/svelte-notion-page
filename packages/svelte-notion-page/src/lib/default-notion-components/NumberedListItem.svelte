@@ -15,9 +15,11 @@
 	data-notion-marker-format={format}
 	class={`notion-block notion-list-numbered ${getColorCss(color)}`}
 >
-	<li>
+	<li class="notion-list-numbered-content">
 		<div class="notion-list-marker">{marker}</div>
-		<RichText props={texts} />
+		<p>
+			<RichText props={texts} />
+		</p>
 	</li>
 	<slot />
 </div>
@@ -41,12 +43,13 @@
 
 	.notion-list-marker {
 		display: inline-flex;
+		flex-shrink: 0;
 		justify-content: center;
 		align-items: center;
 		height: fit-content;
 	}
 
-	.notion-list-numbered > li {
+	.notion-list-numbered-content {
 		padding-top: 4px;
 		padding-bottom: 4px;
 		list-style-type: none;
