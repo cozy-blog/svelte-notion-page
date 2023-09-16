@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { SyncedBlock } from '$lib/types';
-	export let props: SyncedBlock;
+	import type { SyncedBlockProps } from '$lib/types';
+	export let props: SyncedBlockProps;
 </script>
 
 <div class="notion-block notion-synced-block">

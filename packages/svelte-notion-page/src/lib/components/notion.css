@@ -37,15 +37,15 @@
 	margin-top: 2px;
 }
 
-.notion-block>.notion-block {
+.notion-block > .notion-block {
 	margin-left: var(--notion-indent);
 }
 
-.notion-toggle>.notion-block {
+.notion-toggle > .notion-block {
 	display: none;
 }
 
-.notion-toggle.notion-toggle-open>.notion-block {
+.notion-toggle.notion-toggle-open > .notion-block {
 	display: block;
 }
 
@@ -124,11 +124,19 @@
 	}
 }
 
-[data-notion-theme='dark'] .notion-callout {
+[data-theme='dark'] .notion-callout {
 	border-color: var(--bg-color-2);
 }
 
-[data-notion-theme='light'] .notion,
+.notion {
+	--notion-font: ui-sans-serif, system-ui, apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica,
+		'Apple Color Emoji', Arial, sans-serif, 'Segoe UI Emoji', 'Segoe UI Symbol';
+	--notion-max-width: 720px;
+	--notion-header-height: 45px;
+	--notion-indent: 27px;
+}
+
+[data-theme='light'] .notion,
 .notion {
 	--fg-color: rgb(55, 53, 47);
 	--fg-color-0: rgba(55, 53, 47, 0.09);
@@ -188,15 +196,9 @@
 	--notion-item-default: rgba(206, 205, 202, 0.5);
 	--notion-item-purple: rgba(103, 36, 222, 0.2);
 	--notion-item-gray: rgba(155, 154, 151, 0.4);
-
-	--notion-font: ui-sans-serif, system-ui, apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica,
-		'Apple Color Emoji', Arial, sans-serif, 'Segoe UI Emoji', 'Segoe UI Symbol';
-	--notion-max-width: 720px;
-	--notion-header-height: 45px;
-	--notion-indent: 27px;
 }
 
-[data-notion-theme='dark'] .notion {
+[data-theme='dark'] .notion {
 	--fg-color: rgba(255, 255, 255, 0.9);
 	--fg-color-0: var(--fg-color);
 	--fg-color-1: var(--fg-color);
@@ -212,24 +214,26 @@
 	--bg-color-1: rgb(63, 68, 71);
 	--bg-color-2: rgba(135, 131, 120, 0.15);
 
-	--notion-red: rgb(255, 115, 105);
-	--notion-pink: rgb(226, 85, 161);
-	--notion-blue: rgb(82, 156, 202);
-	--notion-purple: rgb(154, 109, 215);
-	--notion-teal: rgb(77, 171, 154);
-	--notion-yellow: rgb(255, 220, 73);
-	--notion-orange: rgb(255, 163, 68);
-	--notion-brown: rgb(147, 114, 100);
-	--notion-gray: rgba(151, 154, 155, 0.95);
-	--notion-red_background: rgb(89, 65, 65);
-	--notion-pink_background: rgb(83, 59, 76);
-	--notion-blue_background: rgb(54, 73, 84);
-	--notion-purple_background: rgb(68, 63, 87);
-	--notion-teal_background: rgb(53, 76, 75);
-	--notion-yellow_background: rgb(89, 86, 59);
-	--notion-orange_background: rgb(89, 74, 58);
-	--notion-brown_background: rgb(67, 64, 64);
-	--notion-gray_background: rgb(69, 75, 78);
+	--notion-red: #ff7369;
+	--notion-pink: #e254a0;
+	--notion-blue: #519cca;
+	--notion-purple: #9a6dd7;
+	--notion-green: #458262;
+	--notion-yellow: #ffdc49;
+	--notion-orange: #ffa343;
+	--notion-brown: #937264;
+	--notion-gray: #909293;
+
+	--notion-red_background: #594140;
+	--notion-pink_background: #533b4c;
+	--notion-blue_background: #364954;
+	--notion-purple_background: #443f57;
+	--notion-green_background: #365c48;
+	--notion-yellow_background: #58563b;
+	--notion-orange_background: #594a3a;
+	--notion-brown_background: #424040;
+	--notion-gray_background: #454b4e;
+
 	--notion-red_background_co: rgba(89, 65, 65, 0.3);
 	--notion-pink_background_co: rgba(83, 59, 76, 0.3);
 	--notion-blue_background_co: rgba(120, 162, 187, 0.3);
