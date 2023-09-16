@@ -6,6 +6,8 @@
   "scripts": {
     "start:notion-page": "npm run dev -workspace=@cozy-blog/svelte-notion-page",
     "storybook:notion-page": "npm run storybook -workspace=@cozy-blog/svelte-notion-page",
+    "storybook": "npm run storybook:notion-page",
+    "chromatic": "npm run chromatic:notion-page",
     "chromatic:notion-page": "npm run chromatic -workspace=@cozy-blog/svelte-notion-page",
     "build:notion-client": "npm run build -workspace=@cozy-blog/notion-client"
   },

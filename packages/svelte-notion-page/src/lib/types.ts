@@ -215,6 +215,6 @@ export type BookmarkProps = {
 	};
 } & ContextedBlock;
 
-export type SyncedBlock = {
+export type SyncedBlockProps = {
 	type: 'synced_block';
 };
