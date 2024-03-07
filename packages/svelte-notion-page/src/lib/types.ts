@@ -19,7 +19,7 @@ export type BlockContext = {
 	};
 };
 
-export type TextProps = {
+export type TextArgs = {
 	type: 'text';
 	text: {
 		content: string;
@@ -39,14 +39,14 @@ export type TextProps = {
 	href?: string | null;
 };
 
-export type ParagraphProps = {
+export type ParagraphArgs = {
 	paragraph: {
 		color: string;
-		rich_text: TextProps[];
+		rich_text: TextArgs[];
 	};
 } & ContextedBlock;
 
-export type EquationProps = {
+export type EquationArgs = {
 	type: 'equation';
 	inline?: boolean;
 	equation: {
@@ -54,74 +54,74 @@ export type EquationProps = {
 	};
 };
 
-export type CodeProps = {
+export type CodeArgs = {
 	type: 'code';
 	code: {
 		caption: [];
 		language: string;
-		rich_text: TextProps[];
+		rich_text: TextArgs[];
 	};
 } & ContextedBlock;
 
-export type Heading_1_Props = {
+export type Heading_1_Args = {
 	type: 'heading_1';
-	heading_1: HeadingProps;
+	heading_1: HeadingArgs;
 } & ContextedBlock;
 
-export type Heading_2_Props = {
+export type Heading_2_Args = {
 	type: 'heading_2';
-	heading_2: HeadingProps;
+	heading_2: HeadingArgs;
 } & ContextedBlock;
 
-export type Heading_3_Props = {
+export type Heading_3_Args = {
 	type: 'heading_3';
-	heading_3: HeadingProps;
+	heading_3: HeadingArgs;
 } & ContextedBlock;
 
-export type HeadingProps = {
+export type HeadingArgs = {
 	is_toggleable: boolean;
 	color: string;
-	rich_text: TextProps[];
+	rich_text: TextArgs[];
 };
 
-export type ColumnListProps = { type: 'column_list' } & Block;
-export type ColumnProps = { type: 'column' } & Block;
-export type BulletedListItemProps = {
+export type ColumnListArgs = { type: 'column_list' } & Block;
+export type ColumnArgs = { type: 'column' } & Block;
+export type BulletedListItemArgs = {
 	type: 'bulleted_list_item';
-	bulleted_list_item: { color: string; rich_text: TextProps[] };
+	bulleted_list_item: { color: string; rich_text: TextArgs[] };
 } & ContextedBlock;
 
-export type NumberedListItemProps = {
+export type NumberedListItemArgs = {
 	type: 'numbered_list_item';
-	numbered_list_item: { color: string; rich_text: TextProps[] };
+	numbered_list_item: { color: string; rich_text: TextArgs[] };
 } & ContextedBlock;
 
-export type TodoProps = {
+export type TodoArgs = {
 	type: 'to_do';
 	to_do: {
 		color: string;
 		checked: boolean;
-		rich_text: TextProps[];
+		rich_text: TextArgs[];
 	};
 } & ContextedBlock;
 
-export type ToggleProps = {
+export type ToggleArgs = {
 	type: 'toggle';
 	toggle: {
 		color: string;
-		rich_text: TextProps[];
+		rich_text: TextArgs[];
 	};
 } & ContextedBlock;
 
-export type QuoteProps = {
+export type QuoteArgs = {
 	type: 'quote';
 	quote: {
 		color: string;
-		rich_text: TextProps[];
+		rich_text: TextArgs[];
 	};
 } & ContextedBlock;
 
-export type CalloutProps = {
+export type CalloutArgs = {
 	type: 'callout';
 	callout: {
 		icon: {
@@ -135,22 +135,22 @@ export type CalloutProps = {
 			};
 		};
 		color: string;
-		rich_text: TextProps[];
+		rich_text: TextArgs[];
 	};
 } & ContextedBlock;
 
-export type ImageProps = {
+export type ImageArgs = {
 	type: 'image';
 	image:
 		| {
-				caption: TextProps[];
+				caption: TextArgs[];
 				type: 'file';
 				file: {
 					url: string;
 				};
 		  }
 		| {
-				caption: TextProps[];
+				caption: TextArgs[];
 				type: 'external';
 				external?: {
 					url: string;
@@ -158,10 +158,10 @@ export type ImageProps = {
 		  };
 } & ContextedBlock;
 
-export type VideoProps = {
+export type VideoArgs = {
 	type: 'video';
 	video: {
-		caption: TextProps[];
+		caption: TextArgs[];
 		type: 'external' | 'file';
 		file?: {
 			url: string;
@@ -172,17 +172,17 @@ export type VideoProps = {
 	};
 } & ContextedBlock;
 
-export type DividerProps = {
+export type DividerArgs = {
 	type: 'divider';
 	divider: {
 		//
 	};
 } & ContextedBlock;
 
-export type AudioProps = {
+export type AudioArgs = {
 	type: 'audio';
 	audio: {
-		caption: TextProps[];
+		caption: TextArgs[];
 		type: 'external' | 'file';
 		file?: {
 			url: string;
@@ -193,7 +193,7 @@ export type AudioProps = {
 	};
 } & ContextedBlock;
 
-export type TableProps = {
+export type TableArgs = {
 	table: {
 		table_width: number;
 		has_column_header: boolean;
@@ -201,20 +201,20 @@ export type TableProps = {
 	};
 } & ContextedBlock;
 
-export type TableRowProps = {
+export type TableRowArgs = {
 	table_row: {
-		cells: TextProps[][];
+		cells: TextArgs[][];
 	};
 };
 
-export type BookmarkProps = {
+export type BookmarkArgs = {
 	type: 'bookmark';
 	bookmark: {
-		caption: TextProps[];
+		caption: TextArgs[];
 		url: string;
 	};
 } & ContextedBlock;
 
-export type SyncedBlockProps = {
+export type SyncedBlockArgs = {
 	type: 'synced_block';
 };

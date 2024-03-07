@@ -1,9 +1,9 @@
 <script lang="ts">
-	import type { ImageProps, ContextedBlock } from '$lib/types';
+	import type { ImageArgs, ContextedBlock } from '$lib/types';
 	import RichText from '../base/richtext/RichText.svelte';
 	import ImageViewer from './ImageViewer.svelte';
 
-	export let props: ImageProps;
+	export let props: ImageArgs;
 	const { image } = props;
 	const { type, caption } = image;
 	export let convertUrl: (url: string) => string = (url) => url;

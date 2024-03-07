@@ -1,8 +1,8 @@
 <script lang="ts">
-	import type { TextProps } from '$lib/types';
+	import type { TextArgs } from '$lib/types';
 	import Text from './component/Text.svelte';
 	import Equation from './component/Equation.svelte';
-	export let props: TextProps[];
+	export let props: TextArgs[];
 	const configs = {
 		text: Text,
 		equation: Equation

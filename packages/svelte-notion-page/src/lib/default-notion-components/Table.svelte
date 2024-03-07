@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { TableProps } from '$lib/types';
-	export let props: TableProps;
+	import type { TableArgs } from '$lib/types';
+	export let props: TableArgs;
 	const {
 		table: { has_column_header, has_row_header }
 	} = props;

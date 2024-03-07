@@ -1,9 +1,9 @@
 <script lang="ts">
-	import type { TodoProps } from '$lib/types';
+	import type { TodoArgs } from '$lib/types';
 	import { getColorCss } from '$lib/utils/getColorCss';
 	import RichText from './base/richtext/RichText.svelte';
 	import CheckBox from './base/CheckBox.svelte';
-	export let props: TodoProps;
+	export let props: TodoArgs;
 
 	const {
 		to_do: { color, rich_text: texts, checked }

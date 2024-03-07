@@ -1,9 +1,9 @@
 <script lang="ts">
-	import type {  VideoProps } from '$lib/types';
+	import type { VideoArgs } from '$lib/types';
 	import RichText from './base/richtext/RichText.svelte';
 	import { getYoutubeId } from '$lib/utils/getYoutubeId';
 
-	export let props: VideoProps;
+	export let props: VideoArgs;
 	const {
 		video: { type, file, external, caption }
 	} = props;
@@ -20,7 +20,7 @@
 
 			{#if youtubeId}
 				<iframe
-          style="width: 100%; aspect-ratio: 560 / 315;"
+					style="width: 100%; aspect-ratio: 560 / 315;"
 					src="https://www.youtube.com/embed/{youtubeId}"
 					title="YouTube video player"
 					frameborder="0"

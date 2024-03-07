@@ -1,7 +1,7 @@
 <script lang="ts">
-	import type { TableRowProps } from '$lib/types';
+	import type { TableRowArgs } from '$lib/types';
 	import RichText from './base/richtext/RichText.svelte';
-	export let props: TableRowProps;
+	export let props: TableRowArgs;
 	const {
 		table_row: { cells }
 	} = props;

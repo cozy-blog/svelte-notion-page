@@ -1,9 +1,9 @@
 <script lang="ts">
-	import type { QuoteProps } from '$lib/types';
+	import type { QuoteArgs } from '$lib/types';
 	import { getColorCss } from '$lib/utils/getColorCss';
 	import RichText from './base/richtext/RichText.svelte';
 
-	export let props: QuoteProps;
+	export let props: QuoteArgs;
 	const {
 		quote: { color, rich_text: texts }
 	} = props;

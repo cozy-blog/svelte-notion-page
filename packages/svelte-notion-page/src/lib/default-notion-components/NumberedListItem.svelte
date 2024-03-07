@@ -1,10 +1,10 @@
 <script lang="ts">
-	import type { NumberedListItemProps } from '$lib/types';
+	import type { NumberedListItemArgs } from '$lib/types';
 	import { getColorCss } from '$lib/utils/getColorCss';
 	import { numberedListItemMarker } from '$lib/utils/listItemMarker';
 	import RichText from './base/richtext/RichText.svelte';
 
-	export let props: NumberedListItemProps;
+	export let props: NumberedListItemArgs;
 	const {
 		numbered_list_item: { rich_text: texts, color }
 	} = props;
