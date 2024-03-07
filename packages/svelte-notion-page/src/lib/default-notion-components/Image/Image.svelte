@@ -3,6 +3,7 @@
 	import RichText from '../base/richtext/RichText.svelte';
 	import ImageViewer from './ImageViewer.svelte';
 
+	export let style = ''
 	export let props: ImageArgs;
 	const { image } = props;
 	const { type, caption } = image;
@@ -53,7 +54,7 @@
 	}
 </script>
 
-<div class="notion-block notion-image">
+<div style={style} class="notion-block notion-image">
 	<div class="notion-image-content">
 		{#if url}
 			<ImageViewer bind:opened {initialIndex} {urls} />
@@ -80,11 +81,5 @@
 	.notion-image-content {
 		display: flex;
 		flex-direction: column;
-	}
-
-	.notion-image-content img {
-		width: 100%;
-		margin: 0 auto;
-		object-fit: contain;
 	}
 </style>
