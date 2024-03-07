@@ -1,7 +1,7 @@
 <script lang="ts">
-	import type { BookmarkProps } from '$lib/types';
+	import type { BookmarkArgs } from '$lib/types';
 	import RichText from './base/richtext/RichText.svelte';
-	export let props: BookmarkProps;
+	export let props: BookmarkArgs;
 	const {
 		bookmark: { url, caption }
 	} = props;

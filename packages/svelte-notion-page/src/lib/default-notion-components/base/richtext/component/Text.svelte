@@ -1,8 +1,8 @@
 <script lang="ts">
-	import type { TextProps } from '$lib/types';
+	import type { TextArgs } from '$lib/types';
 	import { getColorCss } from '$lib/utils/getColorCss';
 	import he from 'he';
-	export let props: TextProps;
+	export let props: TextArgs;
 	const {
 		href,
 		text: { content },

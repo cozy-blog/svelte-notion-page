@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { CodeProps } from '$lib/types';
+	import type { CodeArgs } from '$lib/types';
 	import copyToClipboard from 'clipboard-copy';
 	import RichText from '../base/richtext/RichText.svelte';
 	import { fade, fly } from 'svelte/transition';
@@ -15,7 +15,7 @@
 	import loadSql from './support-language/sql';
 	import loadTypescript from './support-language/typescript';
 
-	export let props: CodeProps;
+	export let props: CodeArgs;
 
 	/*
 	prismjs가 기본적으로 지원하는 언어: 
@@ -92,7 +92,7 @@
 	{/if}
 
 	{#if copied}
-		<div in:fly={{ y: 40 }} out:fade class="notion-code-copy-tooltip">
+		<div in:fly|global={{ y: 40 }} out:fade|global class="notion-code-copy-tooltip">
 			<div>{'Copied'}</div>
 		</div>
 	{/if}

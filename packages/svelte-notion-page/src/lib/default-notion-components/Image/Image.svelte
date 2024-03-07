@@ -1,9 +1,10 @@
 <script lang="ts">
-	import type { ImageProps, ContextedBlock } from '$lib/types';
+	import type { ImageArgs, ContextedBlock } from '$lib/types';
 	import RichText from '../base/richtext/RichText.svelte';
 	import ImageViewer from './ImageViewer.svelte';
 
-	export let props: ImageProps;
+	export let style = ''
+	export let props: ImageArgs;
 	const { image } = props;
 	const { type, caption } = image;
 	export let convertUrl: (url: string) => string = (url) => url;
@@ -53,7 +54,7 @@
 	}
 </script>
 
-<div class="notion-block notion-image">
+<div style={style} class="notion-block notion-image">
 	<div class="notion-image-content">
 		{#if url}
 			<ImageViewer bind:opened {initialIndex} {urls} />
@@ -80,11 +81,5 @@
 	.notion-image-content {
 		display: flex;
 		flex-direction: column;
-	}
-
-	.notion-image-content img {
-		width: 100%;
-		margin: 0 auto;
-		object-fit: contain;
 	}
 </style>

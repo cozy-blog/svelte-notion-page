@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { EquationProps } from '$lib/types';
-	export let props: EquationProps;
+	import type { EquationArgs } from '$lib/types';
+	export let props: EquationArgs;
 	import renderEquation from '$lib/utils/renderEquation';
 	const {
 		equation: { expression }

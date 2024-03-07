@@ -1,8 +1,8 @@
 <script lang="ts">
-	import type { ToggleProps } from '$lib/types';
+	import type { ToggleArgs } from '$lib/types';
 	import { getColorCss } from '$lib/utils/getColorCss';
 	import RichText from './base/richtext/RichText.svelte';
-	export let props: ToggleProps;
+	export let props: ToggleArgs;
 	const {
 		toggle: { color, rich_text: texts }
 	} = props;
@@ -21,7 +21,7 @@
 			<RichText props={texts} />
 		</p>
 	</div>
-	<slot/>
+	<slot />
 </div>
 
 <style>

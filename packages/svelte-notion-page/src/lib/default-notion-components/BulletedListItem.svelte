@@ -1,10 +1,10 @@
 <script lang="ts">
-	import type { BulletedListItemProps } from '$lib/types';
+	import type { BulletedListItemArgs } from '$lib/types';
 	import { getColorCss } from '$lib/utils/getColorCss';
 	import { bulletedListItemMarker } from '$lib/utils/listItemMarker';
 	import RichText from './base/richtext/RichText.svelte';
 
-	export let props: BulletedListItemProps;
+	export let props: BulletedListItemArgs;
 
 	const {
 		bulleted_list_item: { color, rich_text: texts }

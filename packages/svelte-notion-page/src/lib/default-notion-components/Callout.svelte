@@ -1,8 +1,8 @@
 <script lang="ts">
-	import type { CalloutProps } from '$lib/types';
+	import type { CalloutArgs } from '$lib/types';
 	import { getColorCss } from '$lib/utils/getColorCss';
 	import RichText from './base/richtext/RichText.svelte';
-	export let props: CalloutProps;
+	export let props: CalloutArgs;
 	const {
 		callout: { color, rich_text: texts, icon }
 	} = props;

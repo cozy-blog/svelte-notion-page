@@ -1,8 +1,8 @@
 <script lang="ts">
-	import type { AudioProps } from '$lib/types';
+	import type { AudioArgs } from '$lib/types';
 	import RichText from './base/richtext/RichText.svelte';
 
-	export let props: AudioProps;
+	export let props: AudioArgs;
 	const {
 		audio: { type, file, external, caption }
 	} = props;

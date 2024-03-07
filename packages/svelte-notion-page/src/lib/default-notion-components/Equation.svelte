@@ -1,8 +1,8 @@
 <script lang="ts">
-	import type { EquationProps } from '$lib/types';
+	import type { EquationArgs } from '$lib/types';
 	import renderEquation from '$lib/utils/renderEquation';
 
-	export let props: EquationProps;
+	export let props: EquationArgs;
 	const {
 		equation: { expression }
 	} = props;
