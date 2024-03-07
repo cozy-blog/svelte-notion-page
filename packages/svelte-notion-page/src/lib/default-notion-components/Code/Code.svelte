@@ -92,7 +92,7 @@
 	{/if}
 
 	{#if copied}
-		<div in:fly={{ y: 40 }} out:fade class="notion-code-copy-tooltip">
+		<div in:fly|global={{ y: 40 }} out:fade|global class="notion-code-copy-tooltip">
 			<div>{'Copied'}</div>
 		</div>
 	{/if}
