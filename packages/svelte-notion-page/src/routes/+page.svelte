@@ -1,24 +1,13 @@
 <script lang="ts">
-	import { Notion } from '$lib/components';
-	import { json } from './notion-export';
-	const { blocks } = json as any;
+	/**
+	 * this is for getting notion data
+	 */
+	import { onMount } from 'svelte';
+	import type { PageData } from './$types';
+
+	export let data: PageData;
+
+	onMount(async () => {
+		console.log(data.page);
+	});
 </script>
-
-<!-- <Notion>
-	<Notion.Body>
-		<Notion.Blocks blocks={[...blocks, ...blocks]} />
-	</Notion.Body>
-</Notion> -->
-
-<div class="viewer" />
-
-<style>
-	.viewer {
-		margin-top: -3px;
-		margin-right: 3px;
-		position: fixed !important;
-		width: 100vw;
-		height: 100vh;
-		background-color: green;
-	}
-</style>
